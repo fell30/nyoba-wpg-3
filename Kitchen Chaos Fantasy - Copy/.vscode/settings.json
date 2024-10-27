@@ -52,5 +52,5 @@
         "Temp/": true
     },
     "dotnet.preferCSharpExtension": true,
-    "dotnet.defaultSolution": "Kitchen Chaos Fantasy.sln"
+    "dotnet.defaultSolution": "Kitchen Chaos Fantasy - Copy.sln"
 }
