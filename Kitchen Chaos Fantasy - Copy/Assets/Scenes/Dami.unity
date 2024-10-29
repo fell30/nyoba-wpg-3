@@ -212,6 +212,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClearCounter (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5386691556809412972, guid: 36f5e9d55263e4d4b95c2f5bd08865cc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7251823731232869744, guid: 36f5e9d55263e4d4b95c2f5bd08865cc, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -1585,6 +1589,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lamp (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4547567413071019452, guid: 1041b442cfe17c649bb38b32155fa11a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2193,6 +2201,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClearCounter (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 5386691556809412972, guid: 36f5e9d55263e4d4b95c2f5bd08865cc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7251823731232869744, guid: 36f5e9d55263e4d4b95c2f5bd08865cc, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -2734,6 +2746,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClearCounter (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 5386691556809412972, guid: 36f5e9d55263e4d4b95c2f5bd08865cc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7251823731232869744, guid: 36f5e9d55263e4d4b95c2f5bd08865cc, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -2837,6 +2853,10 @@ PrefabInstance:
     - target: {fileID: 5386691556809412972, guid: 36f5e9d55263e4d4b95c2f5bd08865cc, type: 3}
       propertyPath: m_Name
       value: ClearCounter (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5386691556809412972, guid: 36f5e9d55263e4d4b95c2f5bd08865cc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7251823731232869744, guid: 36f5e9d55263e4d4b95c2f5bd08865cc, type: 3}
       propertyPath: m_IsActive
@@ -3616,6 +3636,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClearCounter (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 5386691556809412972, guid: 36f5e9d55263e4d4b95c2f5bd08865cc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7251823731232869744, guid: 36f5e9d55263e4d4b95c2f5bd08865cc, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -4014,6 +4038,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MortarAndPastle_Counter (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6166606290561052732, guid: 814d9792b9153094fa877a9120af28e3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7925588497555052598, guid: 814d9792b9153094fa877a9120af28e3, type: 3}
       propertyPath: cuttingProgressSlider
       value: 
@@ -4408,6 +4436,10 @@ PrefabInstance:
     - target: {fileID: 5386691556809412972, guid: 36f5e9d55263e4d4b95c2f5bd08865cc, type: 3}
       propertyPath: m_Name
       value: ClearCounter
+      objectReference: {fileID: 0}
+    - target: {fileID: 5386691556809412972, guid: 36f5e9d55263e4d4b95c2f5bd08865cc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7251823731232869744, guid: 36f5e9d55263e4d4b95c2f5bd08865cc, type: 3}
       propertyPath: m_IsActive
@@ -8240,6 +8272,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClearCounter (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 5386691556809412972, guid: 36f5e9d55263e4d4b95c2f5bd08865cc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7251823731232869744, guid: 36f5e9d55263e4d4b95c2f5bd08865cc, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -8500,6 +8536,10 @@ PrefabInstance:
     - target: {fileID: 5386691556809412972, guid: 36f5e9d55263e4d4b95c2f5bd08865cc, type: 3}
       propertyPath: m_Name
       value: ClearCounter (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5386691556809412972, guid: 36f5e9d55263e4d4b95c2f5bd08865cc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7251823731232869744, guid: 36f5e9d55263e4d4b95c2f5bd08865cc, type: 3}
       propertyPath: m_IsActive
@@ -9611,6 +9651,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d0e2a2c41f353294489cfcded92202d0, type: 3}
       propertyPath: m_Name
       value: Level 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d0e2a2c41f353294489cfcded92202d0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d0e2a2c41f353294489cfcded92202d0, type: 3}
       propertyPath: m_TagString
@@ -16379,6 +16423,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClearCounter (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 5386691556809412972, guid: 36f5e9d55263e4d4b95c2f5bd08865cc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7251823731232869744, guid: 36f5e9d55263e4d4b95c2f5bd08865cc, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -16532,6 +16580,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClearCounter (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 5386691556809412972, guid: 36f5e9d55263e4d4b95c2f5bd08865cc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7251823731232869744, guid: 36f5e9d55263e4d4b95c2f5bd08865cc, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -16634,6 +16686,10 @@ PrefabInstance:
     - target: {fileID: 4547567413071019452, guid: 1041b442cfe17c649bb38b32155fa11a, type: 3}
       propertyPath: m_Name
       value: Lamp (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4547567413071019452, guid: 1041b442cfe17c649bb38b32155fa11a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16884,6 +16940,10 @@ PrefabInstance:
     - target: {fileID: 5386691556809412972, guid: 36f5e9d55263e4d4b95c2f5bd08865cc, type: 3}
       propertyPath: m_Name
       value: ClearCounter (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5386691556809412972, guid: 36f5e9d55263e4d4b95c2f5bd08865cc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7251823731232869744, guid: 36f5e9d55263e4d4b95c2f5bd08865cc, type: 3}
       propertyPath: m_IsActive
@@ -17503,6 +17563,10 @@ PrefabInstance:
     - target: {fileID: 6166606290561052732, guid: 814d9792b9153094fa877a9120af28e3, type: 3}
       propertyPath: m_Name
       value: MortarAndPastle_Counter
+      objectReference: {fileID: 0}
+    - target: {fileID: 6166606290561052732, guid: 814d9792b9153094fa877a9120af28e3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7925588497555052598, guid: 814d9792b9153094fa877a9120af28e3, type: 3}
       propertyPath: cuttingProgressSlider
@@ -24650,6 +24714,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClearCounter (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 5386691556809412972, guid: 36f5e9d55263e4d4b95c2f5bd08865cc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7251823731232869744, guid: 36f5e9d55263e4d4b95c2f5bd08865cc, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -26893,6 +26961,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClearCounter (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 5386691556809412972, guid: 36f5e9d55263e4d4b95c2f5bd08865cc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7251823731232869744, guid: 36f5e9d55263e4d4b95c2f5bd08865cc, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -27282,6 +27354,10 @@ PrefabInstance:
     - target: {fileID: 4547567413071019452, guid: 1041b442cfe17c649bb38b32155fa11a, type: 3}
       propertyPath: m_Name
       value: Lamp (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4547567413071019452, guid: 1041b442cfe17c649bb38b32155fa11a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -28298,6 +28374,10 @@ PrefabInstance:
     - target: {fileID: 4547567413071019452, guid: 1041b442cfe17c649bb38b32155fa11a, type: 3}
       propertyPath: m_Name
       value: Lamp (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4547567413071019452, guid: 1041b442cfe17c649bb38b32155fa11a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5147199043802047461, guid: 1041b442cfe17c649bb38b32155fa11a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -33697,6 +33777,10 @@ PrefabInstance:
     - target: {fileID: 4547567413071019452, guid: 1041b442cfe17c649bb38b32155fa11a, type: 3}
       propertyPath: m_Name
       value: Lamp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4547567413071019452, guid: 1041b442cfe17c649bb38b32155fa11a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
