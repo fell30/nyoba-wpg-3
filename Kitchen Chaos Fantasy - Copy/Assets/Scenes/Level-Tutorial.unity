@@ -26516,6 +26516,14 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3766082180972554238, guid: ab2d9bae1b9739141b2491f5e181299a, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3766082180972554238, guid: ab2d9bae1b9739141b2491f5e181299a, type: 3}
+      propertyPath: m_Materials.Array.data[4]
+      value: 
+      objectReference: {fileID: 2100000, guid: cee024b0f588e734283a00e5d595f388, type: 2}
     - target: {fileID: 3873295952617328445, guid: ab2d9bae1b9739141b2491f5e181299a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.471486
@@ -26560,6 +26568,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Glow Fungus
       objectReference: {fileID: 0}
+    - target: {fileID: 6368518995404317497, guid: ab2d9bae1b9739141b2491f5e181299a, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6368518995404317497, guid: ab2d9bae1b9739141b2491f5e181299a, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: cee024b0f588e734283a00e5d595f388, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 7875008574676993046, guid: ab2d9bae1b9739141b2491f5e181299a, type: 3}
