@@ -51,5 +51,9 @@ public class GameInput : MonoBehaviour
     {
         return playerInputActions.Player.InteractAlternate.ReadValue<float>() > 0.1f;
     }
+    public bool IsInteractPressed()
+    {
+        return playerInputActions.Player.Interact.ReadValue<float>() > 0.1f;
+    }
 
 }

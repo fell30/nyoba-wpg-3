@@ -22,6 +22,10 @@ public class Player : MonoBehaviour, IkitchenObjectParent
     {
         return gameInput.IsInteractAlternatePressed();
     }
+    public bool IsInteractPressed()
+    {
+        return gameInput.IsInteractPressed();
+    }
 
     public float speed = 5f;
 
