@@ -113,8 +113,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CounterTopPoint: {fileID: 2586240428948308569}
-  waterBucketSO: {fileID: 11400000, guid: ba9295246e7e9df4c8bbadb1e7795488, type: 2}
-  holdSlider: {fileID: 0}
+  _waterBucketSO: {fileID: 11400000, guid: ba9295246e7e9df4c8bbadb1e7795488, type: 2}
+  _holdSlider: {fileID: 0}
+  _gameInput: {fileID: 0}
 --- !u!1001 &3300787774462627296
 PrefabInstance:
   m_ObjectHideFlags: 0

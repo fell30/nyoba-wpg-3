@@ -3,7 +3,17 @@ guid: 57a052931e865ad4fa5e524224bae7ce
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Twisting Mushroom
+    second: {fileID: 2100000, guid: 242fe58a5bad8b74dbcb1fe3b794bdb1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Twisting Mushroom Tangkai
+    second: {fileID: 2100000, guid: 090552a73898fd8498a7422fc29770a2, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

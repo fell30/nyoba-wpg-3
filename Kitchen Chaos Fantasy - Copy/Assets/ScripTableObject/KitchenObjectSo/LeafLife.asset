@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 16f952276c9eaf84b9c03c8ee55ab013, type: 3}
-  m_Name: Watter_Bucket
+  m_Name: LeafLife
   m_EditorClassIdentifier: 
-  prefab: {fileID: 5133453827729482660, guid: 0f8dc7ae77edd524d8ae34e7b412e142, type: 3}
-  sprite: {fileID: 21300000, guid: da2d04fe27b94e34ea0b624569b48a6f, type: 3}
-  objectName: WaterBucket
+  prefab: {fileID: 5133453827729482660, guid: 2648d2a9007bd754daa86cbac61d2d2a, type: 3}
+  sprite: {fileID: 21300000, guid: c9f08c3c1ae2a364aaeaa3712540b1d4, type: 3}
+  objectName: LeafLife
