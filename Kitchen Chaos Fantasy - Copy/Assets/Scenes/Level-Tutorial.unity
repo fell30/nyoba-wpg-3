@@ -5936,7 +5936,7 @@ MonoBehaviour:
   footstepAudioSource: {fileID: 886263401}
   audioClipItems:
   - audioName: Footstep
-    clip: {fileID: 8300000, guid: 47053b0341c803d41bdb64bb2b4eea29, type: 3}
+    clip: {fileID: 8300000, guid: be24562f463218544b849ac8ea822247, type: 3}
   - audioName: PickupSound
     clip: {fileID: 8300000, guid: 6b7ca137e7670a149bc86d5fe24bac1a, type: 3}
   - audioName: DroupSound
