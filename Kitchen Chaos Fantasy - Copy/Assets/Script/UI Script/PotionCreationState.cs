@@ -33,7 +33,7 @@ public class PotionCreationState : MonoBehaviour
 
 
 
-    void Start()
+    public void StartPotionCreationProcess()
     {
         currentState = PotionState.TakeWaterBucket;
         WaterBucketHighlight.SetActive(true);

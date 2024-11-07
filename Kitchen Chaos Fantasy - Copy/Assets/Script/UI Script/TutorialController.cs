@@ -79,7 +79,7 @@ public class TutorialController : MonoBehaviour
         player.enabled = true;
         yield return new WaitForSeconds(3f);
         tutorialUI5.SetActive(false);
-        // potionCreationState.StartPotionCreationProcess();
+        potionCreationState.StartPotionCreationProcess();
         yield return new WaitUntil(() => isPotionServed == true);
         player.enabled = true;
         tutorialUI6.SetActive(true);
