@@ -19,6 +19,7 @@ public class WellCounter : BaseCounter
     private void Start()
     {
         InitializeSlider();
+
     }
 
     public void Initialize(GameInput gameInput)

@@ -4,19 +4,22 @@ using UnityEngine;
 public class PotionCreationState : MonoBehaviour
 {
     public Player player;
-    public TutorialController tutorialController; // Referensi ke TutorialController
+    public TutorialController tutorialController;
 
-    public GameObject leafTreeHighlight; // Highlight untuk LeafLife Tree
-    public GameObject mortarHighlight; // Highlight untuk Mortar and Pestle
-    public GameObject barrelHighlight; // Highlight untuk Mushroom barrel
-    public GameObject cauldronHighlight; // Highlight untuk Cauldron
-    public GameObject stirringHighlight; // Highlight untuk proses mengaduk potion
+    public GameObject WaterBucketHighlight;
+    public GameObject leafTreeHighlight;
+    public GameObject mortarHighlight;
+    public GameObject barrelHighlight;
+    public GameObject cauldronHighlight;
+    public GameObject stirringHighlight;
 
-    [SerializeField] private CauldronCounter cauldronCounter; // Referensi ke CauldronCounter
+    [SerializeField] private CauldronCounter cauldronCounter;
 
     private enum PotionState
     {
         Start,
+        TakeWaterBucket,
+        AddWaterBucketToCauldron,
         TakeLeafLife,
         UseMortar,
         AddCauldron,
@@ -30,18 +33,45 @@ public class PotionCreationState : MonoBehaviour
 
 
 
-    public void StartPotionCreationProcess()
+    void Start()
     {
-        currentState = PotionState.TakeLeafLife;
-        leafTreeHighlight.SetActive(true); // Tampilkan highlight untuk LeafLife Tree
+        currentState = PotionState.TakeWaterBucket;
+        WaterBucketHighlight.SetActive(true);
+
     }
 
     void Update()
     {
         switch (currentState)
         {
+
+            case PotionState.TakeWaterBucket:
+                if (player.HasKitchenObject() && player.GetKitchenObject().GetKitchenObjectSO().name == "Watter_Bucket")
+                {
+                    WaterBucketHighlight.SetActive(false);
+                    cauldronHighlight.SetActive(true);
+                    currentState = PotionState.AddWaterBucketToCauldron;
+                }
+
+                break;
+
+            case PotionState.AddWaterBucketToCauldron:
+                Debug.Log("Checking if water is added in PotionCreationState...");
+                if (cauldronCounter.IsWaterAdded())
+                {
+                    Debug.Log("Water has been added to the cauldron.");
+                    leafTreeHighlight.SetActive(true);
+                    cauldronHighlight.SetActive(false);
+                    currentState = PotionState.TakeLeafLife; // Ubah state setelah air ditambahkan
+                }
+                else
+                {
+                    Debug.Log("Water not yet added.");
+                }
+                break;
+
             case PotionState.TakeLeafLife:
-                if (player.HasKitchenObject() && player.GetKitchenObject().GetKitchenObjectSO().name == "Tomato")
+                if (player.HasKitchenObject() && player.GetKitchenObject().GetKitchenObjectSO().name == "LeafLife")
                 {
                     leafTreeHighlight.SetActive(false);
                     mortarHighlight.SetActive(true); // Tampilkan highlight untuk Mortar

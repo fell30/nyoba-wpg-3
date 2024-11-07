@@ -77,7 +77,7 @@ public class AudioManager : MonoBehaviour
                 audioSource.loop = false;
                 audioSource.Play();
             }
-            Debug.Log("Playing audio: " + audioName);
+            // Debug.Log("Playing audio: " + audioName);
         }
         else
         {
@@ -101,7 +101,7 @@ public class AudioManager : MonoBehaviour
                     audioSource.Stop();
                 }
             }
-            Debug.Log("Stopping audio: " + audioName);
+            // Debug.Log("Stopping audio: " + audioName);
         }
     }
 }

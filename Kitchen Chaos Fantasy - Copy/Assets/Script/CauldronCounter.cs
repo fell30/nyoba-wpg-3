@@ -21,6 +21,12 @@ public class CauldronCounter : BaseCounter
     private bool _isCookingInProgress = false; // Flag untuk menandakan apakah proses pengolahan sedang berlangsung
     private bool _isWaterAdded = false; // Flag untuk menandakan apakah water sudah dimasukkan
 
+    // Metode Getter untuk Flag _isWaterAdded
+    public bool IsWaterAdded()
+    {
+        return _isWaterAdded;
+    }
+
     private void Start()
     {
         InitializeUI();
@@ -71,7 +77,7 @@ public class CauldronCounter : BaseCounter
                 // Cauldron requires water first
                 if (playerObject.GetKitchenObjectSO() == _waterBucketSO)
                 {
-                    // Destroy the water bucket in player's hand
+                    // Destroy the WaterBucket in player's hand
                     KitchenObject.Destroy(playerObject.gameObject);
                     _isWaterAdded = true;
 
@@ -86,6 +92,8 @@ public class CauldronCounter : BaseCounter
                 {
                     Debug.Log("Cauldron requires water as the first ingredient.");
                     // Tambahkan feedback visual atau audio di sini untuk memberi tahu pemain
+                    // Contoh: UIManager.Instance.ShowMessage("First ingredient must be Water!");
+                    // AudioEventSystem.PlayAudio("ErrorSound");
                 }
             }
             else
@@ -111,12 +119,16 @@ public class CauldronCounter : BaseCounter
                     {
                         Debug.Log("Cauldron is full.");
                         // Tambahkan feedback visual atau audio di sini untuk memberi tahu pemain
+                        // Contoh: UIManager.Instance.ShowMessage("Cauldron is full!");
+                        // AudioEventSystem.PlayAudio("ErrorSound");
                     }
                 }
                 else
                 {
                     Debug.Log("Water has already been added. You cannot add another water.");
                     // Tambahkan feedback visual atau audio di sini untuk memberi tahu pemain
+                    // Contoh: UIManager.Instance.ShowMessage("Water has already been added!");
+                    // AudioEventSystem.PlayAudio("ErrorSound");
                 }
             }
         }
@@ -166,12 +178,16 @@ public class CauldronCounter : BaseCounter
             {
                 Debug.Log("No matching recipe found for these ingredients.");
                 // Tambahkan feedback visual atau audio di sini untuk memberi tahu pemain
+                // Contoh: UIManager.Instance.ShowMessage("No matching recipe found!");
+                // AudioEventSystem.PlayAudio("ErrorSound");
             }
         }
         else
         {
             Debug.Log("Cannot start cooking. Ensure you have both water and another ingredient.");
             // Tambahkan feedback visual atau audio di sini untuk memberi tahu pemain
+            // Contoh: UIManager.Instance.ShowMessage("Ensure you have both water and another ingredient.");
+            // AudioEventSystem.PlayAudio("ErrorSound");
         }
     }
 
@@ -284,7 +300,7 @@ public class CauldronCounter : BaseCounter
     }
 
     // Metode untuk memulai blubParticle
-    private void StartBlubParticle()
+    public void StartBlubParticle()
     {
         if (_blubParticle != null && !_blubParticle.isPlaying)
         {
