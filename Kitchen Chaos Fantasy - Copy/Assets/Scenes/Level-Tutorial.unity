@@ -8314,6 +8314,11 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &1132984931 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3375206494164002729, guid: ef0f5d4b63c60464986b62f1523e74ca, type: 3}
+  m_PrefabInstance: {fileID: 1587940234}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1139514675
 GameObject:
   m_ObjectHideFlags: 0
@@ -16740,7 +16745,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26236d529881f5148b3b43b74ac6d723, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeRemaining: 20
+  timeRemaining: 120
   timerIsRunning: 0
   timeText: {fileID: 1658300586}
   GameOverPanel: {fileID: 479485556}
@@ -24054,6 +24059,7 @@ MonoBehaviour:
   tutorialUI5: {fileID: 1165516053}
   tutorialUI6: {fileID: 52492285}
   serveTutorial: {fileID: 917395301}
+  ServeMain: {fileID: 1132984931}
   potionCreationState: {fileID: 2046771897}
   TimerPanel:
   - {fileID: 959018345}
@@ -29665,6 +29671,10 @@ PrefabInstance:
       propertyPath: _fireParticle
       value: 
       objectReference: {fileID: 2776258086547203891}
+    - target: {fileID: 9154376809899444676, guid: 26c0f6d9bac29fd4eac0265e6884cc9a, type: 3}
+      propertyPath: _emptyBottleSO
+      value: 
+      objectReference: {fileID: 11400000, guid: cdb8c964cc73f744d9c89ae53450dae0, type: 2}
     - target: {fileID: 9154376809899444676, guid: 26c0f6d9bac29fd4eac0265e6884cc9a, type: 3}
       propertyPath: _waterBucketSO
       value: 
