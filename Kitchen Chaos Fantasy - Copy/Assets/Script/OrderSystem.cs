@@ -11,7 +11,7 @@ public class OrderSystem : MonoBehaviour
     private KitchenObjectSO currentOrder; // Order yang sedang aktif
     public GameObject orderUIPrefab;
     public Transform orderUIParent;
-    public TextMeshProUGUI coinText;
+    // public TextMeshProUGUI coinText;
 
     [SerializeField] private GameObject OrderSucces;
 
@@ -27,7 +27,7 @@ public class OrderSystem : MonoBehaviour
     {
 
         // Jangan panggil GenerateOrders atau ShowNextOrder di sini.
-        UpdateCoinUI(); // Update UI koin di awal
+        // UpdateCoinUI(); // Update UI koin di awal
     }
 
 
@@ -120,7 +120,7 @@ public class OrderSystem : MonoBehaviour
         {
             Debug.Log("Order completed: " + currentOrder.name);
             currentOrder = null; // Hapus order saat ini
-            AddCoins(3); // Tambahkan koin
+            // AddCoins(3); // Tambahkan koin
 
             if (currentOrderUI != null)
             {
@@ -137,24 +137,24 @@ public class OrderSystem : MonoBehaviour
     }
 
 
-    private void AddCoins(int amount)
-    {
-        coins += amount;
-        Debug.Log("Coins added: " + amount + ". Total Coins: " + coins);
-        UpdateCoinUI();
-    }
+    // private void AddCoins(int amount)
+    // {
+    //     coins += amount;
+    //     Debug.Log("Coins added: " + amount + ". Total Coins: " + coins);
+    //     UpdateCoinUI();
+    // }
 
-    private void UpdateCoinUI()
-    {
-        if (coinText != null)
-        {
-            coinText.text = "Coins: " + coins.ToString();
-        }
-        else
-        {
-            Debug.LogError("Coin Text UI is not assigned!");
-        }
-    }
+    // private void UpdateCoinUI()
+    // {
+    //     if (coinText != null)
+    //     {
+    //         coinText.text = "Coins: " + coins.ToString();
+    //     }
+    //     else
+    //     {
+    //         Debug.LogError("Coin Text UI is not assigned!");
+    //     }
+    // }
 
     // Panggil ini saat pemain berhasil menyajikan potion
 
