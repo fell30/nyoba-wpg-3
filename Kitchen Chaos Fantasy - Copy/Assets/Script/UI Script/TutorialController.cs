@@ -12,6 +12,7 @@ public class TutorialController : MonoBehaviour
     public GameObject tutorialUI5;
     public GameObject tutorialUI6;
     public GameObject serveTutorial;
+    public GameObject ServeMain;
     [SerializeField] PotionCreationState potionCreationState;
     [SerializeField] private GameObject[] TimerPanel;
     [SerializeField] private CountdownTimer countdownTimer;
@@ -122,6 +123,7 @@ public class TutorialController : MonoBehaviour
         if (serveTutorial != null)
         {
             serveTutorial.SetActive(false);
+            ServeMain.SetActive(true);
             Debug.Log("ServeTutorial GameObject destroyed.");
         }
         countdownTimer.StartTimer();

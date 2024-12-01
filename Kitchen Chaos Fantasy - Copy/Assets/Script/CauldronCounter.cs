@@ -80,7 +80,7 @@ public class CauldronCounter : BaseCounter
                     _isWaterAdded = true;
                     _Water.SetActive(true);
                     AudioEventSystem.PlayAudio("DropIngredient");
-                    StartBlubParticle();
+
                 }
                 else
                 {
@@ -179,6 +179,7 @@ public class CauldronCounter : BaseCounter
         _cookingProgressSlider.value = 0; // Set nilai awal slider ke 0
 
         PlayCookingEffects();
+        StartBlubParticle();
 
         float cookDuration = 3f; // Durasi pemasakan
         float elapsedTime = 0f;
