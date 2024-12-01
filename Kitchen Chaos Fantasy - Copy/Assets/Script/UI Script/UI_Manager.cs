@@ -9,6 +9,7 @@ public class UI_Manager : MonoBehaviour
     public GameObject menuPause;
     public GameObject[] Koin;
     public TextMeshProUGUI teksSkor;
+    public GameObject SuccesCoin;
 
 
     private int skor = 0; // Variabel untuk melacak skor
@@ -54,8 +55,9 @@ public class UI_Manager : MonoBehaviour
             skor++;
             teksSkor.text = "Coin: " + skor.ToString();
 
-            yield return new WaitForSeconds(2.0f);
+            yield return new WaitForSeconds(0.7f);
             Koin[i].SetActive(false);
         }
+        SuccesCoin.SetActive(true);
     }
 }

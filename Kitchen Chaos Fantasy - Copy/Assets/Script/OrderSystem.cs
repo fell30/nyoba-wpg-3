@@ -10,6 +10,8 @@ public class OrderSystem : MonoBehaviour
     private Queue<KitchenObjectSO> orderQueue = new Queue<KitchenObjectSO>(); // Antrian untuk order
     private KitchenObjectSO currentOrder; // Order yang sedang aktif
     public GameObject orderUIPrefab;
+    public GameObject Timer;
+
     public Transform orderUIParent;
     // public TextMeshProUGUI coinText;
 
@@ -69,6 +71,7 @@ public class OrderSystem : MonoBehaviour
             currentOrder = null; // Tidak ada order lagi
             Debug.Log("All orders completed!");
             OrderSucces.SetActive(true);
+            Timer.SetActive(false);
             if (Input.GetKeyDown(KeyCode.Q))
             {
                 SceneManager.LoadScene("Level1");
