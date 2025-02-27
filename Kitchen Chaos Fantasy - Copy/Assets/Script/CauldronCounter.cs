@@ -21,6 +21,12 @@ public class CauldronCounter : BaseCounter
     private bool _isCookingInProgress = false; // Flag untuk menandakan apakah proses pengolahan sedang berlangsung
     private bool _isWaterAdded = false; // Flag untuk menandakan apakah water sudah dimasukkan
 
+    // Metode Getter untuk Flag _isWaterAdded
+    public bool IsWaterAdded()
+    {
+        return _isWaterAdded;
+    }
+
     private void Start()
     {
         InitializeUI();
@@ -68,87 +74,75 @@ public class CauldronCounter : BaseCounter
 
             if (!_isWaterAdded)
             {
-                // Cauldron requires water first
                 if (playerObject.GetKitchenObjectSO() == _waterBucketSO)
                 {
-                    // Destroy the water bucket in player's hand
                     KitchenObject.Destroy(playerObject.gameObject);
                     _isWaterAdded = true;
-
-                    // Activate Water GameObject in cauldron
                     _Water.SetActive(true);
                     AudioEventSystem.PlayAudio("DropIngredient");
 
-                    // Start blubParticle effects
-                    StartBlubParticle();
                 }
                 else
                 {
                     Debug.Log("Cauldron requires water as the first ingredient.");
-                    // Tambahkan feedback visual atau audio di sini untuk memberi tahu pemain
                 }
             }
             else
             {
-                // Water already added, allow adding ingredients
                 if (playerObject.GetKitchenObjectSO() != _waterBucketSO)
                 {
                     if (_ingredient1 == null)
                     {
-                        playerObject.SetKitchenObjectParent(this); // Pindahkan bahan pertama ke cauldron
+                        playerObject.SetKitchenObjectParent(this);
                         _ingredient1 = playerObject;
-                        _ingredient1.transform.position = _counterTopPoint1.position; // Set posisi bahan pertama
+                        _ingredient1.transform.position = _counterTopPoint1.position;
                         AudioEventSystem.PlayAudio("DropIngredient");
                     }
                     else if (_ingredient2 == null)
                     {
-                        playerObject.SetKitchenObjectParent(this); // Pindahkan bahan kedua ke cauldron
+                        playerObject.SetKitchenObjectParent(this);
                         _ingredient2 = playerObject;
-                        _ingredient2.transform.position = _counterTopPoint2.position; // Set posisi bahan kedua
+                        _ingredient2.transform.position = _counterTopPoint2.position;
                         AudioEventSystem.PlayAudio("DropIngredient");
                     }
                     else
                     {
                         Debug.Log("Cauldron is full.");
-                        // Tambahkan feedback visual atau audio di sini untuk memberi tahu pemain
                     }
                 }
                 else
                 {
                     Debug.Log("Water has already been added. You cannot add another water.");
-                    // Tambahkan feedback visual atau audio di sini untuk memberi tahu pemain
                 }
             }
         }
         else
         {
-            // Player tidak memegang objek, coba ambil bahan atau potion dari cauldron
             if (_finishedPotion != null)
             {
-                _finishedPotion.SetKitchenObjectParent(player); // Berikan Potion ke Player
-                _finishedPotion = null; // Hapus referensi Potion setelah diambil oleh Player
+                _finishedPotion.SetKitchenObjectParent(player);
+                _finishedPotion = null;
+                _Water.SetActive(false); // Nonaktifkan visual Water setelah Potion diambil
+                _isWaterAdded = false;   // Reset flag water untuk mereset cauldron
             }
             else
             {
                 if (_ingredient1 != null)
                 {
-                    _ingredient1.SetKitchenObjectParent(player); // Berikan bahan pertama ke Player
-                    _ingredient1 = null; // Hapus referensi bahan pertama dari Cauldron
-
-                    // Matikan blubParticle jika tidak ada bahan lagi
+                    _ingredient1.SetKitchenObjectParent(player);
+                    _ingredient1 = null;
                     StopBlubParticleIfNoIngredients();
                 }
                 else if (_ingredient2 != null)
                 {
-                    _ingredient2.SetKitchenObjectParent(player); // Berikan bahan kedua ke Player
-                    _ingredient2 = null; // Hapus referensi bahan kedua dari Cauldron
-
-                    // Matikan blubParticle jika tidak ada bahan lagi
+                    _ingredient2.SetKitchenObjectParent(player);
+                    _ingredient2 = null;
                     StopBlubParticleIfNoIngredients();
                 }
             }
         }
     }
+
 
     // Metode Interaksi Alternatif
     public override void InteractAlternate(Player player)
@@ -166,12 +160,14 @@ public class CauldronCounter : BaseCounter
             {
                 Debug.Log("No matching recipe found for these ingredients.");
                 // Tambahkan feedback visual atau audio di sini untuk memberi tahu pemain
+                // Contoh: UIManager.Instance.ShowMessage("No matching recipe found!");
+                // AudioEventSystem.PlayAudio("ErrorSound");
             }
         }
         else
         {
             Debug.Log("Cannot start cooking. Ensure you have both water and another ingredient.");
-            // Tambahkan feedback visual atau audio di sini untuk memberi tahu pemain
+
         }
     }
 
@@ -183,6 +179,7 @@ public class CauldronCounter : BaseCounter
         _cookingProgressSlider.value = 0; // Set nilai awal slider ke 0
 
         PlayCookingEffects();
+        StartBlubParticle();
 
         float cookDuration = 3f; // Durasi pemasakan
         float elapsedTime = 0f;
@@ -206,8 +203,8 @@ public class CauldronCounter : BaseCounter
         potionTransform.GetComponent<KitchenObject>().SetKitchenObjectParent(this);
         _finishedPotion = potionTransform.GetComponent<KitchenObject>(); // Simpan referensi ke Potion
 
-        _cookingProgressSlider.gameObject.SetActive(false); // Sembunyikan slider progress setelah selesai
-        _isCookingInProgress = false; // Reset status pengolahan
+        _cookingProgressSlider.gameObject.SetActive(false);
+        _isCookingInProgress = false;
 
         StopCookingEffects();
     }
@@ -284,7 +281,7 @@ public class CauldronCounter : BaseCounter
     }
 
     // Metode untuk memulai blubParticle
-    private void StartBlubParticle()
+    public void StartBlubParticle()
     {
         if (_blubParticle != null && !_blubParticle.isPlaying)
         {

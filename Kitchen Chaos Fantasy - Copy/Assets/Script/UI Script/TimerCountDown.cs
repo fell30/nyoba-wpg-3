@@ -21,13 +21,13 @@ public class CountdownTimer : MonoBehaviour
         {
             if (timeRemaining > 0)
             {
-                timeRemaining -= Time.deltaTime; // Kurangi waktu berdasarkan frame time
+                timeRemaining -= Time.deltaTime;
                 UpdateTimerDisplay(timeRemaining);
 
                 // Periksa apakah waktu tersisa kurang dari atau sama dengan 8 detik
                 if (timeRemaining <= 8f && !isTimerSoundPlaying)
                 {
-                    // Memutar suara timer
+
                     AudioEventSystem.PlayAudio("TimerSound");
                     isTimerSoundPlaying = true;
                 }
@@ -35,14 +35,14 @@ public class CountdownTimer : MonoBehaviour
             else
             {
                 Debug.Log("Time has run out!");
-                timeRemaining = 0; // Pastikan waktu tidak menjadi negatif
-                timerIsRunning = false; // Hentikan timer
+                timeRemaining = 0;
+                timerIsRunning = false;
                 TimerEnd();
             }
         }
     }
 
-    // Metode untuk memulai timer dari luar
+
     public void StartTimer()
     {
         timerIsRunning = true;
@@ -62,7 +62,7 @@ public class CountdownTimer : MonoBehaviour
         GameOverPanel.SetActive(true);
         Time.timeScale = 0;
 
-        // Hentikan suara timer jika masih berjalan
+
         if (isTimerSoundPlaying)
         {
             AudioEventSystem.StopAudio("TimerSound");
