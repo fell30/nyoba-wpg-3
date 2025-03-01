@@ -17080,7 +17080,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0c2f7c4826d1bcb419fbf5809f4c82ff, type: 2}
   - {fileID: 11400000, guid: c8351ee39a263b24ab68ac836af22a88, type: 2}
   orderUIPrefab: {fileID: 7411863772216727866, guid: 127ee1a2f9d518a4797676809ee7206a, type: 3}
-  Timer: {fileID: 0}
+  Timer: {fileID: 1658300584}
   orderUIParent: {fileID: 1799279248}
   OrderSucces: {fileID: 1711828872}
 --- !u!4 &1668967412
@@ -23011,6 +23011,18 @@ PrefabInstance:
       value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2888188595384380699, guid: f8aa5e99827a53742b45b9a9d274a0ab, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2888188595384380699, guid: f8aa5e99827a53742b45b9a9d274a0ab, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2888188595384380699, guid: f8aa5e99827a53742b45b9a9d274a0ab, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2888188595384380699, guid: f8aa5e99827a53742b45b9a9d274a0ab, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.050423145
       objectReference: {fileID: 0}
@@ -23049,6 +23061,10 @@ PrefabInstance:
     - target: {fileID: 2888188595384380699, guid: f8aa5e99827a53742b45b9a9d274a0ab, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0.981
+      objectReference: {fileID: 0}
+    - target: {fileID: 2888188595384380699, guid: f8aa5e99827a53742b45b9a9d274a0ab, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3751261616994782895, guid: f8aa5e99827a53742b45b9a9d274a0ab, type: 3}
       propertyPath: m_LocalPosition.x
