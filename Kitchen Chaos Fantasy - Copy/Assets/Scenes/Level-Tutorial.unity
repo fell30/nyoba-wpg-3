@@ -24,8 +24,8 @@ RenderSettings:
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 0.46
-  m_AmbientMode: 0
-  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
+  m_AmbientMode: 1
+  m_SubtractiveShadowColor: {r: 1, g: 1, b: 1, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.57
   m_FlareStrength: 1
@@ -2633,7 +2633,7 @@ Transform:
   m_GameObject: {fileID: 399274078}
   serializedVersion: 2
   m_LocalRotation: {x: 0.59950316, y: -0, z: -0, w: 0.8003724}
-  m_LocalPosition: {x: 1.21, y: 15.09, z: 5.83}
+  m_LocalPosition: {x: 11.4, y: 15.09, z: 5.83}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2653,7 +2653,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Version: 3
   m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: -1
+  m_AdditionalLightsShadowResolutionTier: 1
   m_LightLayerMask: 1
   m_RenderingLayers: 1
   m_CustomShadowLayers: 0
@@ -3762,7 +3762,7 @@ Transform:
   m_GameObject: {fileID: 535060811}
   serializedVersion: 2
   m_LocalRotation: {x: 0.54607195, y: 0.0087724, z: -0.0057186545, w: 0.8376728}
-  m_LocalPosition: {x: 6.96, y: 18.1, z: -0.04}
+  m_LocalPosition: {x: 8.61, y: 15.62, z: -9.78}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4840,13 +4840,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 670242137}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.50380963, y: -0.0043567135, z: 0.0030939544, w: 0.86379814}
-  m_LocalPosition: {x: 0.5, y: 11.06, z: -15.3}
+  m_LocalRotation: {x: 0.35283142, y: -0.0037802642, z: 0.003776659, w: 0.9356717}
+  m_LocalPosition: {x: 0.5, y: 8.27, z: -18.52}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 60.506, y: -0.513, z: 0.111}
+  m_LocalEulerAnglesHint: {x: 41.323, y: -0.336, z: 0.336}
 --- !u!4 &691377806 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3526458156391113324, guid: 0852ba165a7730940a4403bee85e2606, type: 3}
@@ -23028,7 +23028,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2888188595384380699, guid: f8aa5e99827a53742b45b9a9d274a0ab, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.42
+      value: 1.18
       objectReference: {fileID: 0}
     - target: {fileID: 2888188595384380699, guid: f8aa5e99827a53742b45b9a9d274a0ab, type: 3}
       propertyPath: m_LocalPosition.z
