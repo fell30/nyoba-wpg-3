@@ -6650,11 +6650,11 @@ MonoBehaviour:
   - audioName: Footstep
     clip: {fileID: 8300000, guid: 3da705b0ce7843a4496da2a0d852f36c, type: 3}
   - audioName: PickupSound
-    clip: {fileID: 8300000, guid: 6b7ca137e7670a149bc86d5fe24bac1a, type: 3}
+    clip: {fileID: 8300000, guid: 55f20037bdb0b824eaa23e65315d6f57, type: 3}
   - audioName: DroupSound
-    clip: {fileID: 8300000, guid: 6b7ca137e7670a149bc86d5fe24bac1a, type: 3}
+    clip: {fileID: 8300000, guid: 49bb1d0c7d6b56e4ea539526a9e3e8ed, type: 3}
   - audioName: Mortar
-    clip: {fileID: 8300000, guid: 43c57196f721645449533aaee1bb76f0, type: 3}
+    clip: {fileID: 8300000, guid: 2ce596a283e2fe74988eede1e54dad35, type: 3}
   - audioName: Serve
     clip: {fileID: 8300000, guid: 4eac46afa3248664ca6789b2f8dd814d, type: 3}
   - audioName: DropIngredient
