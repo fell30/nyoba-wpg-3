@@ -7,7 +7,8 @@ public class AudioManager : MonoBehaviour
     public static AudioManager instance;
 
     [SerializeField] private AudioSource audioSource;
-    [SerializeField] private AudioSource footstepAudioSource; // AudioSource khusus untuk footstep
+    [SerializeField] private AudioSource footstepAudioSource;
+    [SerializeField] private AudioSource bgmAudioSource;
 
     [System.Serializable]
     public class AudioClipItem
