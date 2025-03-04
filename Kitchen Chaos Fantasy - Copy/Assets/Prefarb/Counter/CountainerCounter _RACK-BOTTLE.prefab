@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3033269989903104300, guid: 278f3bf9ca0c4a14c8ac91ddf3a21f16, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.513
+      value: -0.476
       objectReference: {fileID: 0}
     - target: {fileID: 3033269989903104300, guid: 278f3bf9ca0c4a14c8ac91ddf3a21f16, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.88
+      value: 1.018
       objectReference: {fileID: 0}
     - target: {fileID: 3033269989903104300, guid: 278f3bf9ca0c4a14c8ac91ddf3a21f16, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.272
+      value: 0.478
       objectReference: {fileID: 0}
     - target: {fileID: 3055014890254096379, guid: 278f3bf9ca0c4a14c8ac91ddf3a21f16, type: 3}
       propertyPath: m_Size.x
@@ -26,7 +26,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3055014890254096379, guid: 278f3bf9ca0c4a14c8ac91ddf3a21f16, type: 3}
       propertyPath: m_Size.y
-      value: 1.42
+      value: 1.0049101
       objectReference: {fileID: 0}
     - target: {fileID: 3055014890254096379, guid: 278f3bf9ca0c4a14c8ac91ddf3a21f16, type: 3}
       propertyPath: m_Size.z
@@ -34,15 +34,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3055014890254096379, guid: 278f3bf9ca0c4a14c8ac91ddf3a21f16, type: 3}
       propertyPath: m_Center.x
-      value: 0.51
+      value: 0.510012
       objectReference: {fileID: 0}
     - target: {fileID: 3055014890254096379, guid: 278f3bf9ca0c4a14c8ac91ddf3a21f16, type: 3}
       propertyPath: m_Center.y
-      value: 0.56
+      value: 0.35245508
       objectReference: {fileID: 0}
     - target: {fileID: 3055014890254096379, guid: 278f3bf9ca0c4a14c8ac91ddf3a21f16, type: 3}
       propertyPath: m_Center.z
-      value: 0.54
+      value: 0.54000145
       objectReference: {fileID: 0}
     - target: {fileID: 3526458156391113324, guid: 278f3bf9ca0c4a14c8ac91ddf3a21f16, type: 3}
       propertyPath: m_LocalPosition.x
@@ -209,7 +209,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bottleCounter: {fileID: 1429724532980466799}
-  counterTopPoint: {fileID: 115952038061708857}
+  counterTopPoint: {fileID: 3097533277629939715}
   bottleVisualPrefarb: {fileID: 5133453827729482660, guid: f8546f80efbd5e74ea4c5d533fed9e5d, type: 3}
 --- !u!4 &3097533277629939715 stripped
 Transform:

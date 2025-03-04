@@ -3,7 +3,12 @@ guid: 59ad7a8dc53e4d043a88e64b923fcc72
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lifeleaf texture
+    second: {fileID: 2100000, guid: 33bbef0ccb4c26647b561a99b74b3e77, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
