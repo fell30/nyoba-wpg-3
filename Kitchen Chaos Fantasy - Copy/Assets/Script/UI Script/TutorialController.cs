@@ -7,11 +7,11 @@ public class TutorialController : MonoBehaviour
 {
     public OrderSystem orderSystem;
     public Player player;
-    public GameObject tutorialUI;
-    public GameObject tutorialUI2;
-    public GameObject tutorialUI3;
-    public GameObject tutorialUI4;
-    public GameObject tutorialUI5;
+    // public GameObject tutorialUI;
+    // public GameObject tutorialUI2;
+    // public GameObject tutorialUI3;
+    // public GameObject tutorialUI4;
+    // public GameObject tutorialUI5;
     public GameObject tutorialUI6;
     public GameObject serveTutorial;
     public GameObject ServeMain;
@@ -24,12 +24,13 @@ public class TutorialController : MonoBehaviour
 
     private enum TutorialInputState
     {
+        Start,
         WASD,
         PressP,
         PressO,
     }
 
-    private TutorialInputState currenState = TutorialInputState.WASD;
+    private TutorialInputState currenState = TutorialInputState.Start;
 
     private void Update()
     {
@@ -39,20 +40,28 @@ public class TutorialController : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D))
                 {
                     currenState = TutorialInputState.PressP;
+                    player.enabled = false;
+
+                    tutorialDialog.ShowMessage("Tekan P untuk membuka menu potion.", "hint");
                 }
                 break;
             case TutorialInputState.PressP:
                 if (Input.GetKeyDown(KeyCode.P))
                 {
                     currenState = TutorialInputState.PressO;
+
+                    tutorialDialog.ShowMessage("Press O For Action", "hint");
+
                 }
                 break;
             case TutorialInputState.PressO:
                 if (Input.GetKeyDown(KeyCode.O))
                 {
-                    currenState = TutorialInputState.WASD;
+                    currenState = TutorialInputState.Start; // Tambahkan ini agar tidak terus-menerus memulai tutorial
+                    StartCoroutine(StartTutorial());
                 }
                 break;
+
         }
     }
 
@@ -63,6 +72,7 @@ public class TutorialController : MonoBehaviour
         {
             player = FindObjectOfType<Player>();
             Debug.Log("Player found in the scene.");
+
 
         }
 
@@ -78,59 +88,28 @@ public class TutorialController : MonoBehaviour
     }
     private IEnumerator IntroDialog()
     {
+        player.enabled = false;
         tutorialDialog.ShowMessage("Aku membutuhkan uang untuk membayar pendidikanku.", "main");
         yield return new WaitForSeconds(6f);
-        tutorialDialog.HideMessageDelayed("main", 8f);
+        // tutorialDialog.HideMessageDelayed("main", 8f);
         tutorialDialog.ShowMessage("Karena KIPK sudah dihapus demi efisiensi, potion adalah cara paling efisien untuk mendapatkannya. ", "main");
         yield return new WaitForSeconds(8.5f);
-        tutorialDialog.HideMessageDelayed("main", 8f);
+        // tutorialDialog.HideMessageDelayed("main", 8f);
         tutorialDialog.ShowMessage("Seharusnya di sekitar sini ada bahan-bahan yang dapat dijadikan untuk potion. Ayo kita mulai untuk membuat potion dan menjualnya!", "main");
         yield return new WaitForSeconds(8.5f);
-        tutorialDialog.HideMessageDelayed("main", 3f);
+        //tutorialDialog.HideMessageDelayed("main", 3f);
+        currenState = TutorialInputState.WASD;
+        tutorialDialog.HideMessage("main");
+        tutorialDialog.ShowMessage("Press WASD to Move Around", "hint");
+        player.enabled = true;
 
     }
 
 
     private IEnumerator StartTutorial()
     {
-        // Tampilkan UI tutorial langkah demi langkah
-        tutorialUI.SetActive(true);
-        player.enabled = false;
-        yield return new WaitForSeconds(2f);
-        tutorialUI.SetActive(false);
         player.enabled = true;
-
-        yield return new WaitForSeconds(2f);
-
-        tutorialUI2.SetActive(true);
-        player.enabled = false;
-        yield return new WaitForSeconds(1f);
-        tutorialUI2.SetActive(false);
-        player.enabled = true;
-
-        yield return new WaitForSeconds(1f);
-
-        tutorialUI3.SetActive(true);
-        player.enabled = false;
-        yield return new WaitForSeconds(1f);
-        tutorialUI3.SetActive(false);
-        player.enabled = true;
-
-        yield return new WaitForSeconds(1f);
-
-        tutorialUI4.SetActive(true);
-        player.enabled = false;
-        yield return new WaitForSeconds(1f);
-        tutorialUI4.SetActive(false);
-        player.enabled = true;
-
-        yield return new WaitForSeconds(1f);
-
-
-        tutorialUI5.SetActive(true);
-        player.enabled = true;
-        yield return new WaitForSeconds(1f);
-        tutorialUI5.SetActive(false);
+        tutorialDialog.HideMessage("hint");
         potionCreationState.StartPotionCreationProcess();
         yield return new WaitUntil(() => isPotionServed == true);
         player.enabled = true;
@@ -149,6 +128,7 @@ public class TutorialController : MonoBehaviour
         TimerPanel[1].SetActive(false);
         yield return new WaitForSeconds(2);
         TimerPanel[2].SetActive(false);
+
         //End Timer
         yield return new WaitForSeconds(0.5f);
         EndTutorial();

@@ -3,7 +3,12 @@ guid: e6177df14aa44ab4a82e1a569b446f0a
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cauldron Texture
+    second: {fileID: 2100000, guid: 1278268ee03f7a943bcbdbd6d02eb2a7, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

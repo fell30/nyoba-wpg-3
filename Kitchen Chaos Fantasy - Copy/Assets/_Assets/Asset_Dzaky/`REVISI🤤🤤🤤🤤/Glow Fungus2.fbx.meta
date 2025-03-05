@@ -3,7 +3,12 @@ guid: 4d7e3fd2ca390a84587fc2029028d83d
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glow Fungus Texture
+    second: {fileID: 2100000, guid: bf2f4a49ae5701d41bae91b208e75dfc, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

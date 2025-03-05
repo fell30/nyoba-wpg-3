@@ -3,7 +3,12 @@ guid: ffe0ed3d85b04424c8e99807e49bb3e8
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Torchflower Texture
+    second: {fileID: 2100000, guid: 17dc07bd2b81e4c43b7cff70c8de6363, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

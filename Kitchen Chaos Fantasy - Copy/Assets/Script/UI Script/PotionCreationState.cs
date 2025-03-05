@@ -18,6 +18,10 @@ public class PotionCreationState : MonoBehaviour
     public GameObject cauldronHighlight;
     public GameObject stirringHighlight;
 
+
+    //COBA
+    [SerializeField] private GameObject OrderLightPotion_Tutor;
+
     [SerializeField] private CauldronCounter cauldronCounter;
 
     private enum PotionState
@@ -43,6 +47,7 @@ public class PotionCreationState : MonoBehaviour
         currentState = PotionState.TakeWaterBucket;
         WaterBucketHighlight.SetActive(true);
         tutorialDialog.ShowMessage("Cepat! Ambil air dari sumur.", "main");
+        OrderLightPotion_Tutor.SetActive(true);
 
     }
 
@@ -57,7 +62,7 @@ public class PotionCreationState : MonoBehaviour
                     WaterBucketHighlight.SetActive(false);
                     cauldronHighlight.SetActive(true);
                     currentState = PotionState.AddWaterBucketToCauldron;
-                    tutorialDialog.HideMessageDelayed("main", 4f);
+                    //tutorialDialog.HideMessageDelayed("main", 4f);
                     tutorialDialog.ShowMessage("Bagus! Selanjutnya isi tungku dengan air.", "npc");
                 }
 
@@ -71,8 +76,8 @@ public class PotionCreationState : MonoBehaviour
                     leafTreeHighlight.SetActive(true);
                     cauldronHighlight.SetActive(false);
                     currentState = PotionState.TakeLeafLife; // Ubah state setelah air ditambahkan
-                    tutorialDialog.HideMessageDelayed("npc", 7f);
-                    tutorialDialog.ShowMessage("Air sudah siap! Sekarang ambil Torch Flower di pot bunga.", "main");
+                                                             // tutorialDialog.HideMessageDelayed("npc", 7f);
+                    tutorialDialog.ShowMessage("Air sudah siap! Sekarang ambil Torch Flower di pot bunga.", "npc");
                 }
                 else
                 {
@@ -86,7 +91,7 @@ public class PotionCreationState : MonoBehaviour
                     leafTreeHighlight.SetActive(false);
                     mortarHighlight.SetActive(true); // Tampilkan highlight untuk Mortar
                     currentState = PotionState.UseMortar;
-                    tutorialDialog.HideMessageDelayed("main", 7f);
+                    // tutorialDialog.HideMessageDelayed("main", 7f);
                     tutorialDialog.ShowMessage("Haluskan Torch Flower menggunakan alat penghalus (Mortar and Pestle).", "npc");
                 }
                 break;
@@ -97,8 +102,8 @@ public class PotionCreationState : MonoBehaviour
                     mortarHighlight.SetActive(false);
                     cauldronHighlight.SetActive(true); // Tampilkan highlight untuk Cauldron
                     currentState = PotionState.AddCauldron;
-                    tutorialDialog.HideMessageDelayed("npc", 7f);
-                    tutorialDialog.ShowMessage("Masukkan Torch Flower Powder ke dalam tungku.", "main");
+                    // tutorialDialog.HideMessageDelayed("npc", 7f);
+                    tutorialDialog.ShowMessage("Masukkan Torch Flower Powder ke dalam tungku.", "npc");
                 }
                 break;
             case PotionState.AddCauldron:
@@ -113,8 +118,8 @@ public class PotionCreationState : MonoBehaviour
 
                         // Ubah state
                         currentState = PotionState.TakeMushroom;
-                        Debug.Log("State changed to: " + currentState.ToString());
-                        tutorialDialog.HideMessageDelayed("main", 7f);
+                        // Debug.Log("State changed to: " + currentState.ToString());
+                        // tutorialDialog.HideMessageDelayed("main", 7f);
                         tutorialDialog.ShowMessage("Bagus! Sekarang ambil Glow Fungus lalu masukkan ke dalam tungku.", "npc");
                     }
                 }
@@ -128,7 +133,7 @@ public class PotionCreationState : MonoBehaviour
                     barrelHighlight.SetActive(false);
 
                     currentState = PotionState.MixPotion;
-                    tutorialDialog.HideMessageDelayed("npc", 7f);
+                    // tutorialDialog.HideMessageDelayed("npc", 7f);
                     tutorialDialog.ShowMessage("Aduk semua bahan hingga tercampur rata.", "main");
                 }
                 break;
@@ -137,7 +142,7 @@ public class PotionCreationState : MonoBehaviour
                 // Cek apakah pemain mengaduk potion di Cauldron
                 if (player.HasKitchenObject())
                 {
-                    Debug.Log("Object held by player: " + player.GetKitchenObject().GetKitchenObjectSO().name); // Cek nama objek
+                    //Debug.Log("Object held by player: " + player.GetKitchenObject().GetKitchenObjectSO().name); // Cek nama objek
 
                     if (player.GetKitchenObject().GetKitchenObjectSO().name == "HealingPotion")
                     {
@@ -145,8 +150,8 @@ public class PotionCreationState : MonoBehaviour
                         stirringHighlight.SetActive(true); // Tampilkan highlight untuk mengaduk potion
                         currentState = PotionState.ServePotion; // Pindah ke state ServePotion
                         Debug.Log("State changed to ServePotion");
-                        tutorialDialog.HideMessageDelayed("main", 7f);
-                        tutorialDialog.ShowMessage("Ambil Light Potion dan sajikan!", "npc");
+                        //  tutorialDialog.HideMessageDelayed("main", 7f);
+                        tutorialDialog.ShowMessage("Ambil Light Potion dan sajikan!", "main");
                     }
                 }
                 break;
@@ -157,16 +162,18 @@ public class PotionCreationState : MonoBehaviour
                 {
                     Debug.Log("Serve Potion");
                     currentState = PotionState.Complete;
-                    tutorialDialog.HideMessageDelayed("npc", 4f);
-                    tutorialDialog.ShowMessage("Antarkan pesanan ke meja.", "main");
+                    //tutorialDialog.HideMessageDelayed("npc", 4f);
+                    tutorialDialog.ShowMessage("Antarkan pesanan ke meja, dan Mulai bekerja!", "main");
+                    tutorialDialog.HideMessageDelayed("main", 4f);
+                    player.enabled = true;
 
                 }
                 break;
 
             case PotionState.Complete:
                 // Proses pembuatan potion sudah selesai
-                tutorialDialog.HideMessageDelayed("main", 4f);
-                tutorialDialog.ShowMessage("Sekarang ayo selesaikan pesanan pertamamu!", "npc");
+
+
 
                 break;
         }

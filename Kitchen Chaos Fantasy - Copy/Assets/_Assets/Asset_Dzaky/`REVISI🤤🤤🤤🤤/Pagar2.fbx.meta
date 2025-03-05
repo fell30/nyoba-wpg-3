@@ -3,7 +3,17 @@ guid: 9765aa5f3fa7a674f96811ae533e06b7
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pagar
+    second: {fileID: 2100000, guid: d9c6dd54e840f60428765a40a828a975, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Kayu
+    second: {fileID: 2800000, guid: cb489fc313203e74c94bf7d93ddd9a83, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0

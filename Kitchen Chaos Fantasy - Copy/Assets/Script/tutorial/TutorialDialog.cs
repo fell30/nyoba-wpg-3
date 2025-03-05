@@ -30,6 +30,8 @@ public class TutorialDialog : MonoBehaviour
 
     private void Awake()
     {
+        DOTween.SetTweensCapacity(1000, 100);
+
         // Simpan posisi awal sebelum animasi
         mainDialog.initialPosition = mainDialog.rectTransform.anchoredPosition;
         npcDialog.initialPosition = npcDialog.rectTransform.anchoredPosition;
