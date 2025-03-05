@@ -3,7 +3,12 @@ guid: e848c0c5f6aeb434c980f6d952b85aa9
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: rumput texture
+    second: {fileID: 2800000, guid: 540f642f5a9316143a8d8bcbcf49c088, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0

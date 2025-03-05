@@ -3,7 +3,12 @@ guid: 53ad7483de2a2f24ebab6490a31e44ad
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Cartoon_green_texture_grass
+    second: {fileID: 2800000, guid: 15a07bb58f797e4438fe453e4fd0b043, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -21,6 +21,7 @@ public class PotionCreationState : MonoBehaviour
 
     //COBA
     [SerializeField] private GameObject OrderLightPotion_Tutor;
+    [SerializeField] private GameObject OrderHealingPotion_Tutor;
 
     [SerializeField] private CauldronCounter cauldronCounter;
 
@@ -165,6 +166,8 @@ public class PotionCreationState : MonoBehaviour
                     //tutorialDialog.HideMessageDelayed("npc", 4f);
                     tutorialDialog.ShowMessage("Antarkan pesanan ke meja, dan Mulai bekerja!", "main");
                     tutorialDialog.HideMessageDelayed("main", 4f);
+                    //OrderLightPotion_Tutor.SetActive(false);
+                    OrderHealingPotion_Tutor.SetActive(true);
                     player.enabled = true;
 
                 }
