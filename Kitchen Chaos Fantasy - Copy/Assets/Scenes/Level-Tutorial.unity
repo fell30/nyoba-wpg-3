@@ -16166,6 +16166,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.691
       objectReference: {fileID: 0}
+    - target: {fileID: 6672399194892675262, guid: 26c0f6d9bac29fd4eac0265e6884cc9a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dca92e25e6b84df4ba448d54a13ab488, type: 2}
     - target: {fileID: 9154376809899444676, guid: 26c0f6d9bac29fd4eac0265e6884cc9a, type: 3}
       propertyPath: _cookingProgressSlider
       value: 
