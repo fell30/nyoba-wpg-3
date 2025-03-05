@@ -179,7 +179,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Setting
+  m_text: 'Music
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -444,7 +446,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 206530969}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1912887876}
+        m_TargetAssemblyTypeName: CameraController, Assembly-CSharp
+        m_MethodName: LookAt
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 560854597}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &206530969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -565,7 +579,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 227784348}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1912887876}
+        m_TargetAssemblyTypeName: CameraController, Assembly-CSharp
+        m_MethodName: LookAt
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1111104965}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &227784348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1087,7 +1113,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 560854593}
   m_LocalRotation: {x: -0, y: 0.43033177, z: -0, w: 0.90267086}
-  m_LocalPosition: {x: 0, y: 0, z: -1081}
+  m_LocalPosition: {x: 0, y: 0, z: -1365}
   m_LocalScale: {x: 0.24487287, y: 0.6970523, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1099,7 +1125,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 50.977, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 854, y: 685}
+  m_AnchoredPosition: {x: 721, y: 685}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &662067163
@@ -1562,7 +1588,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 798536219}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1912887876}
+        m_TargetAssemblyTypeName: CameraController, Assembly-CSharp
+        m_MethodName: LookAt
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1521865996}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &798536219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2260,7 +2298,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 1912887873}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -2281,7 +2319,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1111104961}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -946}
+  m_LocalPosition: {x: 0, y: 0, z: -1361}
   m_LocalScale: {x: 0.24487287, y: 0.6970523, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2731,7 +2769,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Suara
+  m_text: 'Sound
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2898,7 +2938,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1521865992}
   m_LocalRotation: {x: 0, y: -0.43032986, z: 0, w: 0.90267175}
-  m_LocalPosition: {x: 0, y: 0, z: -946}
+  m_LocalPosition: {x: 0, y: 0, z: -1421}
   m_LocalScale: {x: 0.24487287, y: 0.6970523, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2908,7 +2948,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: -50.977, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -1147, y: 685}
+  m_AnchoredPosition: {x: -794, y: 685}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1699453474
@@ -2993,7 +3033,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1699453477}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1912887876}
+        m_TargetAssemblyTypeName: CameraController, Assembly-CSharp
+        m_MethodName: LookAt
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1111104965}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1699453477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3165,6 +3217,7 @@ GameObject:
   - component: {fileID: 1912887873}
   - component: {fileID: 1912887872}
   - component: {fileID: 1912887875}
+  - component: {fileID: 1912887876}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3213,7 +3266,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 50.60082
+  field of view: 55.58816
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -3240,7 +3293,7 @@ Transform:
   m_GameObject: {fileID: 1912887871}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -97, y: 700, z: -1916}
+  m_LocalPosition: {x: -97, y: 700, z: -1895}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3290,6 +3343,19 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!114 &1912887876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1912887871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04c9384d07232814da498d6572b103cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 2
 --- !u!1 &1940698122
 GameObject:
   m_ObjectHideFlags: 0
