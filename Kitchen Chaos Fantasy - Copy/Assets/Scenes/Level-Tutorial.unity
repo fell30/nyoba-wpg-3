@@ -1052,6 +1052,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: CountainerCounter_TwistingMushroom Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 7118045985238033358, guid: eda47335012daf0498d85b4c7cc0f577, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7118045985238033358, guid: eda47335012daf0498d85b4c7cc0f577, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8649d4c9146ca8e489837710c62c0f1b, type: 2}
+    - target: {fileID: 7456660914855751322, guid: eda47335012daf0498d85b4c7cc0f577, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7456660914855751322, guid: eda47335012daf0498d85b4c7cc0f577, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: df314db17b729a24d94a3ad7e1e90ab1, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15057,6 +15073,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: CountainerCounter_TwistingMushroom Variant (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7118045985238033358, guid: eda47335012daf0498d85b4c7cc0f577, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7118045985238033358, guid: eda47335012daf0498d85b4c7cc0f577, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: df314db17b729a24d94a3ad7e1e90ab1, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16176,6 +16200,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: CountainerCounter_TwistingMushroom Variant (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7118045985238033358, guid: eda47335012daf0498d85b4c7cc0f577, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7118045985238033358, guid: eda47335012daf0498d85b4c7cc0f577, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: df314db17b729a24d94a3ad7e1e90ab1, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
