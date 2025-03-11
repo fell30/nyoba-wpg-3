@@ -16403,6 +16403,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1346172940484265243, guid: 26c0f6d9bac29fd4eac0265e6884cc9a, type: 3}
+      propertyPath: scalingMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1346172940484265243, guid: 26c0f6d9bac29fd4eac0265e6884cc9a, type: 3}
+      propertyPath: useUnscaledTime
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1346172940484265243, guid: 26c0f6d9bac29fd4eac0265e6884cc9a, type: 3}
+      propertyPath: InitialModule.gravitySource
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1346172940484265243, guid: 26c0f6d9bac29fd4eac0265e6884cc9a, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1346172940484265243, guid: 26c0f6d9bac29fd4eac0265e6884cc9a, type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 0.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1346172940484265243, guid: 26c0f6d9bac29fd4eac0265e6884cc9a, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 3.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1628084546362702151, guid: 26c0f6d9bac29fd4eac0265e6884cc9a, type: 3}
       propertyPath: m_Color.b
       value: 0.2060637
@@ -16423,6 +16447,14 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: bf3f1955593768147b8887d6355d9888, type: 2}
+    - target: {fileID: 2774135497456285782, guid: 26c0f6d9bac29fd4eac0265e6884cc9a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.045
+      objectReference: {fileID: 0}
+    - target: {fileID: 2774135497456285782, guid: 26c0f6d9bac29fd4eac0265e6884cc9a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.743
+      objectReference: {fileID: 0}
     - target: {fileID: 3943501352874417622, guid: 26c0f6d9bac29fd4eac0265e6884cc9a, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.687
