@@ -820,13 +820,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: ProgressUI
       objectReference: {fileID: 0}
+    - target: {fileID: 2202442113922496890, guid: ab18abdaab6b55a47883e833e81562c1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2367965662021357995, guid: ab18abdaab6b55a47883e833e81562c1, type: 3}
       propertyPath: m_Pivot.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2367965662021357995, guid: ab18abdaab6b55a47883e833e81562c1, type: 3}
       propertyPath: m_Pivot.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2367965662021357995, guid: ab18abdaab6b55a47883e833e81562c1, type: 3}
       propertyPath: m_AnchorMax.x
@@ -853,6 +857,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2367965662021357995, guid: ab18abdaab6b55a47883e833e81562c1, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2367965662021357995, guid: ab18abdaab6b55a47883e833e81562c1, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2367965662021357995, guid: ab18abdaab6b55a47883e833e81562c1, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2367965662021357995, guid: ab18abdaab6b55a47883e833e81562c1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -870,23 +886,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2367965662021357995, guid: ab18abdaab6b55a47883e833e81562c1, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2367965662021357995, guid: ab18abdaab6b55a47883e833e81562c1, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2367965662021357995, guid: ab18abdaab6b55a47883e833e81562c1, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2367965662021357995, guid: ab18abdaab6b55a47883e833e81562c1, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.79
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2367965662021357995, guid: ab18abdaab6b55a47883e833e81562c1, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 1.99
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2367965662021357995, guid: ab18abdaab6b55a47883e833e81562c1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -908,6 +924,14 @@ PrefabInstance:
       propertyPath: hasProgressGameObject
       value: 
       objectReference: {fileID: 6166606290561052732}
+    - target: {fileID: 8565866584581598503, guid: ab18abdaab6b55a47883e833e81562c1, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8707438147362123466, guid: ab18abdaab6b55a47883e833e81562c1, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
