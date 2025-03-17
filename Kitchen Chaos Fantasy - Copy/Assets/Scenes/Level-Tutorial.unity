@@ -4722,7 +4722,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: eda0caa110c97114d820a20c0c7c2b13, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: 32f3193ede4552d42b2248436a5e07c8, type: 2}
+      objectReference: {fileID: 2100000, guid: abf81a4e2addb8841ba7cb0bfba86290, type: 2}
     - target: {fileID: 919132149155446097, guid: eda0caa110c97114d820a20c0c7c2b13, type: 3}
       propertyPath: m_Name
       value: Lifeleaf2 (1)
