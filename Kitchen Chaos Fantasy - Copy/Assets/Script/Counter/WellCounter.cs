@@ -2,12 +2,12 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class WellCounter : BaseCounter
+public class WellCounter : BaseCounter, IHasProgress
 {
     public event EventHandler OnWaterCollected;
+    public event EventHandler<IHasProgress.OnProgressChangedEventArgs> OnProgressChanged;
 
     [SerializeField] private KitchenObjectSO _waterBucketSO;
-    [SerializeField] private Slider _holdSlider;
     [SerializeField] private GameInput _gameInput;
 
     private const float _holdTime = 2f;
@@ -18,8 +18,7 @@ public class WellCounter : BaseCounter
 
     private void Start()
     {
-        InitializeSlider();
-
+        ResetHoldProcess();
     }
 
     public void Initialize(GameInput gameInput)
@@ -35,13 +34,6 @@ public class WellCounter : BaseCounter
         }
     }
 
-    private void InitializeSlider()
-    {
-        _holdSlider.gameObject.SetActive(false);
-        _holdSlider.value = 0;
-
-    }
-
     private void StartHoldProcess(Player player)
     {
         _isHolding = true;
@@ -49,8 +41,6 @@ public class WellCounter : BaseCounter
         _interactingPlayer = player;
         _playerStartPosition = player.Getposition();
 
-        _holdSlider.gameObject.SetActive(true);
-        _holdSlider.value = 0f;
         AudioEventSystem.PlayAudio("Well");
     }
 
@@ -67,7 +57,12 @@ public class WellCounter : BaseCounter
         if (_gameInput.IsInteractPressed() && _interactingPlayer != null && !_interactingPlayer.HasMovedSince(_playerStartPosition))
         {
             _holdProgress += Time.deltaTime / _holdTime;
-            _holdSlider.value = _holdProgress;
+
+            // 🔥 Panggil event OnProgressChanged agar UI mengetahui perubahan progress
+            OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs
+            {
+                progressNormalized = _holdProgress
+            });
 
             if (_holdProgress >= 1f)
             {
@@ -96,11 +91,15 @@ public class WellCounter : BaseCounter
 
     private void ResetHoldProcess()
     {
-        _holdSlider.gameObject.SetActive(false);
-        _holdSlider.value = 0f;
         _isHolding = false;
         _holdProgress = 0f;
         _interactingPlayer = null;
         AudioEventSystem.StopAudio("Well");
+
+        // 🔥 Beritahu UI bahwa progress reset ke 0
+        OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs
+        {
+            progressNormalized = 0f
+        });
     }
 }

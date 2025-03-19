@@ -9,9 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16f952276c9eaf84b9c03c8ee55ab013, type: 3}
-  m_Name: HealingPotion
+  m_Script: {fileID: 11500000, guid: 8ae3b0341c79ceb45829ab7fd3cdc70b, type: 3}
+  m_Name: Result_HealingPotion
   m_EditorClassIdentifier: 
   prefab: {fileID: 5133453827729482660, guid: ffcd9974adccb7b45b80a51bc794ca89, type: 3}
+  objectName: Potion
+  potionName: HealingPotion
   recipeSprite: {fileID: 21300000, guid: e054fa842bc76bc4a93939a7e9213cab, type: 3}
-  objectName: HealingPotion

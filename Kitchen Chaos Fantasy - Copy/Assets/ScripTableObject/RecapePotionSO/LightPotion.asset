@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0731756da4e874349a147a9038b55ce6, type: 3}
   m_Name: LightPotion
   m_EditorClassIdentifier: 
-  potionName: HealingPotion
+  potionName: LightPotion
   ingredients:
   - {fileID: 11400000, guid: 8f2b687d5dd88204eb19771bc6b4867e, type: 2}
   - {fileID: 11400000, guid: eedab8fc322f46d4ca5b37d52f923667, type: 2}

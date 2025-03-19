@@ -1,147 +1,87 @@
+using System;
 using System.Collections.Generic;
-using System.Runtime.InteropServices;
-using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class OrderSystem : MonoBehaviour
 {
-    public List<KitchenObjectSO> possiblePotions;
-    private Queue<KitchenObjectSO> orderQueue = new Queue<KitchenObjectSO>(); // Antrian untuk order
-    private KitchenObjectSO currentOrder; // Order yang sedang aktif
+    public event Action OnAllOrdersCompleted;
+    public List<KitchenObjectSO> possibleOrders; // List pesanan yang bisa muncul
+    private Queue<KitchenObjectSO> orderQueue = new Queue<KitchenObjectSO>(); // Queue KitchenObjectSO
+    private KitchenObjectSO currentOrder;
+
     public GameObject orderUIPrefab;
-    public GameObject Timer;
-
     public Transform orderUIParent;
-    // public TextMeshProUGUI coinText;
 
-    [SerializeField] private GameObject OrderSucces;
+    [SerializeField] private GameObject OrderSuccess;
+    private GameObject currentOrderUI;
 
     private int maxOrders = 2;
-
-
-    private GameObject currentOrderUI;
     private bool isTutorialCompleted = false;
-
-
-
-    void Start()
-    {
-
-        // Jangan panggil GenerateOrders atau ShowNextOrder di sini.
-        // UpdateCoinUI(); // Update UI koin di awal
-    }
-
 
     public void StartOrderSystem()
     {
         isTutorialCompleted = true;
         GenerateOrders(maxOrders);
-        ShowNextOrder(); // Tampilkan order pertama dari antrian
+        ShowNextOrder();
     }
 
-    void GenerateOrders(int count)
+    public void AddNewOrder()
+    {
+        KitchenObjectSO newOrder = possibleOrders[UnityEngine.Random.Range(0, possibleOrders.Count)];
+        orderQueue.Enqueue(newOrder);
+        Debug.Log("New Order: " + newOrder.objectName);
+    }
+
+    private void GenerateOrders(int count)
     {
         for (int i = 0; i < count; i++)
         {
-            KitchenObjectSO newOrder = possiblePotions[Random.Range(0, possiblePotions.Count)];
-            orderQueue.Enqueue(newOrder); // Masukkan order ke dalam antrian
+            AddNewOrder();
         }
     }
 
-    // Menampilkan order berikutnya dari antrian
-    void ShowNextOrder()
+    private void ShowNextOrder()
     {
         if (isTutorialCompleted && orderQueue.Count > 0)
         {
             if (currentOrderUI != null)
             {
-                Destroy(currentOrderUI); // Hapus UI order sebelumnya jika ada
+                Destroy(currentOrderUI);
             }
 
-            currentOrder = orderQueue.Dequeue(); // Ambil order dari antrian
-            currentOrderUI = CreateOrderUI(currentOrder); // Buat UI untuk order tersebut
-        }
-        else if (!isTutorialCompleted)
-        {
-            Debug.Log("Tutorial belum selesai, sistem order tidak aktif.");
-        }
-        else
-        {
-            currentOrder = null; // Tidak ada order lagi
-            Debug.Log("All orders completed!");
-            OrderSucces.SetActive(true);
-            Timer.SetActive(false);
-            if (Input.GetKeyDown(KeyCode.Q))
+            currentOrder = orderQueue.Dequeue();
+            currentOrderUI = Instantiate(orderUIPrefab, orderUIParent);
+
+            OrderUI orderUIComponent = currentOrderUI.GetComponent<OrderUI>();
+            if (orderUIComponent != null)
             {
-                SceneManager.LoadScene("Level1");
-                Debug.Log("Game Restarted");
+                orderUIComponent.SetOrder(currentOrder);
             }
-        }
-    }
-
-    // Metode untuk membuat UI order dan mengembalikan referensinya
-    GameObject CreateOrderUI(KitchenObjectSO order)
-    {
-        if (orderUIPrefab == null)
-        {
-            Debug.LogError("Order UI Prefab is null! Make sure to assign it in the Inspector.");
-            return null;
-        }
-
-        if (orderUIParent == null)
-        {
-            Debug.LogError("Order UI Parent is null! Make sure to assign it in the Inspector.");
-            return null;
-        }
-
-        GameObject orderUI = Instantiate(orderUIPrefab, orderUIParent);
-        Debug.Log("Order UI instantiated successfully.");
-
-        TextMeshProUGUI orderText = orderUI.GetComponentInChildren<TextMeshProUGUI>();
-        if (orderText != null)
-        {
-            orderText.text = order.name; // Tampilkan nama order
         }
         else
         {
-            Debug.LogError("TextMeshProUGUI component is missing in the Order UI Prefab!");
+            currentOrder = null;
+            OrderSuccess.SetActive(true);
+            OnAllOrdersCompleted?.Invoke();
         }
-
-        return orderUI; // Kembalikan referensi ke UI yang baru dibuat
     }
 
-    public bool CheckOrder(KitchenObjectSO potion)
+    public bool CheckOrder(KitchenObjectSO item)
     {
-        return currentOrder != null && currentOrder == potion;
+        return currentOrder != null && currentOrder == item;
     }
 
-    // Selesaikan order saat ini dan tampilkan order berikutnya
-    public void CompleteOrder(KitchenObjectSO potion)
+    public void CompleteOrder(KitchenObjectSO item)
     {
-        if (currentOrder != null && currentOrder == potion)
+        if (CheckOrder(item))
         {
-            Debug.Log("Order completed: " + currentOrder.name);
-            currentOrder = null; // Hapus order saat ini
-            // AddCoins(3); // Tambahkan koin
-
+            currentOrder = null;
             if (currentOrderUI != null)
             {
                 Destroy(currentOrderUI);
-                currentOrderUI = null; // Reset referensi UI order
+                currentOrderUI = null;
             }
-
-            ShowNextOrder(); // Tampilkan order berikutnya dari antrian
-        }
-        else
-        {
-            Debug.Log("Potion is not the current order.");
+            ShowNextOrder();
         }
     }
 }
-
-
-
-
-
-

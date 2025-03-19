@@ -37,7 +37,8 @@ public class ServePotionTutorial : BaseCounter
                 // Panggil metode OnPotionServed() di TutorialController
                 if (tutorialController != null)
                 {
-                    tutorialController.OnPotionServed(); // Tandai bahwa Healing Potion telah disajikan
+                    tutorialController.OnPotionServed();
+                    Debug.Log("TutorialController.OnPotionServed() is called.");
                 }
                 else
                 {
