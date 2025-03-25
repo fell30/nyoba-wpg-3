@@ -753,6 +753,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CountainerCounter_TwistingMushroom Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 6482609577781300241, guid: eda47335012daf0498d85b4c7cc0f577, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7118045985238033358, guid: eda47335012daf0498d85b4c7cc0f577, type: 3}
       propertyPath: m_Materials.Array.size
       value: 1
@@ -15487,6 +15491,10 @@ PrefabInstance:
     - target: {fileID: 6482609577781300241, guid: eda47335012daf0498d85b4c7cc0f577, type: 3}
       propertyPath: m_Name
       value: CountainerCounter_TwistingMushroom Variant (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6482609577781300241, guid: eda47335012daf0498d85b4c7cc0f577, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7118045985238033358, guid: eda47335012daf0498d85b4c7cc0f577, type: 3}
       propertyPath: m_Materials.Array.size
