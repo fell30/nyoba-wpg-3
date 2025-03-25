@@ -104,7 +104,7 @@ public class PotionCreationState : MonoBehaviour
                     cauldronHighlight.SetActive(true); // Tampilkan highlight untuk Cauldron
                     currentState = PotionState.AddCauldron;
                     // tutorialDialog.HideMessageDelayed("npc", 7f);
-                    tutorialDialog.ShowMessage("Masukkan Torch Flower Powder ke dalam tungku.", "npc");
+                    tutorialDialog.ShowMessage("Masukkan Twisting Mushroom ke dalam tungku.", "npc");
                 }
                 break;
             case PotionState.AddCauldron:
@@ -119,9 +119,9 @@ public class PotionCreationState : MonoBehaviour
 
                         // Ubah state
                         currentState = PotionState.TakeMushroom;
-                        // Debug.Log("State changed to: " + currentState.ToString());
+                        //Debug.Log("State changed to: " + currentState.ToString());
                         // tutorialDialog.HideMessageDelayed("main", 7f);
-                        tutorialDialog.ShowMessage("Bagus! Sekarang ambil Glow Fungus lalu masukkan ke dalam tungku.", "npc");
+                        tutorialDialog.ShowMessage("Bagus! Sekarang ambil Torch Flower lalu masukkan ke dalam tungku.", "npc");
                     }
                 }
                 break;
