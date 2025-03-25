@@ -8,6 +8,7 @@ public class ProgressUI : MonoBehaviour
 {
     [SerializeField] private GameObject hasProgressGameObject;
     [SerializeField] private Image barImage;
+    [SerializeField] private GameObject Hud_ui;
     private IHasProgress hasProgress;
 
     private void Start()
@@ -15,15 +16,15 @@ public class ProgressUI : MonoBehaviour
         hasProgress = hasProgressGameObject.GetComponent<IHasProgress>();
         if (hasProgress == null)
         {
-            Debug.LogError("Game Object + " + hasProgressGameObject + "does not have IHasProgress component");
+            Debug.LogError("Game Object " + hasProgressGameObject + " does not have IHasProgress component");
         }
 
         hasProgress.OnProgressChanged += HasProgress_OnProgressChanged;
 
         barImage.fillAmount = 0f;
-
         Hide();
     }
+
     private void HasProgress_OnProgressChanged(object sender, IHasProgress.OnProgressChangedEventArgs e)
     {
         barImage.fillAmount = e.progressNormalized;
@@ -39,9 +40,19 @@ public class ProgressUI : MonoBehaviour
     private void Show()
     {
         gameObject.SetActive(true);
+        if (Hud_ui != null)
+        {
+            Hud_ui.SetActive(false);
+        }
     }
+
     private void Hide()
     {
         gameObject.SetActive(false);
+        if (Hud_ui != null)
+        {
+            Hud_ui.SetActive(true);
+        }
     }
+
 }

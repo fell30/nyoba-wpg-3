@@ -3,7 +3,17 @@ guid: cf1d3e3cd8a3a52448eb3e98734789b3
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lifeleaf leaf
+    second: {fileID: 2100000, guid: 322a3801d6876214ca3f8c74e32c5a37, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Logs
+    second: {fileID: 2100000, guid: 383d69df8598dca41af8e4287b3bf2c1, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

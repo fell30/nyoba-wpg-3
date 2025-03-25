@@ -12,7 +12,7 @@ public class TutorialController : MonoBehaviour
     // public GameObject tutorialUI3;
     // public GameObject tutorialUI4;
     // public GameObject tutorialUI5;
-    public GameObject tutorialUI6;
+    // public GameObject tutorialUI6;
     public GameObject serveTutorial;
     public GameObject ServeMain;
     [SerializeField] PotionCreationState potionCreationState;
@@ -113,9 +113,9 @@ public class TutorialController : MonoBehaviour
         potionCreationState.StartPotionCreationProcess();
         yield return new WaitUntil(() => isPotionServed == true);
         player.enabled = true;
-        tutorialUI6.SetActive(true);
-        yield return new WaitForSeconds(1f);
-        tutorialUI6.SetActive(false);
+        //    // tutorialUI6.SetActive(true);
+        //     yield return new WaitForSeconds(1f);
+        //     tutorialUI6.SetActive(false);
 
         //Timer
         yield return new WaitForSeconds(1f);

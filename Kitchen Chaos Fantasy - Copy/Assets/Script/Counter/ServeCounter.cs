@@ -12,31 +12,29 @@ public class ServingCounter : BaseCounter
     // Metode untuk interaksi utama
     public override void Interact(Player player)
     {
-        // Cek apakah player memiliki kitchen object (potion)
+        // Cek apakah player memiliki kitchen object
         if (player.HasKitchenObject())
         {
             KitchenObject playerObject = player.GetKitchenObject();
-            Debug.Log("Player is trying to serve: " + playerObject.GetKitchenObjectSO().name);
+            KitchenObjectSO playerKitchenObjectSO = playerObject.GetKitchenObjectSO();
 
-            // Cek apakah potion yang dibawa player cocok dengan order
-            if (orderSystem.CheckOrder(playerObject.GetKitchenObjectSO()))
+            Debug.Log("Player is trying to serve: " + playerKitchenObjectSO.name);
+
+            // Cek apakah objek yang dipegang sesuai dengan order yang ada
+            if (orderSystem.CheckOrder(playerKitchenObjectSO))
             {
                 Debug.Log("Order served successfully!");
-                playerObject.DestroySelf(); // Hancurkan potion yang telah disajikan
-                orderSystem.CompleteOrder(playerObject.GetKitchenObjectSO()); // Tandai order sebagai selesai
-
-                // Panggil metode OnPotionServed() di TutorialController
-                FindObjectOfType<TutorialController>().OnPotionServed(); // Pastikan metode ini dipanggil setelah potion disajikan
-                AudioEventSystem.PlayAudio("Serve");
+                playerObject.DestroySelf(); // Hancurkan objek yang disajikan
+                orderSystem.CompleteOrder(playerKitchenObjectSO);
             }
             else
             {
-                Debug.Log("This potion is not ordered.");
+                Debug.Log("This item is not ordered.");
             }
         }
         else
         {
-            Debug.Log("Player is not holding any potion to serve.");
+            Debug.Log("Player is not holding anything.");
         }
     }
 }

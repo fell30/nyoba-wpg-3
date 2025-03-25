@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ae3b0341c79ceb45829ab7fd3cdc70b, type: 3}
+  m_Name: Result_HealingPotion
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 5133453827729482660, guid: ffcd9974adccb7b45b80a51bc794ca89, type: 3}
+  objectName: Potion
+  potionName: HealingPotion
+  recipeSprite: {fileID: 21300000, guid: e054fa842bc76bc4a93939a7e9213cab, type: 3}
