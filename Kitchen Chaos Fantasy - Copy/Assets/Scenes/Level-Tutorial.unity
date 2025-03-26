@@ -704,7 +704,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 1776656564554451679}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c0113a4323317346b4980f4a6bf9c72, type: 3}
   m_Name: 
@@ -2126,7 +2126,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 267868982}
   m_LocalRotation: {x: -0.00020451803, y: -0.07323784, z: 0.0027850086, w: 0.99731064}
-  m_LocalPosition: {x: 0, y: 0, z: 48}
+  m_LocalPosition: {x: 0, y: 0, z: 37}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2136,7 +2136,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: -8.4, z: 0.32}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -163, y: 146}
+  m_AnchoredPosition: {x: -234, y: 146}
   m_SizeDelta: {x: 100, y: 23.4888}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &267868984
@@ -2153,7 +2153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasProgressGameObject: {fileID: 1067791409}
   barImage: {fileID: 241770173}
-  Hud_ui: {fileID: 0}
+  Hud_ui: {fileID: 1098611924}
 --- !u!1 &277996783 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4277231629181964708, guid: f8317004d376011438263333f42b7a71, type: 3}
@@ -6800,7 +6800,7 @@ MonoBehaviour:
   - audioName: Cooking
     clip: {fileID: 8300000, guid: e87a7290c4a6d6f478cea7f1144abb62, type: 3}
   - audioName: TimerSound
-    clip: {fileID: 8300000, guid: 60779c93bfa017645a99e090b575f87a, type: 3}
+    clip: {fileID: 8300000, guid: de2c10a025e227e4f969d7ac4ed54266, type: 3}
 --- !u!4 &886263404
 Transform:
   m_ObjectHideFlags: 0
@@ -6987,7 +6987,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 895116157}
   m_LocalRotation: {x: -0.00020451803, y: -0.07323784, z: 0.0027850086, w: 0.99731064}
-  m_LocalPosition: {x: 0, y: 0, z: 145}
+  m_LocalPosition: {x: 0, y: 0, z: 117}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6997,7 +6997,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: -8.4, z: 0.32}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 494, y: -264}
+  m_AnchoredPosition: {x: 300, y: -263}
   m_SizeDelta: {x: 100, y: 23.4888}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &895116159
@@ -7611,7 +7611,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &982748680
 Transform:
   m_ObjectHideFlags: 0
@@ -12913,7 +12913,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1639123396}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 26236d529881f5148b3b43b74ac6d723, type: 3}
   m_Name: 
@@ -12922,6 +12922,7 @@ MonoBehaviour:
   timerIsRunning: 0
   timeText: {fileID: 1639123399}
   GameOverPanel: {fileID: 479485556}
+  bgm: {fileID: 0}
 --- !u!114 &1639123399
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13133,14 +13134,14 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1989317}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 43, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -39, y: 0}
+  m_SizeDelta: {x: 137.0849, y: 50}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &1658300586
 MonoBehaviour:
@@ -13196,7 +13197,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -13225,7 +13226,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 80.89197, w: 0}
+  m_margin: {x: 0, y: 0, z: 0.0013427734, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -13251,10 +13252,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26236d529881f5148b3b43b74ac6d723, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeRemaining: 120
+  timeRemaining: 30
   timerIsRunning: 0
   timeText: {fileID: 1658300586}
   GameOverPanel: {fileID: 479485556}
+  bgm: {fileID: 982748679}
 --- !u!1 &1668967410
 GameObject:
   m_ObjectHideFlags: 0
@@ -13907,7 +13909,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1749997892}
   m_LocalRotation: {x: -0.00020451803, y: -0.07323784, z: 0.0027850086, w: 0.99731064}
-  m_LocalPosition: {x: 0, y: 0, z: 115}
+  m_LocalPosition: {x: 0, y: 0, z: 33}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -13917,7 +13919,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: -8.4, z: 0.32}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 294, y: -265}
+  m_AnchoredPosition: {x: -262, y: -263}
   m_SizeDelta: {x: 100, y: 23.4888}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1749997894
@@ -15135,7 +15137,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1881169939}
   m_LocalRotation: {x: -0.00020451803, y: -0.07323784, z: 0.0027850086, w: 0.99731064}
-  m_LocalPosition: {x: 0, y: 0, z: 31}
+  m_LocalPosition: {x: 0, y: 0, z: 105}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -15145,7 +15147,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: -8.4, z: 0.32}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -275, y: 146}
+  m_AnchoredPosition: {x: 229, y: 142}
   m_SizeDelta: {x: 100, y: 23.4888}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1881169941
@@ -15162,7 +15164,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasProgressGameObject: {fileID: 534357925}
   barImage: {fileID: 292366199}
-  Hud_ui: {fileID: 1098611924}
+  Hud_ui: {fileID: 0}
 --- !u!1 &1891011144
 GameObject:
   m_ObjectHideFlags: 0
@@ -17014,6 +17016,10 @@ PrefabInstance:
       propertyPath: gameInput
       value: 
       objectReference: {fileID: 169101990}
+    - target: {fileID: 6448862728177996688, guid: cf4157ea362930248af48ca9fa80408c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8784248484756187401, guid: cf4157ea362930248af48ca9fa80408c, type: 3}
       propertyPath: m_RenderMode
       value: 0
