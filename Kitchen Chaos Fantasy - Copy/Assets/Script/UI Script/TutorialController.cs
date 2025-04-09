@@ -7,12 +7,7 @@ public class TutorialController : MonoBehaviour
 {
     public OrderSystem orderSystem;
     public Player player;
-    // public GameObject tutorialUI;
-    // public GameObject tutorialUI2;
-    // public GameObject tutorialUI3;
-    // public GameObject tutorialUI4;
-    // public GameObject tutorialUI5;
-    // public GameObject tutorialUI6;
+    public GameObject[] TutorialInteract;
     public GameObject serveTutorial;
     public GameObject ServeMain;
     [SerializeField] PotionCreationState potionCreationState;
@@ -40,6 +35,9 @@ public class TutorialController : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D))
                 {
                     currenState = TutorialInputState.PressP;
+                    TutorialInteract[0].SetActive(false);
+                    TutorialInteract[1].SetActive(true);
+
                     player.enabled = false;
 
                     tutorialDialog.ShowMessage("Tekan P untuk membuka menu potion.", "hint");
@@ -49,6 +47,8 @@ public class TutorialController : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.P))
                 {
                     currenState = TutorialInputState.PressO;
+                    TutorialInteract[1].SetActive(false);
+                    TutorialInteract[2].SetActive(true);
 
                     tutorialDialog.ShowMessage("Press O For Action", "hint");
 
@@ -57,7 +57,8 @@ public class TutorialController : MonoBehaviour
             case TutorialInputState.PressO:
                 if (Input.GetKeyDown(KeyCode.O))
                 {
-                    currenState = TutorialInputState.Start; // Tambahkan ini agar tidak terus-menerus memulai tutorial
+                    currenState = TutorialInputState.Start;
+
                     StartCoroutine(StartTutorial());
                 }
                 break;
@@ -100,6 +101,7 @@ public class TutorialController : MonoBehaviour
         //tutorialDialog.HideMessageDelayed("main", 3f);
         currenState = TutorialInputState.WASD;
         tutorialDialog.HideMessage("main");
+        TutorialInteract[0].SetActive(true);
         tutorialDialog.ShowMessage("Press WASD to Move Around", "hint");
         player.enabled = true;
 
@@ -109,7 +111,9 @@ public class TutorialController : MonoBehaviour
     private IEnumerator StartTutorial()
     {
         player.enabled = true;
+        TutorialInteract[2].SetActive(false);
         tutorialDialog.HideMessage("hint");
+
         potionCreationState.StartPotionCreationProcess();
         yield return new WaitUntil(() => isPotionServed == true);
         player.enabled = true;
