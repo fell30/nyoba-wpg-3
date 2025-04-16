@@ -17010,7 +17010,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   orderSystem: {fileID: 1668967411}
   player: {fileID: 52797740}
-  TutorialInteract: []
+  TutorialInteract:
+  - {fileID: 1135152859}
+  - {fileID: 1135152859}
+  - {fileID: 1135152859}
   serveTutorial: {fileID: 917395301}
   ServeMain: {fileID: 1132984931}
   potionCreationState: {fileID: 2046771897}
