@@ -9,7 +9,7 @@ public class CountdownTimer : MonoBehaviour
     public bool timerIsRunning = false;
     public TextMeshProUGUI timeText;
     [SerializeField] private GameObject GameOverPanel;
-    public GameObject bgm;
+    //public GameObject bgm;
     public GameObject timerSound;
 
     private bool isTimerSoundPlaying = false;
@@ -19,6 +19,7 @@ public class CountdownTimer : MonoBehaviour
     void Start()
     {
         originalPosition = timeText.transform.localPosition; // Simpan posisi awal teks
+        UpdateTimerDisplay(timeRemaining);
     }
 
     void Update()
@@ -27,7 +28,7 @@ public class CountdownTimer : MonoBehaviour
         {
             if (timeRemaining > 0)
             {
-                bgm.SetActive(true);
+                //bgm.SetActive(true);
                 timeRemaining -= Time.deltaTime;
                 UpdateTimerDisplay(timeRemaining);
 

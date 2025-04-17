@@ -3,8 +3,7 @@ using System.Collections;
 using UnityEngine;
 //using UnityEngine.InputSystem.iOS;
 
-public class TutorialController : MonoBehaviour
-{
+public class TutorialController : MonoBehaviour {
     public OrderSystem orderSystem;
     public Player player;
     // public GameObject tutorialUI;
@@ -22,8 +21,7 @@ public class TutorialController : MonoBehaviour
 
     private bool isPotionServed = false;
 
-    private enum TutorialInputState
-    {
+    private enum TutorialInputState {
         Start,
         WASD,
         PressP,
@@ -32,13 +30,10 @@ public class TutorialController : MonoBehaviour
 
     private TutorialInputState currenState = TutorialInputState.Start;
 
-    private void Update()
-    {
-        switch (currenState)
-        {
+    private void Update() {
+        switch (currenState) {
             case TutorialInputState.WASD:
-                if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D))
-                {
+                if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D)) {
                     currenState = TutorialInputState.PressP;
                     player.enabled = false;
 
@@ -46,8 +41,7 @@ public class TutorialController : MonoBehaviour
                 }
                 break;
             case TutorialInputState.PressP:
-                if (Input.GetKeyDown(KeyCode.P))
-                {
+                if (Input.GetKeyDown(KeyCode.P)) {
                     currenState = TutorialInputState.PressO;
 
                     tutorialDialog.ShowMessage("Press O For Action", "hint");
@@ -55,8 +49,7 @@ public class TutorialController : MonoBehaviour
                 }
                 break;
             case TutorialInputState.PressO:
-                if (Input.GetKeyDown(KeyCode.O))
-                {
+                if (Input.GetKeyDown(KeyCode.O)) {
                     currenState = TutorialInputState.Start; // Tambahkan ini agar tidak terus-menerus memulai tutorial
                     StartCoroutine(StartTutorial());
                 }
@@ -65,11 +58,9 @@ public class TutorialController : MonoBehaviour
         }
     }
 
-    void Start()
-    {
+    void Start() {
 
-        if (player == null)
-        {
+        if (player == null) {
             player = FindObjectOfType<Player>();
             Debug.Log("Player found in the scene.");
 
@@ -77,37 +68,51 @@ public class TutorialController : MonoBehaviour
         }
 
 
-        if (player != null && orderSystem != null)
-        {
+        if (player != null && orderSystem != null) {
             StartCoroutine(IntroDialog());
-        }
-        else
-        {
+        } else {
             Debug.LogError("Player atau OrderSystem tidak diassign di Inspector!");
         }
     }
-    private IEnumerator IntroDialog()
-    {
+    private bool isSkipping = false; // Menandai apakah dialog sedang di-skip
+    private IEnumerator IntroDialog() {
         player.enabled = false;
-        tutorialDialog.ShowMessage("Aku membutuhkan uang untuk membayar pendidikanku.", "main");
-        yield return new WaitForSeconds(6f);
-        // tutorialDialog.HideMessageDelayed("main", 8f);
-        tutorialDialog.ShowMessage("Karena KIPK sudah dihapus demi efisiensi, potion adalah cara paling efisien untuk mendapatkannya. ", "main");
-        yield return new WaitForSeconds(8.5f);
-        // tutorialDialog.HideMessageDelayed("main", 8f);
-        tutorialDialog.ShowMessage("Seharusnya di sekitar sini ada bahan-bahan yang dapat dijadikan untuk potion. Ayo kita mulai untuk membuat potion dan menjualnya!", "main");
-        yield return new WaitForSeconds(8.5f);
-        //tutorialDialog.HideMessageDelayed("main", 3f);
+        isSkipping = false; // Reset setiap kali dialog dimulai
+
+        // player.enabled = false;
+        yield return StartCoroutine(ShowDialogWithSkip("Aku membutuhkan uang untuk membayar pendidikanku.", 6f));
+        yield return StartCoroutine(ShowDialogWithSkip("Karena KIPK sudah dihapus demi efisiensi, potion adalah cara paling efisien untuk mendapatkannya.", 8.5f));
+        yield return StartCoroutine(ShowDialogWithSkip("Seharusnya di sekitar sini ada bahan-bahan yang dapat dijadikan untuk potion. Ayo kita mulai untuk membuat potion dan menjualnya!", 8.5f));
+
         currenState = TutorialInputState.WASD;
         tutorialDialog.HideMessage("main");
         tutorialDialog.ShowMessage("Press WASD to Move Around", "hint");
         player.enabled = true;
 
     }
+    // Fungsi untuk menampilkan dialog dengan opsi skip
+    private IEnumerator ShowDialogWithSkip(string message, float duration) {
+        tutorialDialog.ShowMessage(message, "main");
+
+        float timer = 0f;
+        while (timer < duration) {
+            if (Input.GetKeyDown(KeyCode.Space)) {
+                isSkipping = true;
+                break; // Skip langsung ke dialog berikutnya
+            }
+
+            timer += Time.deltaTime;
+            yield return null;
+        }
+
+        if (!isSkipping) {
+            yield return new WaitForSeconds(duration - timer); // Tunggu sisa durasi jika tidak di-skip
+        }
+    }
 
 
-    private IEnumerator StartTutorial()
-    {
+
+    private IEnumerator StartTutorial() {
         player.enabled = true;
         tutorialDialog.HideMessage("hint");
         potionCreationState.StartPotionCreationProcess();
@@ -135,8 +140,7 @@ public class TutorialController : MonoBehaviour
     }
 
     //Finish make potion
-    public void OnPotionServed()
-    {
+    public void OnPotionServed() {
         Debug.Log("Healing Potion has been served!");
         isPotionServed = true; // Set status menjadi true
         potionCreationState.stirringHighlight.SetActive(false);
@@ -144,15 +148,14 @@ public class TutorialController : MonoBehaviour
     }
 
     //Finish Tutorial
-    public void EndTutorial()
-    {
+    public void EndTutorial() {
         Debug.Log("Tutorial ended. Starting Order System...");
         orderSystem.StartOrderSystem();
 
+        // Panggil AudioManager untuk memulai BGM
+        FindObjectOfType<BGMManager>().StartBGM();
 
-
-        if (serveTutorial != null)
-        {
+        if (serveTutorial != null) {
             serveTutorial.SetActive(false);
             ServeMain.SetActive(true);
             Debug.Log("ServeTutorial GameObject destroyed.");

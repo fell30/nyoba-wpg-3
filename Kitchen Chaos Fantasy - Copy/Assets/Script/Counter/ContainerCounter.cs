@@ -1,23 +1,25 @@
+using FMODUnity;
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class ContainerCounter : BaseCounter
-{
-    public event EventHandler OnGrabbedKitchenObject;
-    [SerializeField] private KitchenObjectSO kitchenObjectSO;
+public class ContainerCounter : BaseCounter {
+    public event System.EventHandler OnGrabbedKitchenObject;
 
-    public override void Interact(Player player)
-    {
+    [SerializeField] private KitchenObjectSO kitchenObjectSO;
+    [SerializeField] private EventReference ambilRamuanSFX;
+
+    public override void Interact(Player player) {
 
         // Jika kitchenObject belum ada, instantiate baru
-        if (!player.HasKitchenObject())
-        {
+        if (!player.HasKitchenObject()) {
             // Jika kitchenObject belum ada, instantiate baru
             KitchenObject.SpawnKitchenObject(kitchenObjectSO, player);
 
             OnGrabbedKitchenObject?.Invoke(this, EventArgs.Empty);
+
+            SFXCounter.PlaySFX(ambilRamuanSFX,player.transform.position);
+
+
 
         }
 

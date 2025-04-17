@@ -2,9 +2,9 @@ using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using FMODUnity;
 
-public class CauldronCounter : BaseCounter, IHasProgress
-{
+public class CauldronCounter : BaseCounter, IHasProgress {
     public event EventHandler<IHasProgress.OnProgressChangedEventArgs> OnProgressChanged;
 
     [SerializeField] private RecipePotionSO[] _potionRecipes;
@@ -17,6 +17,9 @@ public class CauldronCounter : BaseCounter, IHasProgress
     [SerializeField] private KitchenObjectSO _waterBucketSO;
     [SerializeField] private GameObject _Water;
 
+    [SerializeField] private StudioEventEmitter sfxDropIngredient;
+    [SerializeField] private StudioEventEmitter sfxCookingCauldron;
+
     private KitchenObject _ingredient1;
     private KitchenObject _ingredient2;
     private KitchenObject _finishedPotion;
@@ -25,67 +28,50 @@ public class CauldronCounter : BaseCounter, IHasProgress
 
     public bool IsWaterAdded() => _isWaterAdded;
 
-    private void Start()
-    {
+    private void Start() {
         InitializeEffects();
         _Water.SetActive(false);
     }
 
-    private void InitializeEffects()
-    {
+    private void InitializeEffects() {
         _fireParticle?.Stop();
         _fireLight.enabled = false;
         _blubParticle?.Stop();
         _blubLight.enabled = false;
     }
 
-    public override void Interact(Player player)
-    {
-        if (player.HasKitchenObject())
-        {
+    public override void Interact(Player player) {
+        if (player.HasKitchenObject()) {
             KitchenObject playerObject = player.GetKitchenObject();
 
-            if (!_isWaterAdded && playerObject.GetKitchenObjectSO() == _waterBucketSO)
-            {
+            if (!_isWaterAdded && playerObject.GetKitchenObjectSO() == _waterBucketSO) {
                 KitchenObject.Destroy(playerObject.gameObject);
                 _isWaterAdded = true;
                 _Water.SetActive(true);
-                AudioEventSystem.PlayAudio("DropIngredient");
-            }
-            else if (_isWaterAdded && playerObject.GetKitchenObjectSO() != _waterBucketSO)
-            {
-                if (_ingredient1 == null)
-                {
+                sfxDropIngredient.Play();
+            } else if (_isWaterAdded && playerObject.GetKitchenObjectSO() != _waterBucketSO) {
+                if (_ingredient1 == null) {
                     playerObject.SetKitchenObjectParent(this);
                     _ingredient1 = playerObject;
                     _ingredient1.transform.position = _counterTopPoint1.position;
-                    AudioEventSystem.PlayAudio("DropIngredient");
-                }
-                else if (_ingredient2 == null)
-                {
+                    sfxDropIngredient.Play();
+                } else if (_ingredient2 == null) {
                     playerObject.SetKitchenObjectParent(this);
                     _ingredient2 = playerObject;
                     _ingredient2.transform.position = _counterTopPoint2.position;
-                    AudioEventSystem.PlayAudio("DropIngredient");
+                    sfxDropIngredient.Play();
                 }
             }
-        }
-        else
-        {
-            if (_finishedPotion != null)
-            {
+        } else {
+            if (_finishedPotion != null) {
                 _finishedPotion.SetKitchenObjectParent(player);
                 _finishedPotion = null;
                 ResetCauldron();
-            }
-            else if (_ingredient2 != null)
-            {
+            } else if (_ingredient2 != null) {
                 _ingredient2.SetKitchenObjectParent(player);
                 _ingredient2 = null;
                 StopBlubParticleIfNoIngredients();
-            }
-            else if (_ingredient1 != null)
-            {
+            } else if (_ingredient1 != null) {
                 _ingredient1.SetKitchenObjectParent(player);
                 _ingredient1 = null;
                 StopBlubParticleIfNoIngredients();
@@ -93,33 +79,26 @@ public class CauldronCounter : BaseCounter, IHasProgress
         }
     }
 
-    public override void InteractAlternate(Player player)
-    {
-        if (HasBothIngredients() && !_isCookingInProgress)
-        {
+    public override void InteractAlternate(Player player) {
+        if (HasBothIngredients() && !_isCookingInProgress) {
             RecipePotionSO matchedRecipe = GetMatchingRecipe();
-            if (matchedRecipe != null)
-            {
+            if (matchedRecipe != null) {
                 StartCoroutine(CookPotion(matchedRecipe));
-                AudioEventSystem.PlayAudio("Cooking");
-            }
-            else
-            {
+                sfxCookingCauldron.Play();
+            } else {
                 Debug.Log("No matching recipe found for these ingredients.");
             }
         }
     }
 
-    private IEnumerator CookPotion(RecipePotionSO recipe)
-    {
+    private IEnumerator CookPotion(RecipePotionSO recipe) {
         _isCookingInProgress = true;
         PlayCookingEffects();
 
         float cookDuration = 3f;
         float elapsedTime = 0f;
 
-        while (elapsedTime < cookDuration)
-        {
+        while (elapsedTime < cookDuration) {
             elapsedTime += Time.deltaTime;
             float progressNormalized = elapsedTime / cookDuration;
             OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs { progressNormalized = progressNormalized });
@@ -130,7 +109,7 @@ public class CauldronCounter : BaseCounter, IHasProgress
         _ingredient2?.DestroySelf();
         _ingredient1 = null;
         _ingredient2 = null;
-        AudioEventSystem.StopAudio("Cooking");
+        sfxCookingCauldron.Stop();
 
         Transform potionTransform = Instantiate(recipe.potionResult.prefab);
         potionTransform.GetComponent<KitchenObject>().SetKitchenObjectParent(this);
@@ -141,32 +120,27 @@ public class CauldronCounter : BaseCounter, IHasProgress
         StopCookingEffects();
     }
 
-    private void ResetCauldron()
-    {
+    private void ResetCauldron() {
         _Water.SetActive(false);
         _isWaterAdded = false;
     }
 
-    private void PlayCookingEffects()
-    {
+    private void PlayCookingEffects() {
         _fireParticle?.Play();
         _fireLight.enabled = true;
         _blubParticle?.Play();
         _blubLight.enabled = true;
     }
 
-    private void StopCookingEffects()
-    {
+    private void StopCookingEffects() {
         _fireParticle?.Stop();
         _fireLight.enabled = false;
         _blubParticle?.Stop();
         _blubLight.enabled = false;
     }
 
-    private void StopBlubParticleIfNoIngredients()
-    {
-        if (_ingredient1 == null && _ingredient2 == null)
-        {
+    private void StopBlubParticleIfNoIngredients() {
+        if (_ingredient1 == null && _ingredient2 == null) {
             _blubParticle?.Stop();
             _blubLight.enabled = false;
             ResetCauldron();
@@ -175,26 +149,21 @@ public class CauldronCounter : BaseCounter, IHasProgress
 
     private bool HasBothIngredients() => _ingredient1 != null && _ingredient2 != null;
 
-    private RecipePotionSO GetMatchingRecipe()
-    {
-        foreach (RecipePotionSO recipe in _potionRecipes)
-        {
+    private RecipePotionSO GetMatchingRecipe() {
+        foreach (RecipePotionSO recipe in _potionRecipes) {
             if (recipe.ingredients.Length == 2 &&
                 ((recipe.ingredients[0] == _ingredient1.GetKitchenObjectSO() && recipe.ingredients[1] == _ingredient2.GetKitchenObjectSO()) ||
-                (recipe.ingredients[1] == _ingredient1.GetKitchenObjectSO() && recipe.ingredients[0] == _ingredient2.GetKitchenObjectSO())))
-            {
+                (recipe.ingredients[1] == _ingredient1.GetKitchenObjectSO() && recipe.ingredients[0] == _ingredient2.GetKitchenObjectSO()))) {
                 return recipe;
             }
         }
         return null;
     }
-    public KitchenObject GetIngredient1()
-    {
+    public KitchenObject GetIngredient1() {
         return _ingredient1;
     }
 
-    public KitchenObject GetIngredient2()
-    {
+    public KitchenObject GetIngredient2() {
         return _ingredient2;
     }
 
