@@ -1,12 +1,13 @@
 using UnityEngine;
 
-public class ServingCounter : BaseCounter
-{
+public class ServingCounter : BaseCounter {
     private OrderSystem orderSystem;
+    private ServeSFX serveSFX;
 
     private void Start()
     {
         orderSystem = FindObjectOfType<OrderSystem>();
+        serveSFX = GetComponent<ServeSFX>();
     }
 
     // Metode untuk interaksi utama
@@ -21,9 +22,9 @@ public class ServingCounter : BaseCounter
             Debug.Log("Player is trying to serve: " + playerKitchenObjectSO.name);
 
             // Cek apakah objek yang dipegang sesuai dengan order yang ada
-            if (orderSystem.CheckOrder(playerKitchenObjectSO))
-            {
+            if (orderSystem.CheckOrder(playerKitchenObjectSO)) {
                 Debug.Log("Order served successfully!");
+                serveSFX?.PlayAmbilSound();
                 playerObject.DestroySelf(); // Hancurkan objek yang disajikan
                 orderSystem.CompleteOrder(playerKitchenObjectSO);
             }

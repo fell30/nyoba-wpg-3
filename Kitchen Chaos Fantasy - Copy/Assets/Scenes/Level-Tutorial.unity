@@ -11355,6 +11355,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7322757897962992141, guid: ef0f5d4b63c60464986b62f1523e74ca, type: 3}
   m_PrefabInstance: {fileID: 1587940234}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1248515936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1132984931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 229f1f17fe1b96d4fb50435798b0a6ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambilEmitter: {fileID: 1635514150}
 --- !u!1001 &1256396852
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14581,7 +14594,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3375206494164002729, guid: ef0f5d4b63c60464986b62f1523e74ca, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1248515936}
   m_SourcePrefab: {fileID: 100100000, guid: ef0f5d4b63c60464986b62f1523e74ca, type: 3}
 --- !u!1001 &1587969188
 PrefabInstance:
@@ -15504,7 +15520,6 @@ MonoBehaviour:
   timerIsRunning: 0
   timeText: {fileID: 1639123399}
   GameOverPanel: {fileID: 479485556}
-  bgm: {fileID: 0}
   timerSound: {fileID: 0}
 --- !u!114 &1639123399
 MonoBehaviour:
@@ -15915,7 +15930,6 @@ MonoBehaviour:
   timerIsRunning: 0
   timeText: {fileID: 1658300586}
   GameOverPanel: {fileID: 479485556}
-  bgm: {fileID: 0}
   timerSound: {fileID: 0}
 --- !u!1 &1668967410
 GameObject:
