@@ -607,10 +607,10 @@ MonoBehaviour:
   m_Name: FMODStudioSettings
   m_EditorClassIdentifier: 
   switchSettingsMigration: 1
-  HasSourceProject: 1
-  HasPlatforms: 1
+  HasSourceProject: 0
+  HasPlatforms: 0
   sourceProjectPath: ../../../2_TestingFMOD/FMOD WPG/FMOD Unity/FMOD Unity.fspro
-  sourceBankPath: ../../../2_TestingFMOD/FMOD WPG/FMOD Unity/Build
+  sourceBankPath: Assets/StreamingAssets/Desktop
   sourceBankPathUnformatted: 
   BankRefreshCooldown: 5
   ShowBankRefreshWindow: 1
@@ -620,7 +620,7 @@ MonoBehaviour:
   EncryptionKey: 
   ImportType: 0
   TargetAssetPath: FMODBanks
-  TargetBankFolder: 
+  TargetBankFolder: Desktop
   EventLinkage: 0
   LoggingLevel: 2
   SpeakerModeSettings: []
