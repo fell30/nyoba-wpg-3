@@ -19,6 +19,14 @@ public class SelectedCounterVisual : MonoBehaviour
         Player.Instance.OnSelectedCounterChanged += Player_OnSelectedCounterChanged;
     }
 
+    private void OnDestroy()
+    {
+        if (Player.Instance != null)
+        {
+            Player.Instance.OnSelectedCounterChanged -= Player_OnSelectedCounterChanged;
+        }
+    }
+
     private void Player_OnSelectedCounterChanged(object sender, Player.OnSelectedCounterChangedEventArgs e)
     {
         // Debug.Log("Selected counter changed: " + (e.selectedCounter != null ? e.selectedCounter.name : "null"));
@@ -38,7 +46,10 @@ public class SelectedCounterVisual : MonoBehaviour
     {
         foreach (GameObject visual in VisualGameObjectArray)
         {
-            visual.SetActive(true);
+            if (visual != null)
+            {
+                visual.SetActive(true);
+            }
         }
 
     }
@@ -46,7 +57,10 @@ public class SelectedCounterVisual : MonoBehaviour
     {
         foreach (GameObject visual in VisualGameObjectArray)
         {
-            visual.SetActive(false);
+            if (visual != null)
+            {
+                visual.SetActive(false);
+            }
         }
     }
 }
