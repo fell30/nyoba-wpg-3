@@ -1,23 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-9096663494178333958
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Desktop/BGM.assets.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/StreamingAssets/Desktop/BGM.assets.bank
-  Name: Desktop/BGM.assets
-  StudioPath: bank:/BGM.assets
-  lastModified: 638813845178410382
-  FileSizes: []
-  Exists: 1
 --- !u!114 &-8979981220074511426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37,7 +19,7 @@ MonoBehaviour:
     Data3: 69253554
     Data4: 1202372693
   Banks:
-  - {fileID: 1966275717409501090}
+  - {fileID: 1532965806099638775}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -45,7 +27,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 45
   Length: 1000
---- !u!114 &-6684928736374523964
+--- !u!114 &-8334219701536347708
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -55,15 +37,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Desktop/BGM.streams.bank
+  m_Name: bank:/BGM.bank
   m_EditorClassIdentifier: 
-  Path: Assets/StreamingAssets/Desktop/BGM.streams.bank
-  Name: Desktop/BGM.streams
-  StudioPath: bank:/BGM.streams
-  lastModified: 638813845178582832
+  Path: Assets/StreamingAssets/BGM.bank
+  Name: BGM
+  StudioPath: bank:/BGM
+  lastModified: 638815355051084666
   FileSizes: []
   Exists: 1
---- !u!114 &-5594498818193553347
+--- !u!114 &-7573921417890544876
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -73,48 +55,66 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Desktop/SFX.streams.bank
+  m_Name: bank:/Master.bank
   m_EditorClassIdentifier: 
-  Path: Assets/StreamingAssets/Desktop/SFX.streams.bank
-  Name: Desktop/SFX.streams
-  StudioPath: bank:/SFX.streams
-  lastModified: 638813845178683867
-  FileSizes: []
-  Exists: 1
---- !u!114 &-4841999981654415787
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Desktop/SFX.assets.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/StreamingAssets/Desktop/SFX.assets.bank
-  Name: Desktop/SFX.assets
-  StudioPath: bank:/SFX.assets
-  lastModified: 638813845178627939
-  FileSizes: []
-  Exists: 1
---- !u!114 &-4171264531020339791
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Desktop/Master.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/StreamingAssets/Desktop/Master.bank
-  Name: Desktop/Master
+  Path: Assets/StreamingAssets/Master.bank
+  Name: Master
   StudioPath: bank:/Master
-  lastModified: 638813845178601113
+  lastModified: 638815355052001731
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-6986272459831866001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.assets.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/StreamingAssets/Master.assets.bank
+  Name: Master.assets
+  StudioPath: bank:/Master.assets
+  lastModified: 638815355051776785
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-6924527446222899226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/SFX.assets.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/StreamingAssets/SFX.assets.bank
+  Name: SFX.assets
+  StudioPath: bank:/SFX.assets
+  lastModified: 638815355052773319
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-5953538371435897332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/BGM.assets.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/StreamingAssets/BGM.assets.bank
+  Name: BGM.assets
+  StudioPath: bank:/BGM.assets
+  lastModified: 638815355050778378
   FileSizes: []
   Exists: 1
 --- !u!114 &-2511822066361138842
@@ -136,7 +136,7 @@ MonoBehaviour:
     Data3: -667711079
     Data4: 772195109
   Banks:
-  - {fileID: 1966275717409501090}
+  - {fileID: 1532965806099638775}
   IsStream: 1
   Is3D: 1
   IsOneShot: 1
@@ -144,26 +144,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 45
   Length: 13439
---- !u!114 &-1229842367138780337
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Desktop/Master.strings.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/StreamingAssets/Desktop/Master.strings.bank
-  Name: Desktop/Master.strings
-  StudioPath: bank:/Master.strings
-  lastModified: 638813845178607946
-  FileSizes:
-  - Name: 
-    Value: 1486
-  Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,16 +157,16 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: -1229842367138780337}
-  - {fileID: -9096663494178333958}
-  - {fileID: 5938848020683266470}
-  - {fileID: -6684928736374523964}
-  - {fileID: 6050299489341014197}
-  - {fileID: -4171264531020339791}
-  - {fileID: 3515877848104901679}
-  - {fileID: -4841999981654415787}
-  - {fileID: 1966275717409501090}
-  - {fileID: -5594498818193553347}
+  - {fileID: 2332680043342625533}
+  - {fileID: -5953538371435897332}
+  - {fileID: -8334219701536347708}
+  - {fileID: 5169584330365059639}
+  - {fileID: -6986272459831866001}
+  - {fileID: -7573921417890544876}
+  - {fileID: 7805797983100729270}
+  - {fileID: -6924527446222899226}
+  - {fileID: 1532965806099638775}
+  - {fileID: 5954744730437399215}
   EditorEvents:
   - {fileID: 8236027062339220809}
   - {fileID: 2524648150070645894}
@@ -197,10 +177,10 @@ MonoBehaviour:
   - {fileID: 537103363664155959}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -4171264531020339791}
+  - {fileID: -7573921417890544876}
   StringsBanks:
-  - {fileID: -1229842367138780337}
-  cacheTime: 638813845178683867
+  - {fileID: 2332680043342625533}
+  cacheTime: 638815355053417867
   cacheVersion: 131846
 --- !u!114 &122015349597919772
 MonoBehaviour:
@@ -221,7 +201,7 @@ MonoBehaviour:
     Data3: 1752834735
     Data4: -407135531
   Banks:
-  - {fileID: 1966275717409501090}
+  - {fileID: 1532965806099638775}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -248,7 +228,7 @@ MonoBehaviour:
     Data3: -1711091543
     Data4: -103753337
   Banks:
-  - {fileID: 1966275717409501090}
+  - {fileID: 1532965806099638775}
   IsStream: 1
   Is3D: 1
   IsOneShot: 1
@@ -275,7 +255,7 @@ MonoBehaviour:
     Data3: -1752210295
     Data4: -1595690107
   Banks:
-  - {fileID: 1966275717409501090}
+  - {fileID: 1532965806099638775}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -283,7 +263,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 30
   Length: 77
---- !u!114 &1966275717409501090
+--- !u!114 &1532965806099638775
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -293,13 +273,33 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Desktop/SFX.bank
+  m_Name: bank:/SFX.bank
   m_EditorClassIdentifier: 
-  Path: Assets/StreamingAssets/Desktop/SFX.bank
-  Name: Desktop/SFX
+  Path: Assets/StreamingAssets/SFX.bank
+  Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638813845178627939
+  lastModified: 638815355053085726
   FileSizes: []
+  Exists: 1
+--- !u!114 &2332680043342625533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/StreamingAssets/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638815355052531178
+  FileSizes:
+  - Name: 
+    Value: 1486
   Exists: 1
 --- !u!114 &2524648150070645894
 MonoBehaviour:
@@ -320,7 +320,7 @@ MonoBehaviour:
     Data3: 29889159
     Data4: 1548282012
   Banks:
-  - {fileID: 1966275717409501090}
+  - {fileID: 1532965806099638775}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -328,7 +328,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 35
   Length: 300
---- !u!114 &3515877848104901679
+--- !u!114 &5169584330365059639
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -338,48 +338,48 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Desktop/Master.streams.bank
+  m_Name: bank:/BGM.streams.bank
   m_EditorClassIdentifier: 
-  Path: Assets/StreamingAssets/Desktop/Master.streams.bank
-  Name: Desktop/Master.streams
+  Path: Assets/StreamingAssets/BGM.streams.bank
+  Name: BGM.streams
+  StudioPath: bank:/BGM.streams
+  lastModified: 638815355051606894
+  FileSizes: []
+  Exists: 1
+--- !u!114 &5954744730437399215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/SFX.streams.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/StreamingAssets/SFX.streams.bank
+  Name: SFX.streams
+  StudioPath: bank:/SFX.streams
+  lastModified: 638815355053417867
+  FileSizes: []
+  Exists: 1
+--- !u!114 &7805797983100729270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.streams.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/StreamingAssets/Master.streams.bank
+  Name: Master.streams
   StudioPath: bank:/Master.streams
-  lastModified: 638813845178607946
-  FileSizes: []
-  Exists: 1
---- !u!114 &5938848020683266470
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Desktop/BGM.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/StreamingAssets/Desktop/BGM.bank
-  Name: Desktop/BGM
-  StudioPath: bank:/BGM
-  lastModified: 638813845178420171
-  FileSizes: []
-  Exists: 1
---- !u!114 &6050299489341014197
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Desktop/Master.assets.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/StreamingAssets/Desktop/Master.assets.bank
-  Name: Desktop/Master.assets
-  StudioPath: bank:/Master.assets
-  lastModified: 638813845178601113
+  lastModified: 638815355052248545
   FileSizes: []
   Exists: 1
 --- !u!114 &8236027062339220809
@@ -401,7 +401,7 @@ MonoBehaviour:
     Data3: -1336331869
     Data4: -795325664
   Banks:
-  - {fileID: 5938848020683266470}
+  - {fileID: -8334219701536347708}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
