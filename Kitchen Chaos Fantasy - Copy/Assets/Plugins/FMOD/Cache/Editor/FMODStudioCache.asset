@@ -207,7 +207,7 @@ MonoBehaviour:
   Path: Assets/StreamingAssets/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638816377176930261
+  lastModified: 638815506067904527
   FileSizes: []
   Exists: 1
 --- !u!114 &-2610302134265273746
@@ -281,7 +281,7 @@ MonoBehaviour:
   Path: Assets/StreamingAssets/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638816377176588470
+  lastModified: 638815506067884458
   FileSizes:
   - Name: 
     Value: 1486
@@ -301,7 +301,7 @@ MonoBehaviour:
   Path: Assets/StreamingAssets/Master.assets.bank
   Name: Master.assets
   StudioPath: bank:/Master.assets
-  lastModified: 638816377176061397
+  lastModified: 638815506067851613
   FileSizes: []
   Exists: 1
 --- !u!114 &-839907043527611719
@@ -319,7 +319,7 @@ MonoBehaviour:
   Path: Assets/StreamingAssets/BGM.streams.bank
   Name: BGM.streams
   StudioPath: bank:/BGM.streams
-  lastModified: 638816377175875228
+  lastModified: 638815506067841565
   FileSizes: []
   Exists: 1
 --- !u!114 &-228620670982119014
@@ -337,7 +337,7 @@ MonoBehaviour:
   Path: Assets/StreamingAssets/Master.streams.bank
   Name: Master.streams
   StudioPath: bank:/Master.streams
-  lastModified: 638816377176422725
+  lastModified: 638815506067874250
   FileSizes: []
   Exists: 1
 --- !u!114 &11400000
@@ -387,7 +387,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: -1896010386863176234}
   cacheVersion: 131847
-  cacheTime: 638816406112008730
+  cacheTime: 638815506067962359
   SerializableEventsDict:
   - key: event:/BGM
     index: 0
@@ -482,7 +482,7 @@ MonoBehaviour:
   Path: Assets/StreamingAssets/SFX.assets.bank
   Name: SFX.assets
   StudioPath: bank:/SFX.assets
-  lastModified: 638816377176762124
+  lastModified: 638815506067894575
   FileSizes: []
   Exists: 1
 --- !u!114 &7100551099716999625
@@ -500,7 +500,7 @@ MonoBehaviour:
   Path: Assets/StreamingAssets/SFX.streams.bank
   Name: SFX.streams
   StudioPath: bank:/SFX.streams
-  lastModified: 638816377177189139
+  lastModified: 638815506067962359
   FileSizes: []
   Exists: 1
 --- !u!114 &7156616253260308461
@@ -518,7 +518,7 @@ MonoBehaviour:
   Path: Assets/StreamingAssets/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638816377176222645
+  lastModified: 638815506067861582
   FileSizes: []
   Exists: 1
 --- !u!114 &8073326364739323200
@@ -564,7 +564,7 @@ MonoBehaviour:
   Path: Assets/StreamingAssets/BGM.bank
   Name: BGM
   StudioPath: bank:/BGM
-  lastModified: 638816377175473735
+  lastModified: 638815506067705945
   FileSizes: []
   Exists: 1
 --- !u!114 &8262939412483544363
@@ -582,24 +582,6 @@ MonoBehaviour:
   Path: Assets/StreamingAssets/BGM.assets.bank
   Name: BGM.assets
   StudioPath: bank:/BGM.assets
-  lastModified: 638816377175302102
-  FileSizes: []
-  Exists: 1
---- !u!114 &8829186836604209168
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Desktop/BGM.assets.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/StreamingAssets/Desktop/BGM.assets.bank
-  Name: Desktop/BGM.assets
-  StudioPath: bank:/BGM.assets
-  lastModified: 638816380748006576
+  lastModified: 638815506067695799
   FileSizes: []
   Exists: 1
