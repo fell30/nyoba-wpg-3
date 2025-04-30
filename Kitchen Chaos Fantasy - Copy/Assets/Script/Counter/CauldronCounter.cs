@@ -51,6 +51,7 @@ public class CauldronCounter : BaseCounter, IHasProgress
                 _isWaterAdded = true;
                 _Water.SetActive(true);
                 AudioEventSystem.PlayAudio("DropIngredient");
+                GetComponent<WellAudio>()?.PlayAmbilSound();
             }
             else if (_isWaterAdded && playerObject.GetKitchenObjectSO() != _waterBucketSO)
             {
@@ -60,6 +61,7 @@ public class CauldronCounter : BaseCounter, IHasProgress
                     _ingredient1 = playerObject;
                     _ingredient1.transform.position = _counterTopPoint1.position;
                     AudioEventSystem.PlayAudio("DropIngredient");
+                    GetComponent<WellAudio>()?.PlayAmbilSound();
                 }
                 else if (_ingredient2 == null)
                 {
@@ -67,6 +69,7 @@ public class CauldronCounter : BaseCounter, IHasProgress
                     _ingredient2 = playerObject;
                     _ingredient2.transform.position = _counterTopPoint2.position;
                     AudioEventSystem.PlayAudio("DropIngredient");
+                    GetComponent<WellAudio>()?.PlayAmbilSound();
                 }
             }
         }
@@ -102,6 +105,7 @@ public class CauldronCounter : BaseCounter, IHasProgress
             {
                 StartCoroutine(CookPotion(matchedRecipe));
                 AudioEventSystem.PlayAudio("Cooking");
+                GetComponent<WellAudio>()?.MasakPotion();
             }
             else
             {
@@ -131,6 +135,8 @@ public class CauldronCounter : BaseCounter, IHasProgress
         _ingredient1 = null;
         _ingredient2 = null;
         AudioEventSystem.StopAudio("Cooking");
+        GetComponent<WellAudio>()?.StopMasakPotion();
+
 
         Transform potionTransform = Instantiate(recipe.potionResult.prefab);
         potionTransform.GetComponent<KitchenObject>().SetKitchenObjectParent(this);

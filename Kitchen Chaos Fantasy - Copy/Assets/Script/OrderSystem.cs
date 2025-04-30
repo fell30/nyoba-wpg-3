@@ -5,9 +5,10 @@ using UnityEngine;
 public class OrderSystem : MonoBehaviour
 {
     public event Action OnAllOrdersCompleted;
-    public List<KitchenObjectSO> possibleOrders; // List pesanan yang bisa muncul
-    private Queue<KitchenObjectSO> orderQueue = new Queue<KitchenObjectSO>(); // Queue KitchenObjectSO
+    public List<KitchenObjectSO> possibleOrders;
+    private Queue<KitchenObjectSO> orderQueue = new Queue<KitchenObjectSO>();
     private KitchenObjectSO currentOrder;
+    [SerializeField] private CountdownTimer countdownTimer;
 
     public GameObject orderUIPrefab;
     public Transform orderUIParent;
@@ -63,6 +64,7 @@ public class OrderSystem : MonoBehaviour
             currentOrder = null;
             OrderSuccess.SetActive(true);
             OnAllOrdersCompleted?.Invoke();
+            countdownTimer.StopTimer();
         }
     }
 

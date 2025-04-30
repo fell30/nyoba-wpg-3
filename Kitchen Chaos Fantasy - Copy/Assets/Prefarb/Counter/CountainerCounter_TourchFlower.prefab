@@ -88,14 +88,17 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1978162421496860025, guid: 73b65532f54f8e040b18acaa1fe62216, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8921478763985911916}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9085880857875767081, guid: 73b65532f54f8e040b18acaa1fe62216, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 361448181239273909}
   m_SourcePrefab: {fileID: 100100000, guid: 73b65532f54f8e040b18acaa1fe62216, type: 3}
 --- !u!114 &1124166070662810228 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3307345415475961364, guid: 73b65532f54f8e040b18acaa1fe62216, type: 3}
   m_PrefabInstance: {fileID: 2485945436482917472}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 6658662983685999433}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1cffc8653de6009468d8d30a27a7bbae, type: 3}
@@ -106,6 +109,26 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1978162421496860025, guid: 73b65532f54f8e040b18acaa1fe62216, type: 3}
   m_PrefabInstance: {fileID: 2485945436482917472}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6658662983685999433 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9085880857875767081, guid: 73b65532f54f8e040b18acaa1fe62216, type: 3}
+  m_PrefabInstance: {fileID: 2485945436482917472}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &361448181239273909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6658662983685999433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cbfd08c30e6aa14caa0fb2884a9030b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambilEmitter: {fileID: 5934115295746545462, guid: 57deaac772fcc8643a0d79d09806c246, type: 3}
+  taruhEmitter: {fileID: 7947536617824656679, guid: 9f63030e89be9e042be3d30e4f17adb2, type: 3}
+  masakEmitter: {fileID: 0}
 --- !u!1001 &3482700857417878512
 PrefabInstance:
   m_ObjectHideFlags: 0

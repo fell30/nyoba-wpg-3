@@ -70,7 +70,7 @@ public class PotionCreationState : MonoBehaviour
                 break;
 
             case PotionState.AddWaterBucketToCauldron:
-                Debug.Log("Checking if water is added in PotionCreationState...");
+                // Debug.Log("Checking if water is added in PotionCreationState...");
                 if (cauldronCounter.IsWaterAdded())
                 {
 

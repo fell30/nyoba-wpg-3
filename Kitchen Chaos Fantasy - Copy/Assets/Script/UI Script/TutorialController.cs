@@ -14,9 +14,8 @@ public class TutorialController : MonoBehaviour
     [SerializeField] private GameObject[] TimerPanel;
     [SerializeField] private CountdownTimer countdownTimer;
     [SerializeField] private TutorialDialog tutorialDialog;
-
+    [SerializeField] private GameObject TimerDanGoldUI;
     private bool isPotionServed = false;
-
     private enum TutorialInputState
     {
         Start,
@@ -40,27 +39,30 @@ public class TutorialController : MonoBehaviour
 
                     player.enabled = false;
 
-                    tutorialDialog.ShowMessage("Tekan P untuk membuka menu potion.", "hint");
+
+                    //  tutorialDialog.ShowMessage("Tekan P untuk membuka menu potion.", "hint");
                 }
                 break;
             case TutorialInputState.PressP:
-                if (Input.GetKeyDown(KeyCode.P))
+                if (Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.O))
+
                 {
                     currenState = TutorialInputState.PressO;
-                    TutorialInteract[1].SetActive(false);
-                    TutorialInteract[2].SetActive(true);
 
-                    tutorialDialog.ShowMessage("Press O For Action", "hint");
+                    TutorialInteract[1].SetActive(false);
+                    StartCoroutine(StartTutorial());
+
+
+
 
                 }
                 break;
             case TutorialInputState.PressO:
-                if (Input.GetKeyDown(KeyCode.O))
-                {
-                    currenState = TutorialInputState.Start;
 
-                    StartCoroutine(StartTutorial());
-                }
+                currenState = TutorialInputState.Start;
+
+                StartCoroutine(StartTutorial());
+
                 break;
 
         }
@@ -90,23 +92,47 @@ public class TutorialController : MonoBehaviour
     private IEnumerator IntroDialog()
     {
         player.enabled = false;
-        tutorialDialog.ShowMessage("Aku membutuhkan uang untuk membayar pendidikanku.", "main");
-        yield return new WaitForSeconds(6f);
-        // tutorialDialog.HideMessageDelayed("main", 8f);
-        tutorialDialog.ShowMessage("Karena KIPK sudah dihapus demi efisiensi, potion adalah cara paling efisien untuk mendapatkannya. ", "main");
-        yield return new WaitForSeconds(8.5f);
-        // tutorialDialog.HideMessageDelayed("main", 8f);
-        tutorialDialog.ShowMessage("Seharusnya di sekitar sini ada bahan-bahan yang dapat dijadikan untuk potion. Ayo kita mulai untuk membuat potion dan menjualnya!", "main");
-        yield return new WaitForSeconds(8.5f);
-        //tutorialDialog.HideMessageDelayed("main", 3f);
+
+        tutorialDialog.ShowMessage("Since we need money to pay for the academy, selling potions is the most efficient way to get it.", "main");
+        yield return StartCoroutine(WaitForKeyPressOrDelay(6f));
+
+
+
+        tutorialDialog.ShowMessage("There should be ingredients around here that can be used for make potions.", "main");
+
+        yield return StartCoroutine(WaitForKeyPressOrDelay(6f));
+
+
+        tutorialDialog.ShowMessage(" Let's start making potions and selling them! ", "main");
+
+        yield return StartCoroutine(WaitForKeyPressOrDelay(6f));
+
+
         currenState = TutorialInputState.WASD;
         tutorialDialog.HideMessage("main");
         TutorialInteract[0].SetActive(true);
-        tutorialDialog.ShowMessage("Press WASD to Move Around", "hint");
+        // tutorialDialog.ShowMessage("Press WASD to Move Around", "hint");
         player.enabled = true;
 
     }
 
+    private IEnumerator WaitForKeyPressOrDelay(float delayTime)
+    {
+        float timeElapsed = 0f;
+
+        while (timeElapsed < delayTime)
+        {
+
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+
+                yield break;
+            }
+            timeElapsed += Time.deltaTime;
+
+            yield return null;
+        }
+    }
 
     private IEnumerator StartTutorial()
     {
@@ -153,8 +179,9 @@ public class TutorialController : MonoBehaviour
         Debug.Log("Tutorial ended. Starting Order System...");
         orderSystem.StartOrderSystem();
 
+        FindObjectOfType<BGMManager>().StartBGM();
 
-
+        TimerDanGoldUI.SetActive(true);
         if (serveTutorial != null)
         {
             serveTutorial.SetActive(false);

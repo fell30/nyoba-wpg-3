@@ -9,8 +9,7 @@ public class CountdownTimer : MonoBehaviour
     public bool timerIsRunning = false;
     public TextMeshProUGUI timeText;
     [SerializeField] private GameObject GameOverPanel;
-    public GameObject bgm;
-    public GameObject timerSound;
+
 
     private bool isTimerSoundPlaying = false;
     private bool isUrgentMusicPlaying = false;
@@ -27,22 +26,24 @@ public class CountdownTimer : MonoBehaviour
         {
             if (timeRemaining > 0)
             {
-                bgm.SetActive(true);
+
+
                 timeRemaining -= Time.deltaTime;
                 UpdateTimerDisplay(timeRemaining);
 
                 // 🔥 Musik berubah saat timer tersisa ≤ 10 detik
                 if (timeRemaining <= 10f && !isUrgentMusicPlaying)
                 {
-                    AudioEventSystem.PlayAudio("TimerUrgentStart");
+
                     isUrgentMusicPlaying = true;
                 }
 
                 // 🔥 Timer Sound saat tersisa ≤ 8 detik
                 if (timeRemaining <= 30f && !isTimerSoundPlaying)
                 {
-                    timerSound.SetActive(true);
+
                     isTimerSoundPlaying = true;
+                    GetComponent<SFX_Timer>().PlayTimer();
                 }
             }
             else
@@ -57,6 +58,10 @@ public class CountdownTimer : MonoBehaviour
     public void StartTimer()
     {
         timerIsRunning = true;
+    }
+    public void StopTimer()
+    {
+        timerIsRunning = false;
     }
 
     void UpdateTimerDisplay(float currentTime)
@@ -95,6 +100,8 @@ public class CountdownTimer : MonoBehaviour
         Debug.Log("Timer finished! Execute any end of timer logic here.");
         GameOverPanel.SetActive(true);
         Time.timeScale = 0; // Pause game saat waktu habis
+        FindAnyObjectByType<BGMManager>().StopBGM();
+
 
         // Hentikan suara timer
         if (isTimerSoundPlaying)
