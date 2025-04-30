@@ -143,7 +143,7 @@ MonoBehaviour:
   Path: Assets/StreamingAssets/Desktop/SFX.streams.bank
   Name: Desktop/SFX.streams
   StudioPath: bank:/SFX.streams
-  lastModified: 638816402760058564
+  lastModified: 638816406112008730
   FileSizes: []
   Exists: 1
 --- !u!114 &-3919050430154801404
@@ -189,7 +189,7 @@ MonoBehaviour:
   Path: Assets/StreamingAssets/Desktop/SFX.bank
   Name: Desktop/SFX
   StudioPath: bank:/SFX
-  lastModified: 638816402759656005
+  lastModified: 638816406111477571
   FileSizes: []
   Exists: 1
 --- !u!114 &-3339021518018097524
@@ -387,7 +387,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: -1896010386863176234}
   cacheVersion: 131847
-  cacheTime: 638816402760058564
+  cacheTime: 638816406112008730
   SerializableEventsDict:
   - key: event:/BGM
     index: 0
@@ -436,7 +436,7 @@ MonoBehaviour:
   Path: Assets/StreamingAssets/Desktop/SFX.assets.bank
   Name: Desktop/SFX.assets
   StudioPath: bank:/SFX.assets
-  lastModified: 638816402759866933
+  lastModified: 638816406111803818
   FileSizes: []
   Exists: 1
 --- !u!114 &6756592557595634703
