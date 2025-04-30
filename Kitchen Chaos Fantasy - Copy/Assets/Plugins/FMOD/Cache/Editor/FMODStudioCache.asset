@@ -53,7 +53,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 35
-  Length: 300
+  Length: 200
 --- !u!114 &-3919050430154801404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80,7 +80,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 32231
+  Length: 31000
 --- !u!114 &-3339021518018097524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,7 +125,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 45
-  Length: 13439
+  Length: 9400
 --- !u!114 &-1999144270078641312
 MonoBehaviour:
   m_ObjectHideFlags: 0
