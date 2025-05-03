@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
+using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class OrderSystem : MonoBehaviour
 {
@@ -19,12 +21,21 @@ public class OrderSystem : MonoBehaviour
     private int maxOrders = 2;
     private bool isTutorialCompleted = false;
 
+    private void Start()
+    {
+        if (SceneManager.GetActiveScene().name != "Level-Tutorial")
+        {
+            StartOrderSystem();
+            Debug.Log("Order System Started");
+        }
+    }
     public void StartOrderSystem()
     {
         isTutorialCompleted = true;
         GenerateOrders(maxOrders);
         ShowNextOrder();
     }
+
 
     public void AddNewOrder()
     {
@@ -33,13 +44,28 @@ public class OrderSystem : MonoBehaviour
         Debug.Log("New Order: " + newOrder.objectName);
     }
 
+    public void Shuffle<T>(List<T> list)
+    {
+        System.Random rand = new System.Random();
+        int n = list.Count;
+        for (int i = 0; i < n; i++)
+        {
+            int j = rand.Next(i, n);
+            T temp = list[i];
+            list[i] = list[j];
+            list[j] = temp;
+        }
+    }
+
     private void GenerateOrders(int count)
     {
+        Shuffle(possibleOrders);
         for (int i = 0; i < count; i++)
         {
             AddNewOrder();
         }
     }
+
 
     private void ShowNextOrder()
     {
