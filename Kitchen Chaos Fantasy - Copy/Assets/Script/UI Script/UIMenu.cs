@@ -3,19 +3,40 @@ using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class UIMenu : MonoBehaviour
 {
-    public GameObject OptionsMenu;
 
-    public void PlayGame()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    }
+    public Button[] menuButtons;
+    private int currentIndex = 0;
+
 
     void Start()
     {
-
+        EventSystem.current.SetSelectedGameObject(menuButtons[currentIndex].gameObject);
+    }
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            currentIndex = (currentIndex + 1) % menuButtons.Length;
+            EventSystem.current.SetSelectedGameObject(menuButtons[currentIndex].gameObject);
+        }
+        else if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            currentIndex = (currentIndex - 1 + menuButtons.Length) % menuButtons.Length;
+            EventSystem.current.SetSelectedGameObject(menuButtons[currentIndex].gameObject);
+        }
+        else if (Input.GetKeyDown(KeyCode.Return)) // Enter key
+        {
+            menuButtons[currentIndex].onClick.Invoke();
+        }
+    }
+    public void PlayGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     // EnableDisable Menu
@@ -57,13 +78,5 @@ public class UIMenu : MonoBehaviour
         Application.Quit();
     }
 
-    public void Options()
-    {
-        OptionsMenu.SetActive(true);
-    }
 
-    public void BackOptions()
-    {
-        OptionsMenu.SetActive(false);
-    }
 }
