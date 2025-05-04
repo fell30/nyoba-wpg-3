@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.SearchService;
 using UnityEngine;
@@ -15,17 +16,19 @@ public class OrderSystem : MonoBehaviour
     public GameObject orderUIPrefab;
     public Transform orderUIParent;
 
+    [SerializeField] private GameObject[] TimerPanel;
+
     [SerializeField] private GameObject OrderSuccess;
     private GameObject currentOrderUI;
 
-    private int maxOrders = 2;
+    public int maxOrders = 2;
     private bool isTutorialCompleted = false;
 
     private void Start()
     {
         if (SceneManager.GetActiveScene().name != "Level-Tutorial")
         {
-            StartOrderSystem();
+            StartCoroutine(TimerPanelAnimation());
             Debug.Log("Order System Started");
         }
     }
@@ -111,5 +114,22 @@ public class OrderSystem : MonoBehaviour
             }
             ShowNextOrder();
         }
+    }
+
+    //Animation TimerPanel
+    private IEnumerator TimerPanelAnimation()
+    {
+        yield return new WaitForSeconds(1f);
+        TimerPanel[0].SetActive(true);
+        yield return new WaitForSeconds(2);
+        TimerPanel[1].SetActive(true);
+        TimerPanel[0].SetActive(false);
+        yield return new WaitForSeconds(2);
+        TimerPanel[2].SetActive(true);
+        TimerPanel[1].SetActive(false);
+        yield return new WaitForSeconds(2);
+        TimerPanel[2].SetActive(false);
+        StartOrderSystem();
+
     }
 }

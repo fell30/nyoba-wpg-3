@@ -1,7 +1,7 @@
 using System.Collections;
 //using System.Diagnostics;
 using UnityEngine;
-//using UnityEngine.InputSystem.iOS;
+using UnityEngine.SceneManagement;
 
 public class TutorialController : MonoBehaviour
 {
@@ -37,10 +37,13 @@ public class TutorialController : MonoBehaviour
                     TutorialInteract[0].SetActive(false);
                     TutorialInteract[1].SetActive(true);
 
-                    player.enabled = false;
+                    if (SceneManager.GetActiveScene().name == "Level-tutorial")
+                    {
+                        player.enabled = false;
+
+                    }
 
 
-                    //  tutorialDialog.ShowMessage("Tekan P untuk membuka menu potion.", "hint");
                 }
                 break;
             case TutorialInputState.PressP:
