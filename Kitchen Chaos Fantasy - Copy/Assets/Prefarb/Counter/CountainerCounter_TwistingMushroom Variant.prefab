@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afd5761dd2151254ebb64fdbce464b35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseCounter: {fileID: 722650380037639468}
+  baseCounter: {fileID: 3623969561140874897}
   VisualGameObjectArray:
   - {fileID: 8775436963188408859}
 --- !u!1 &8775436963188408859
@@ -75,7 +75,7 @@ Transform:
   m_GameObject: {fileID: 8775436963188408859}
   serializedVersion: 2
   m_LocalRotation: {x: 0.70697325, y: 0.013812391, z: 0.013812391, w: -0.70697063}
-  m_LocalPosition: {x: -0.515, y: 0.195, z: -0.648}
+  m_LocalPosition: {x: -0.515, y: 0.132, z: -0.648}
   m_LocalScale: {x: 107.17, y: 107.17, z: 107.17}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -252,15 +252,15 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: e1c23b5aded59d84da30738d3267a6c9, type: 3}
     - target: {fileID: 1978162421496860025, guid: 73b65532f54f8e040b18acaa1fe62216, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -20.94
+      value: -15.63
       objectReference: {fileID: 0}
     - target: {fileID: 1978162421496860025, guid: 73b65532f54f8e040b18acaa1fe62216, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.74
+      value: 1.208
       objectReference: {fileID: 0}
     - target: {fileID: 1978162421496860025, guid: 73b65532f54f8e040b18acaa1fe62216, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6.42
+      value: -6.13
       objectReference: {fileID: 0}
     - target: {fileID: 1978162421496860025, guid: 73b65532f54f8e040b18acaa1fe62216, type: 3}
       propertyPath: m_LocalRotation.w
@@ -306,7 +306,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CountainerCounter_TwistingMushroom Variant
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3307345415475961364, guid: 73b65532f54f8e040b18acaa1fe62216, type: 3}
     m_RemovedGameObjects:
     - {fileID: 5921862144711591338, guid: 73b65532f54f8e040b18acaa1fe62216, type: 3}
     - {fileID: 7744878066237288646, guid: 73b65532f54f8e040b18acaa1fe62216, type: 3}
@@ -317,21 +318,44 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1978162421496860025, guid: 73b65532f54f8e040b18acaa1fe62216, type: 3}
       insertIndex: -1
       addedObject: {fileID: 54403425809034471}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9085880857875767081, guid: 73b65532f54f8e040b18acaa1fe62216, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3623969561140874897}
   m_SourcePrefab: {fileID: 100100000, guid: 73b65532f54f8e040b18acaa1fe62216, type: 3}
---- !u!114 &722650380037639468 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3307345415475961364, guid: 73b65532f54f8e040b18acaa1fe62216, type: 3}
+--- !u!4 &2772706999704569089 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 115952038061708857, guid: 73b65532f54f8e040b18acaa1fe62216, type: 3}
   m_PrefabInstance: {fileID: 2873669918401221432}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1cffc8653de6009468d8d30a27a7bbae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &4364704564446699073 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1978162421496860025, guid: 73b65532f54f8e040b18acaa1fe62216, type: 3}
   m_PrefabInstance: {fileID: 2873669918401221432}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6482609577781300241 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9085880857875767081, guid: 73b65532f54f8e040b18acaa1fe62216, type: 3}
+  m_PrefabInstance: {fileID: 2873669918401221432}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3623969561140874897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6482609577781300241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bff343fa6d95ebd41941f6c1f0c43eeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CounterTopPoint: {fileID: 2772706999704569089}
+  kitchenObjectSO: {fileID: 11400000, guid: 9230568e8332c1744ab4bfb4ef5e64e4, type: 2}
+  ambilRamuanSFX:
+    Guid:
+      Data1: 1633005819
+      Data2: 1132671708
+      Data3: -1752210295
+      Data4: -1595690107
+    Path: event:/Ambil Ramuan

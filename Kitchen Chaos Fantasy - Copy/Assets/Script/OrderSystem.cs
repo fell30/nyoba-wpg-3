@@ -1,29 +1,44 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class OrderSystem : MonoBehaviour
 {
     public event Action OnAllOrdersCompleted;
-    public List<KitchenObjectSO> possibleOrders; // List pesanan yang bisa muncul
-    private Queue<KitchenObjectSO> orderQueue = new Queue<KitchenObjectSO>(); // Queue KitchenObjectSO
+    public List<KitchenObjectSO> possibleOrders;
+    private Queue<KitchenObjectSO> orderQueue = new Queue<KitchenObjectSO>();
     private KitchenObjectSO currentOrder;
+    [SerializeField] private CountdownTimer countdownTimer;
 
     public GameObject orderUIPrefab;
     public Transform orderUIParent;
 
+    [SerializeField] private GameObject[] TimerPanel;
+
     [SerializeField] private GameObject OrderSuccess;
     private GameObject currentOrderUI;
 
-    private int maxOrders = 2;
+    public int maxOrders = 2;
     private bool isTutorialCompleted = false;
 
+    private void Start()
+    {
+        if (SceneManager.GetActiveScene().name != "Level-Tutorial")
+        {
+            StartCoroutine(TimerPanelAnimation());
+
+        }
+    }
     public void StartOrderSystem()
     {
         isTutorialCompleted = true;
         GenerateOrders(maxOrders);
         ShowNextOrder();
     }
+
 
     public void AddNewOrder()
     {
@@ -32,13 +47,28 @@ public class OrderSystem : MonoBehaviour
         Debug.Log("New Order: " + newOrder.objectName);
     }
 
+    public void Shuffle<T>(List<T> list)
+    {
+        System.Random rand = new System.Random();
+        int n = list.Count;
+        for (int i = 0; i < n; i++)
+        {
+            int j = rand.Next(i, n);
+            T temp = list[i];
+            list[i] = list[j];
+            list[j] = temp;
+        }
+    }
+
     private void GenerateOrders(int count)
     {
+        Shuffle(possibleOrders);
         for (int i = 0; i < count; i++)
         {
             AddNewOrder();
         }
     }
+
 
     private void ShowNextOrder()
     {
@@ -63,6 +93,7 @@ public class OrderSystem : MonoBehaviour
             currentOrder = null;
             OrderSuccess.SetActive(true);
             OnAllOrdersCompleted?.Invoke();
+            countdownTimer.StopTimer();
         }
     }
 
@@ -83,5 +114,23 @@ public class OrderSystem : MonoBehaviour
             }
             ShowNextOrder();
         }
+    }
+
+    //Animation TimerPanel
+    private IEnumerator TimerPanelAnimation()
+    {
+        yield return new WaitForSeconds(1f);
+        TimerPanel[0].SetActive(true);
+        yield return new WaitForSeconds(2);
+        TimerPanel[1].SetActive(true);
+        TimerPanel[0].SetActive(false);
+        yield return new WaitForSeconds(2);
+        TimerPanel[2].SetActive(true);
+        TimerPanel[1].SetActive(false);
+        yield return new WaitForSeconds(2);
+        TimerPanel[2].SetActive(false);
+        StartOrderSystem();
+        countdownTimer.StartTimer();
+
     }
 }

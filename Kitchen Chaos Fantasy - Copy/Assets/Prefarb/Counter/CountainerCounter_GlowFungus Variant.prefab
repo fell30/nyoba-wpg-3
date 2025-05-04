@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afd5761dd2151254ebb64fdbce464b35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseCounter: {fileID: 722650380037639468}
+  baseCounter: {fileID: 928295857228730639}
   VisualGameObjectArray:
   - {fileID: 9193821987345390644}
 --- !u!1001 &2873669918401221432
@@ -82,31 +82,31 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: e1c23b5aded59d84da30738d3267a6c9, type: 3}
     - target: {fileID: 1978162421496860025, guid: 73b65532f54f8e040b18acaa1fe62216, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 1.6206458
       objectReference: {fileID: 0}
     - target: {fileID: 1978162421496860025, guid: 73b65532f54f8e040b18acaa1fe62216, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 1.6206458
       objectReference: {fileID: 0}
     - target: {fileID: 1978162421496860025, guid: 73b65532f54f8e040b18acaa1fe62216, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 1.6206458
       objectReference: {fileID: 0}
     - target: {fileID: 1978162421496860025, guid: 73b65532f54f8e040b18acaa1fe62216, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -20.4
+      value: -14.866
       objectReference: {fileID: 0}
     - target: {fileID: 1978162421496860025, guid: 73b65532f54f8e040b18acaa1fe62216, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.12
+      value: -0.365
       objectReference: {fileID: 0}
     - target: {fileID: 1978162421496860025, guid: 73b65532f54f8e040b18acaa1fe62216, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 13.13
+      value: 14.235
       objectReference: {fileID: 0}
     - target: {fileID: 1978162421496860025, guid: 73b65532f54f8e040b18acaa1fe62216, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.000056922436
+      value: -0.87594557
       objectReference: {fileID: 0}
     - target: {fileID: 1978162421496860025, guid: 73b65532f54f8e040b18acaa1fe62216, type: 3}
       propertyPath: m_LocalRotation.x
@@ -114,7 +114,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1978162421496860025, guid: 73b65532f54f8e040b18acaa1fe62216, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 1
+      value: 0.48241
       objectReference: {fileID: 0}
     - target: {fileID: 1978162421496860025, guid: 73b65532f54f8e040b18acaa1fe62216, type: 3}
       propertyPath: m_LocalRotation.z
@@ -126,7 +126,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1978162421496860025, guid: 73b65532f54f8e040b18acaa1fe62216, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
+      value: 302.314
       objectReference: {fileID: 0}
     - target: {fileID: 1978162421496860025, guid: 73b65532f54f8e040b18acaa1fe62216, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -148,7 +148,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CountainerCounter_GlowFungus Variant
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3307345415475961364, guid: 73b65532f54f8e040b18acaa1fe62216, type: 3}
     m_RemovedGameObjects:
     - {fileID: 5921862144711591338, guid: 73b65532f54f8e040b18acaa1fe62216, type: 3}
     - {fileID: 7744878066237288646, guid: 73b65532f54f8e040b18acaa1fe62216, type: 3}
@@ -159,24 +160,42 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1978162421496860025, guid: 73b65532f54f8e040b18acaa1fe62216, type: 3}
       insertIndex: -1
       addedObject: {fileID: 9002201734718165652}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9085880857875767081, guid: 73b65532f54f8e040b18acaa1fe62216, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 928295857228730639}
   m_SourcePrefab: {fileID: 100100000, guid: 73b65532f54f8e040b18acaa1fe62216, type: 3}
---- !u!114 &722650380037639468 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3307345415475961364, guid: 73b65532f54f8e040b18acaa1fe62216, type: 3}
-  m_PrefabInstance: {fileID: 2873669918401221432}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1cffc8653de6009468d8d30a27a7bbae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &4364704564446699073 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1978162421496860025, guid: 73b65532f54f8e040b18acaa1fe62216, type: 3}
   m_PrefabInstance: {fileID: 2873669918401221432}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6482609577781300241 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9085880857875767081, guid: 73b65532f54f8e040b18acaa1fe62216, type: 3}
+  m_PrefabInstance: {fileID: 2873669918401221432}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &928295857228730639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6482609577781300241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bff343fa6d95ebd41941f6c1f0c43eeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CounterTopPoint: {fileID: 0}
+  kitchenObjectSO: {fileID: 11400000, guid: eedab8fc322f46d4ca5b37d52f923667, type: 2}
+  ambilRamuanSFX:
+    Guid:
+      Data1: 1633005819
+      Data2: 1132671708
+      Data3: -1752210295
+      Data4: -1595690107
+    Path: event:/Ambil Ramuan
 --- !u!1001 &3822388018691140258
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -226,9 +245,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 4d7e3fd2ca390a84587fc2029028d83d, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 4d7e3fd2ca390a84587fc2029028d83d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 3178a3f40c6770f46b69d7cd56726562, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 4d7e3fd2ca390a84587fc2029028d83d, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: b04d9a50fd17f6649a626a8f981e280b, type: 2}
     - target: {fileID: 919132149155446097, guid: 4d7e3fd2ca390a84587fc2029028d83d, type: 3}
       propertyPath: m_Name
       value: Glow Fungus_Visual

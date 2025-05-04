@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-
+using FMODUnity;
 using System.Runtime.InteropServices;
 using UnityEngine;
 
@@ -20,6 +20,7 @@ public class ClearCounter : BaseCounter
             if (player.HasKitchenObject())
             {
                 player.GetKitchenObject().SetKitchenObjectParent(this);
+                GetComponent<WellAudio>()?.PlayAmbilSound();
             }
             else
             {
@@ -35,6 +36,7 @@ public class ClearCounter : BaseCounter
             else
             {
                 GetKitchenObject().SetKitchenObjectParent(player);
+                GetComponent<WellAudio>()?.PlayTaruhSound();
             }
         }
 

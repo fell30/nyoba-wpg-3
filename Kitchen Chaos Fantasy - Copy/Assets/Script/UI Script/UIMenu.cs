@@ -6,9 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class UIMenu : MonoBehaviour
 {
-
-    // [SerializeField] private GameObject OrderPanel;
-    // [SerializeField] private GameObject[] TimerPanel;\
     public GameObject OptionsMenu;
 
     public void PlayGame()
@@ -19,44 +16,54 @@ public class UIMenu : MonoBehaviour
     void Start()
     {
 
-        // OrderPanel.SetActive(false);
     }
 
-    // private IEnumerator OrderPanelCoroutine()
-    // {
-    //     TimerPanel[0].SetActive(true);
-    //     yield return new WaitForSeconds(2);
-    //     TimerPanel[1].SetActive(true);
-    //     TimerPanel[0].SetActive(false);
-    //     yield return new WaitForSeconds(2);
-    //     TimerPanel[2].SetActive(true);
-    //     TimerPanel[1].SetActive(false);
-    //     yield return new WaitForSeconds(2);
-    //     // OrderPanel.SetActive(true);
-    //     TimerPanel[2].SetActive(false);
-    //     yield return new WaitForSeconds(2);
-    //     // OrderPanel.SetActive(false);
-
-
-
-    // }
-
-    public void Options()
+    // EnableDisable Menu
+    public void EnableMenu(GameObject menu)
     {
-        OptionsMenu.SetActive(true);
+        menu.SetActive(true);
     }
 
+    public void DisableMenu(GameObject menu)
+    {
+        menu.SetActive(false);
+    }
 
+    // Pause Game, Resume Game, Restart game, Back to Main Menu
+    public void PauseGame()
+    {
+        Time.timeScale = 0f;
+    }
+
+    public void ResumeGame()
+    {
+        Time.timeScale = 1f;
+    }
+
+    public void RestartGame()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void BacktoMainMenu()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("MainMenu");
+    }
 
     public void QuitGame()
     {
         Application.Quit();
     }
 
+    public void Options()
+    {
+        OptionsMenu.SetActive(true);
+    }
+
     public void BackOptions()
     {
         OptionsMenu.SetActive(false);
     }
-
-
 }
