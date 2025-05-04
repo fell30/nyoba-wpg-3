@@ -29,7 +29,7 @@ public class OrderSystem : MonoBehaviour
         if (SceneManager.GetActiveScene().name != "Level-Tutorial")
         {
             StartCoroutine(TimerPanelAnimation());
-            Debug.Log("Order System Started");
+
         }
     }
     public void StartOrderSystem()
@@ -130,6 +130,7 @@ public class OrderSystem : MonoBehaviour
         yield return new WaitForSeconds(2);
         TimerPanel[2].SetActive(false);
         StartOrderSystem();
+        countdownTimer.StartTimer();
 
     }
 }
