@@ -198,7 +198,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efdbe0ee30305d047a11c34fd0086cb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenu: {fileID: 0}
+  menuPause: {fileID: 0}
+  Koin: []
+  teksSkor: {fileID: 0}
+  SuccesCoin: {fileID: 0}
 --- !u!114 &1099164959
 MonoBehaviour:
   m_ObjectHideFlags: 0
