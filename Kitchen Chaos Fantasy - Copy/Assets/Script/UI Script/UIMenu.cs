@@ -8,7 +8,9 @@ public class UIMenu : MonoBehaviour
 {
 
     // [SerializeField] private GameObject OrderPanel;
-    // [SerializeField] private GameObject[] TimerPanel;
+    // [SerializeField] private GameObject[] TimerPanel;\
+    public GameObject OptionsMenu;
+
     public void PlayGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -39,9 +41,21 @@ public class UIMenu : MonoBehaviour
 
     // }
 
+    public void Options()
+    {
+        OptionsMenu.SetActive(true);
+    }
+
+
+
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    public void BackOptions()
+    {
+        OptionsMenu.SetActive(false);
     }
 
 
