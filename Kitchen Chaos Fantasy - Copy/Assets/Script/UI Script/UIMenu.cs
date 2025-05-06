@@ -29,14 +29,14 @@ public class UIMenu : MonoBehaviour
             currentIndex = (currentIndex - 1 + menuButtons.Length) % menuButtons.Length;
             EventSystem.current.SetSelectedGameObject(menuButtons[currentIndex].gameObject);
         }
-        else if (Input.GetKeyDown(KeyCode.Return)) // Enter key
+        else if (Input.GetKeyDown(KeyCode.Return))
         {
             menuButtons[currentIndex].onClick.Invoke();
         }
     }
-    public void PlayGame()
+    public void PlayGame(string nameScene)
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(nameScene);
     }
 
     // EnableDisable Menu
