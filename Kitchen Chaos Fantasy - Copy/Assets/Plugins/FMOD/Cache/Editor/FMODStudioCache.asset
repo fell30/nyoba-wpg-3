@@ -1,5 +1,267 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8178343431096882557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/TakeIngridientSFX
+  m_EditorClassIdentifier: 
+  Path: event:/TakeIngridientSFX
+  Guid:
+    Data1: 1633005819
+    Data2: 1132671708
+    Data3: -1752210295
+    Data4: -1595690107
+  Banks:
+  - {fileID: 2649350585730701835}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 30
+  Length: 77
+--- !u!114 &-7685652389470690502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Unity/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 638822165869867214
+  FileSizes:
+  - Name: Desktop
+    Value: 2684
+  Exists: 1
+--- !u!114 &-7034719223572383756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/SFX.streams.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Unity/Build/Desktop/SFX.streams.bank
+  Name: SFX.streams
+  StudioPath: bank:/SFX.streams
+  lastModified: 638822161617395879
+  FileSizes:
+  - Name: Desktop
+    Value: 513120
+  Exists: 1
+--- !u!114 &-7028030301904368076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/BGM.assets.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Unity/Build/Desktop/BGM.assets.bank
+  Name: BGM.assets
+  StudioPath: bank:/BGM.assets
+  lastModified: 638822165869492232
+  FileSizes:
+  - Name: Desktop
+    Value: 506
+  Exists: 1
+--- !u!114 &-5872200854426982063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/SFX.assets.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Unity/Build/Desktop/SFX.assets.bank
+  Name: SFX.assets
+  StudioPath: bank:/SFX.assets
+  lastModified: 638822161612319236
+  FileSizes:
+  - Name: Desktop
+    Value: 83520
+  Exists: 1
+--- !u!114 &-5108581887751981321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BGM
+  m_EditorClassIdentifier: 
+  Path: event:/BGM
+  Guid:
+    Data1: 395064684
+    Data2: 1209474891
+    Data3: -1336331869
+    Data4: -795325664
+  Banks:
+  - {fileID: -4277977508461596694}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 122552
+--- !u!114 &-4624235950198752999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/DropIngridientSFX
+  m_EditorClassIdentifier: 
+  Path: event:/DropIngridientSFX
+  Guid:
+    Data1: -19496254
+    Data2: 1153132041
+    Data3: 1752834735
+    Data4: -407135531
+  Banks:
+  - {fileID: 2649350585730701835}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 35
+  Length: 80
+--- !u!114 &-4277977508461596694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/BGM.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Unity/Build/Desktop/BGM.bank
+  Name: BGM
+  StudioPath: bank:/BGM
+  lastModified: 638822165869482239
+  FileSizes:
+  - Name: Desktop
+    Value: 3182
+  Exists: 1
+--- !u!114 &-4202446444244466419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ServeSFX
+  m_EditorClassIdentifier: 
+  Path: event:/ServeSFX
+  Guid:
+    Data1: 615037406
+    Data2: 1238197804
+    Data3: 69253554
+    Data4: 1202372693
+  Banks:
+  - {fileID: 2649350585730701835}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 45
+  Length: 1000
+--- !u!114 &-2129290117610483420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/CauldornSFX
+  m_EditorClassIdentifier: 
+  Path: event:/CauldornSFX
+  Guid:
+    Data1: 1585884500
+    Data2: 1105720674
+    Data3: -667711079
+    Data4: 772195109
+  Banks:
+  - {fileID: 2649350585730701835}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 45
+  Length: 9400
+--- !u!114 &-1689132478979687236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Timecountdown
+  m_EditorClassIdentifier: 
+  Path: event:/Timecountdown
+  Guid:
+    Data1: 2076101695
+    Data2: 1226598734
+    Data3: -1711091543
+    Data4: -103753337
+  Banks:
+  - {fileID: 2649350585730701835}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 31000
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12,11 +274,257 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
-  EditorBanks: []
-  EditorEvents: []
+  EditorBanks:
+  - {fileID: 8987275356666965205}
+  - {fileID: -7028030301904368076}
+  - {fileID: -4277977508461596694}
+  - {fileID: 949429000020055350}
+  - {fileID: 1167107235240318349}
+  - {fileID: -7685652389470690502}
+  - {fileID: 8217067269031618433}
+  - {fileID: -5872200854426982063}
+  - {fileID: 2649350585730701835}
+  - {fileID: -7034719223572383756}
+  EditorEvents:
+  - {fileID: -5108581887751981321}
+  - {fileID: -1689132478979687236}
+  - {fileID: 3496641550254598564}
+  - {fileID: -2129290117610483420}
+  - {fileID: 8706757613403423645}
+  - {fileID: -4624235950198752999}
+  - {fileID: -4202446444244466419}
+  - {fileID: -8178343431096882557}
+  - {fileID: 3362664123192205059}
   EditorParameters: []
-  MasterBanks: []
-  StringsBanks: []
+  MasterBanks:
+  - {fileID: -7685652389470690502}
+  StringsBanks:
+  - {fileID: 8987275356666965205}
   cacheVersion: 131847
-  cacheTime: 0
-  SerializableEventsDict: []
+  cacheTime: 638822165870139746
+  SerializableEventsDict:
+  - key: event:/BGM
+    index: 0
+  - key: event:/Timecountdown
+    index: 1
+  - key: event:/MortarPastleSFX
+    index: 2
+  - key: event:/CauldornSFX
+    index: 3
+  - key: event:/TrashSFX
+    index: 4
+  - key: event:/DropIngridientSFX
+    index: 5
+  - key: event:/ServeSFX
+    index: 6
+  - key: event:/TakeIngridientSFX
+    index: 7
+  - key: event:/Music/LAGU
+    index: 8
+--- !u!114 &949429000020055350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/BGM.streams.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Unity/Build/Desktop/BGM.streams.bank
+  Name: BGM.streams
+  StudioPath: bank:/BGM.streams
+  lastModified: 638822165869792968
+  FileSizes:
+  - Name: Desktop
+    Value: 2640160
+  Exists: 1
+--- !u!114 &1167107235240318349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.assets.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Unity/Build/Desktop/Master.assets.bank
+  Name: Master.assets
+  StudioPath: bank:/Master.assets
+  lastModified: 638822165869887182
+  FileSizes:
+  - Name: Desktop
+    Value: 506
+  Exists: 1
+--- !u!114 &2649350585730701835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/SFX.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Unity/Build/Desktop/SFX.bank
+  Name: SFX
+  StudioPath: bank:/SFX
+  lastModified: 638822161611510745
+  FileSizes:
+  - Name: Desktop
+    Value: 10994
+  Exists: 1
+--- !u!114 &3362664123192205059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/LAGU
+  m_EditorClassIdentifier: 
+  Path: event:/Music/LAGU
+  Guid:
+    Data1: 2069896926
+    Data2: 1331647597
+    Data3: -484224363
+    Data4: -1638154316
+  Banks:
+  - {fileID: -4277977508461596694}
+  - {fileID: -7685652389470690502}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 9010177722522646409}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 90652
+--- !u!114 &3496641550254598564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/MortarPastleSFX
+  m_EditorClassIdentifier: 
+  Path: event:/MortarPastleSFX
+  Guid:
+    Data1: -533777394
+    Data2: 1171783736
+    Data3: 29889159
+    Data4: 1548282012
+  Banks:
+  - {fileID: 2649350585730701835}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 35
+  Length: 200
+--- !u!114 &8217067269031618433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.streams.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Unity/Build/Desktop/Master.streams.bank
+  Name: Master.streams
+  StudioPath: bank:/Master.streams
+  lastModified: 638822165870114729
+  FileSizes:
+  - Name: Desktop
+    Value: 1114208
+  Exists: 1
+--- !u!114 &8706757613403423645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/TrashSFX
+  m_EditorClassIdentifier: 
+  Path: event:/TrashSFX
+  Guid:
+    Data1: 352020603
+    Data2: 1301331175
+    Data3: 288266635
+    Data4: 1658701218
+  Banks:
+  - {fileID: 2649350585730701835}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 35
+  Length: 475
+--- !u!114 &8987275356666965205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Unity/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638822165870139746
+  FileSizes:
+  - Name: Desktop
+    Value: 1620
+  Exists: 1
+--- !u!114 &9010177722522646409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/LAGU/MusicVolume
+  m_EditorClassIdentifier: 
+  Name: MusicVolume
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1448918973
+    data2: 1793836070
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
