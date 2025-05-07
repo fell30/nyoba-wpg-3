@@ -43,7 +43,7 @@ MonoBehaviour:
   Path: Assets/StreamingAssets/Desktop/Master.bank
   Name: Desktop/Master
   StudioPath: bank:/Master
-  lastModified: 638821313816799125
+  lastModified: 638822037191146678
   FileSizes: []
   Exists: 1
 --- !u!114 &-6096306900650469678
@@ -89,7 +89,7 @@ MonoBehaviour:
   Path: Assets/StreamingAssets/Desktop/BGM.bank
   Name: Desktop/BGM
   StudioPath: bank:/BGM
-  lastModified: 638821313816705603
+  lastModified: 638822037190975158
   FileSizes: []
   Exists: 1
 --- !u!114 &-3919050430154801404
@@ -135,7 +135,7 @@ MonoBehaviour:
   Path: Assets/StreamingAssets/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638821313818189122
+  lastModified: 638816098446750767
   FileSizes: []
   Exists: 1
 --- !u!114 &-2610302134265273746
@@ -209,7 +209,7 @@ MonoBehaviour:
   Path: Assets/StreamingAssets/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638821313817680161
+  lastModified: 638816098446720746
   FileSizes:
   - Name: 
     Value: 1486
@@ -229,7 +229,7 @@ MonoBehaviour:
   Path: Assets/StreamingAssets/Master.assets.bank
   Name: Master.assets
   StudioPath: bank:/Master.assets
-  lastModified: 638821313817016118
+  lastModified: 638816098446710799
   FileSizes: []
   Exists: 1
 --- !u!114 &-839907043527611719
@@ -247,7 +247,7 @@ MonoBehaviour:
   Path: Assets/StreamingAssets/BGM.streams.bank
   Name: BGM.streams
   StudioPath: bank:/BGM.streams
-  lastModified: 638821313816370331
+  lastModified: 638816098446690746
   FileSizes: []
   Exists: 1
 --- !u!114 &-228620670982119014
@@ -265,7 +265,7 @@ MonoBehaviour:
   Path: Assets/StreamingAssets/Master.streams.bank
   Name: Master.streams
   StudioPath: bank:/Master.streams
-  lastModified: 638821313817464778
+  lastModified: 638816098446720746
   FileSizes: []
   Exists: 1
 --- !u!114 &11400000
@@ -302,7 +302,7 @@ MonoBehaviour:
   - {fileID: -9123161783366035250}
   - {fileID: 6756592557595634703}
   - {fileID: -1999144270078641312}
-  - {fileID: 1062884429232030223}
+  - {fileID: 6103695766296168319}
   EditorParameters: []
   MasterBanks:
   - {fileID: 7156616253260308461}
@@ -310,7 +310,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: -1896010386863176234}
   cacheVersion: 131847
-  cacheTime: 638821313818511629
+  cacheTime: 638822037191365824
   SerializableEventsDict:
   - key: event:/BGM
     index: 0
@@ -326,7 +326,25 @@ MonoBehaviour:
     index: 5
   - key: event:/Ambil Ramuan
     index: 6
---- !u!114 &1062884429232030223
+--- !u!114 &4292936342481849509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Desktop/SFX.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/StreamingAssets/Desktop/SFX.bank
+  Name: Desktop/SFX
+  StudioPath: bank:/SFX
+  lastModified: 638822037191365824
+  FileSizes: []
+  Exists: 1
+--- !u!114 &6103695766296168319
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -353,24 +371,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 35
   Length: 475
---- !u!114 &4292936342481849509
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Desktop/SFX.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/StreamingAssets/Desktop/SFX.bank
-  Name: Desktop/SFX
-  StudioPath: bank:/SFX
-  lastModified: 638821313816913665
-  FileSizes: []
-  Exists: 1
 --- !u!114 &6756592557595634703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -414,7 +414,7 @@ MonoBehaviour:
   Path: Assets/StreamingAssets/SFX.assets.bank
   Name: SFX.assets
   StudioPath: bank:/SFX.assets
-  lastModified: 638821313817942671
+  lastModified: 638816098446740708
   FileSizes: []
   Exists: 1
 --- !u!114 &7100551099716999625
@@ -432,7 +432,7 @@ MonoBehaviour:
   Path: Assets/StreamingAssets/SFX.streams.bank
   Name: SFX.streams
   StudioPath: bank:/SFX.streams
-  lastModified: 638821313818511629
+  lastModified: 638816098446845415
   FileSizes: []
   Exists: 1
 --- !u!114 &7156616253260308461
@@ -450,7 +450,7 @@ MonoBehaviour:
   Path: Assets/StreamingAssets/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638821313817220218
+  lastModified: 638816098446710799
   FileSizes: []
   Exists: 1
 --- !u!114 &8073326364739323200
@@ -496,7 +496,7 @@ MonoBehaviour:
   Path: Assets/StreamingAssets/BGM.bank
   Name: BGM
   StudioPath: bank:/BGM
-  lastModified: 638821313815672827
+  lastModified: 638816098446430590
   FileSizes: []
   Exists: 1
 --- !u!114 &8262939412483544363
@@ -514,6 +514,6 @@ MonoBehaviour:
   Path: Assets/StreamingAssets/BGM.assets.bank
   Name: BGM.assets
   StudioPath: bank:/BGM.assets
-  lastModified: 638821313815499597
+  lastModified: 638816098446417313
   FileSizes: []
   Exists: 1
