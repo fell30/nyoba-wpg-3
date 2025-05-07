@@ -12219,7 +12219,10 @@ MonoBehaviour:
   countdownTimer: {fileID: 1658300588}
   orderUIPrefab: {fileID: 3947772163280172627, guid: a996183950268b14484f84a1ff20a207, type: 3}
   orderUIParent: {fileID: 879305849}
-  TimerPanel: []
+  TimerPanel:
+  - {fileID: 959018345}
+  - {fileID: 175255494}
+  - {fileID: 720862804}
   OrderSuccess: {fileID: 1711828872}
   maxOrders: 2
 --- !u!4 &1668967412

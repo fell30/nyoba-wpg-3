@@ -189,7 +189,7 @@ public class TutorialController : MonoBehaviour
         {
             serveTutorial.SetActive(false);
             ServeMain.SetActive(true);
-            Debug.Log("ServeTutorial GameObject destroyed.");
+            //Debug.Log("ServeTutorial GameObject destroyed.");
         }
         countdownTimer.StartTimer();
     }

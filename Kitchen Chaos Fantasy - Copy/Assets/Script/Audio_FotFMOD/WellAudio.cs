@@ -12,7 +12,7 @@ public class WellAudio : MonoBehaviour
         if (ambilEmitter != null && !ambilEmitter.IsPlaying())
         {
             ambilEmitter.Play();
-            Debug.Log("SFX Mengambil Ramuan dimainkan!");
+            //Debug.Log("SFX Mengambil Ramuan dimainkan!");
         }
         else
         {
@@ -25,7 +25,7 @@ public class WellAudio : MonoBehaviour
         if (taruhEmitter != null)
         {
             taruhEmitter.Play();
-            Debug.Log("SFX Menaruh Ramuan dimainkan!");
+            //  Debug.Log("SFX Menaruh Ramuan dimainkan!");
         }
         else
         {
@@ -44,7 +44,7 @@ public class WellAudio : MonoBehaviour
         if (masakEmitter != null && masakEmitter.IsPlaying())
         {
             masakEmitter.Stop();
-            Debug.Log("SFX Masak dihentikan!");
+            //Debug.Log("SFX Masak dihentikan!");
         }
         else
         {
@@ -56,7 +56,7 @@ public class WellAudio : MonoBehaviour
         if (ambilEmitter != null && ambilEmitter.IsPlaying())
         {
             ambilEmitter.Stop();
-            Debug.Log("SFX Mengambil Ramuan dihentikan!");
+            // Debug.Log("SFX Mengambil Ramuan dihentikan!");
         }
         else
         {
@@ -68,7 +68,7 @@ public class WellAudio : MonoBehaviour
         if (taruhEmitter != null && taruhEmitter.IsPlaying())
         {
             taruhEmitter.Stop();
-            Debug.Log("SFX Menaruh Ramuan dihentikan!");
+            // Debug.Log("SFX Menaruh Ramuan dihentikan!");
         }
         else
         {
