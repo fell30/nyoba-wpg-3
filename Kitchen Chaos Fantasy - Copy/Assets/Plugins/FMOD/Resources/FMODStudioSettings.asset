@@ -414,10 +414,13 @@ MonoBehaviour:
   Plugins: []
   MasterBanks:
   - Master
+  - Desktop/Master
   Banks:
   - BGM
   - BGM.assets
   - BGM.streams
+  - Desktop/BGM
+  - Desktop/SFX
   - Master.assets
   - Master.streams
   - SFX
