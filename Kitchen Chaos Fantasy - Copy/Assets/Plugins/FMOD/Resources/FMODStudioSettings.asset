@@ -388,10 +388,10 @@ MonoBehaviour:
   m_Name: FMODStudioSettings
   m_EditorClassIdentifier: 
   switchSettingsMigration: 1
-  HasSourceProject: 0
-  HasPlatforms: 0
-  sourceProjectPath: 
-  sourceBankPath: Assets/StreamingAssets
+  HasSourceProject: 1
+  HasPlatforms: 1
+  sourceProjectPath: FMOD Unity/FMOD Unity.fspro
+  sourceBankPath: FMOD Unity/Build
   sourceBankPathUnformatted: 
   BankRefreshCooldown: 5
   ShowBankRefreshWindow: 1
@@ -414,19 +414,10 @@ MonoBehaviour:
   Plugins: []
   MasterBanks:
   - Master
-  - Desktop/Master
   Banks:
   - BGM
   - BGM.assets
   - BGM.streams
-  - Desktop/BGM
-  - Desktop/BGM.assets
-  - Desktop/BGM.streams
-  - Desktop/Master.assets
-  - Desktop/Master.streams
-  - Desktop/SFX
-  - Desktop/SFX.assets
-  - Desktop/SFX.streams
   - Master.assets
   - Master.streams
   - SFX

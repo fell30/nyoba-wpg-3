@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{29e1141d-f9e3-4263-a85b-5924456d6e29}">
+		<property name="assetPath">
+			<value>SFX/mortar and pastle 2.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>8.3509523809523802</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{d0522fed-19fe-431b-9cf3-f49b7357e6f9}</destination>
+		</relationship>
+	</object>
+</objects>
