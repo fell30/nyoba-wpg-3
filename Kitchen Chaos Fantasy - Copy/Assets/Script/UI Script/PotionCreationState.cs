@@ -82,7 +82,7 @@ public class PotionCreationState : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("Water not yet added.");
+                    // Debug.Log("Water not yet added.");
                 }
                 break;
 

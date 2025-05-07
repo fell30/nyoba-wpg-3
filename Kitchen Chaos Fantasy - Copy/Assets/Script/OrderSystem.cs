@@ -21,7 +21,7 @@ public class OrderSystem : MonoBehaviour
     [SerializeField] private GameObject OrderSuccess;
     private GameObject currentOrderUI;
 
-    public int maxOrders = 2;
+    public int maxOrders;
     private bool isTutorialCompleted = false;
 
     private void Start()
@@ -45,6 +45,7 @@ public class OrderSystem : MonoBehaviour
         KitchenObjectSO newOrder = possibleOrders[UnityEngine.Random.Range(0, possibleOrders.Count)];
         orderQueue.Enqueue(newOrder);
         Debug.Log("New Order: " + newOrder.objectName);
+        Debug.Log("Total Orders: " + orderQueue.Count);
     }
 
     public void Shuffle<T>(List<T> list)

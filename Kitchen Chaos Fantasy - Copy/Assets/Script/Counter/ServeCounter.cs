@@ -20,11 +20,11 @@ public class ServingCounter : BaseCounter
 
             Debug.Log("Player is trying to serve: " + playerKitchenObjectSO.name);
 
-            // Cek apakah objek yang dipegang sesuai dengan order yang ada
+
             if (orderSystem.CheckOrder(playerKitchenObjectSO))
             {
                 Debug.Log("Order served successfully!");
-                playerObject.DestroySelf(); // Hancurkan objek yang disajikan
+                playerObject.DestroySelf();
                 orderSystem.CompleteOrder(playerKitchenObjectSO);
             }
             else
