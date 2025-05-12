@@ -51,7 +51,7 @@ MonoBehaviour:
       Data2: 1132671708
       Data3: -1752210295
       Data4: -1595690107
-    Path: event:/Ambil Ramuan
+    Path: event:/TakeIngridientSFX
   Event: 
   EventPlayTrigger: 0
   EventStopTrigger: 0
