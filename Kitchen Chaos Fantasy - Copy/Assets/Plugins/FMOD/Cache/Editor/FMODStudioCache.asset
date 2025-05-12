@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: Assets/StreamingAssets/Desktop/BGM.bank
   Name: Desktop/BGM
   StudioPath: bank:/BGM
-  lastModified: 638822037190975158
+  lastModified: 638821358339516493
   FileSizes: []
   Exists: 1
 --- !u!114 &-8178343431096882557
@@ -141,7 +141,7 @@ MonoBehaviour:
   Path: Assets/StreamingAssets/Desktop/Master.strings.bank
   Name: Desktop/Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638822210431225505
+  lastModified: 638826462863431316
   FileSizes:
   - Name: 
     Value: 1514
@@ -232,7 +232,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: -2745257994843917859}
   cacheVersion: 131847
-  cacheTime: 638822210431235501
+  cacheTime: 638826462863441746
   SerializableEventsDict:
   - key: event:/BGM
     index: 0
@@ -265,7 +265,7 @@ MonoBehaviour:
   Path: Assets/StreamingAssets/Desktop/Master.bank
   Name: Desktop/Master
   StudioPath: bank:/Master
-  lastModified: 638822037191146678
+  lastModified: 638821358339674677
   FileSizes: []
   Exists: 1
 --- !u!114 &3496641550254598564
@@ -310,7 +310,7 @@ MonoBehaviour:
   Path: Assets/StreamingAssets/Desktop/SFX.bank
   Name: Desktop/SFX
   StudioPath: bank:/SFX
-  lastModified: 638822210431235501
+  lastModified: 638826462863441746
   FileSizes: []
   Exists: 1
 --- !u!114 &8706757613403423645
