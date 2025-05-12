@@ -179,7 +179,7 @@ public class TutorialController : MonoBehaviour
     //Finish Tutorial
     public void EndTutorial()
     {
-        Debug.Log("Tutorial ended. Starting Order System...");
+
         orderSystem.StartOrderSystem();
 
         FindObjectOfType<BGMManager>().StartBGM();
@@ -189,8 +189,8 @@ public class TutorialController : MonoBehaviour
         {
             serveTutorial.SetActive(false);
             ServeMain.SetActive(true);
-            //Debug.Log("ServeTutorial GameObject destroyed.");
+         
         }
-        countdownTimer.StartTimer();
+        // countdownTimer.StartTimer();
     }
 }
