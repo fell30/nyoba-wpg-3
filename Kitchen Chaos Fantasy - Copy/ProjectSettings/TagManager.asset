@@ -6,6 +6,7 @@ TagManager:
   tags:
   - ValidPlacementArea
   - Obstacle
+  - LevelTrigger
   layers:
   - Default
   - TransparentFX
