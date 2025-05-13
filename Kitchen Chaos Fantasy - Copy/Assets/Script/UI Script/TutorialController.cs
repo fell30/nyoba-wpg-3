@@ -12,6 +12,7 @@ public class TutorialController : MonoBehaviour
     public GameObject ServeMain;
     [SerializeField] PotionCreationState potionCreationState;
     [SerializeField] private GameObject[] TimerPanel;
+    [SerializeField] private GameObject[] perkenalanUIMas;
     [SerializeField] private CountdownTimer countdownTimer;
     [SerializeField] private TutorialDialog tutorialDialog;
     [SerializeField] private GameObject TimerDanGoldUI;
@@ -164,7 +165,7 @@ public class TutorialController : MonoBehaviour
 
         //End Timer
         yield return new WaitForSeconds(0.5f);
-        EndTutorial();
+        StartCoroutine(perkenalanUI());
     }
 
     //Finish make potion
@@ -176,21 +177,45 @@ public class TutorialController : MonoBehaviour
 
     }
 
+
+    private IEnumerator perkenalanUI()
+    {
+        TimerDanGoldUI.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        orderSystem.StartOrderSystem();
+        tutorialDialog.ShowMessage("Ghullam Yapping", "main");
+
+        perkenalanUIMas[0].SetActive(true);
+        TimerDanGoldUI.SetActive(true);
+        yield return new WaitForSeconds(4.5f);
+        perkenalanUIMas[0].SetActive(false);
+        tutorialDialog.ShowMessage("Ghullam Yapping", "main");
+        perkenalanUIMas[1].SetActive(true);
+        yield return new WaitForSeconds(4.5f);
+        perkenalanUIMas[1].SetActive(false);
+        tutorialDialog.ShowMessage("Ghullam Yapping", "main");
+        perkenalanUIMas[2].SetActive(true);
+        yield return new WaitForSeconds(4.5f);
+        tutorialDialog.HideMessage("main");
+        perkenalanUIMas[2].SetActive(false);
+        EndTutorial();
+    }
+
     //Finish Tutorial
     public void EndTutorial()
     {
 
-        orderSystem.StartOrderSystem();
+
 
         FindObjectOfType<BGMManager>().StartBGM();
 
-        TimerDanGoldUI.SetActive(true);
+
         if (serveTutorial != null)
         {
             serveTutorial.SetActive(false);
             ServeMain.SetActive(true);
-         
+
         }
-        // countdownTimer.StartTimer();
+        countdownTimer.StartTimer();
     }
 }
