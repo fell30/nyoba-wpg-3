@@ -10,6 +10,7 @@ public class UIMenu : MonoBehaviour
 {
 
     public Button[] menuButtons;
+    public GameObject TRANSISIOUT;
     private int currentIndex = 0;
 
 
@@ -36,9 +37,14 @@ public class UIMenu : MonoBehaviour
     }
     public void PlayGame(string nameScene)
     {
+        StartCoroutine(TransitionOut(nameScene));
+    }
+    private IEnumerator TransitionOut(string nameScene)
+    {
+        TRANSISIOUT.SetActive(true);
+        yield return new WaitForSeconds(0.83f);
         SceneManager.LoadScene(nameScene);
     }
-
     // EnableDisable Menu
     public void EnableMenu(GameObject menu)
     {
