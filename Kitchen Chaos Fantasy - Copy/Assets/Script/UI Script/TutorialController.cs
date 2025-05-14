@@ -11,7 +11,7 @@ public class TutorialController : MonoBehaviour
     public GameObject serveTutorial;
     public GameObject ServeMain;
     [SerializeField] PotionCreationState potionCreationState;
-    [SerializeField] private GameObject[] TimerPanel;
+    // [SerializeField] private GameObject[] TimerPanel;
     [SerializeField] private GameObject[] perkenalanUIMas;
     [SerializeField] private CountdownTimer countdownTimer;
     [SerializeField] private TutorialDialog tutorialDialog;
@@ -149,16 +149,16 @@ public class TutorialController : MonoBehaviour
         player.enabled = true;
 
         //Timer
-        yield return new WaitForSeconds(1f);
-        TimerPanel[0].SetActive(true);
-        yield return new WaitForSeconds(2);
-        TimerPanel[1].SetActive(true);
-        TimerPanel[0].SetActive(false);
-        yield return new WaitForSeconds(2);
-        TimerPanel[2].SetActive(true);
-        TimerPanel[1].SetActive(false);
-        yield return new WaitForSeconds(2);
-        TimerPanel[2].SetActive(false);
+        // yield return new WaitForSeconds(1f);
+        // TimerPanel[0].SetActive(true);
+        // yield return new WaitForSeconds(2);
+        // TimerPanel[1].SetActive(true);
+        // TimerPanel[0].SetActive(false);
+        // yield return new WaitForSeconds(2);
+        // TimerPanel[2].SetActive(true);
+        // TimerPanel[1].SetActive(false);
+        // yield return new WaitForSeconds(2);
+        // TimerPanel[2].SetActive(false);
 
         //End Timer
         yield return new WaitForSeconds(0.5f);
@@ -180,17 +180,24 @@ public class TutorialController : MonoBehaviour
         TimerDanGoldUI.SetActive(true);
         yield return new WaitForSeconds(2f);
         orderSystem.StartOrderSystem();
-        tutorialDialog.ShowMessage("Ghullam Yapping", "main");
-
         perkenalanUIMas[0].SetActive(true);
         TimerDanGoldUI.SetActive(true);
+        // Resep
+        tutorialDialog.ShowMessage("Alright, first of all look at the order menu on the top left", "main");
+        yield return new WaitForSeconds(4.5f);
+        tutorialDialog.ShowMessage("The leftmost part is the potion that must be made", "main");
+        yield return new WaitForSeconds(4.5f);
+        tutorialDialog.ShowMessage("And to the right is a list of ingredients and steps to follow.", "main");
+
         yield return new WaitForSeconds(4.5f);
         perkenalanUIMas[0].SetActive(false);
-        tutorialDialog.ShowMessage("Ghullam Yapping", "main");
+        // Coin
+        tutorialDialog.ShowMessage("Next, on the bottom left, there are coins that have been collected from selling potions.", "main");
         perkenalanUIMas[1].SetActive(true);
         yield return new WaitForSeconds(4.5f);
         perkenalanUIMas[1].SetActive(false);
-        tutorialDialog.ShowMessage("Ghullam Yapping", "main");
+        // Timer
+        tutorialDialog.ShowMessage("Lastly, at the bottom right there is a timer, the timer is the time limit set to complete the order.", "main");
         perkenalanUIMas[2].SetActive(true);
         yield return new WaitForSeconds(4.5f);
         tutorialDialog.HideMessage("main");
