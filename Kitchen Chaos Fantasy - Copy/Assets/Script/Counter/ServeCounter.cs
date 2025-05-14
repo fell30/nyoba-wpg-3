@@ -24,6 +24,7 @@ public class ServingCounter : BaseCounter
             if (orderSystem.CheckOrder(playerKitchenObjectSO))
             {
                 Debug.Log("Order served successfully!");
+                GetComponent<WellAudio>()?.PlayTaruhSound();
                 playerObject.DestroySelf();
                 orderSystem.CompleteOrder(playerKitchenObjectSO);
             }

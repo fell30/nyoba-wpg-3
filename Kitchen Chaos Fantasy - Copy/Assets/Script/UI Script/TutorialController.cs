@@ -1,5 +1,5 @@
 using System.Collections;
-//using System.Diagnostics;
+
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -147,9 +147,6 @@ public class TutorialController : MonoBehaviour
         potionCreationState.StartPotionCreationProcess();
         yield return new WaitUntil(() => isPotionServed == true);
         player.enabled = true;
-        //    // tutorialUI6.SetActive(true);
-        //     yield return new WaitForSeconds(1f);
-        //     tutorialUI6.SetActive(false);
 
         //Timer
         yield return new WaitForSeconds(1f);
@@ -172,7 +169,7 @@ public class TutorialController : MonoBehaviour
     public void OnPotionServed()
     {
         Debug.Log("Healing Potion has been served!");
-        isPotionServed = true; // Set status menjadi true
+        isPotionServed = true;
         potionCreationState.stirringHighlight.SetActive(false);
 
     }

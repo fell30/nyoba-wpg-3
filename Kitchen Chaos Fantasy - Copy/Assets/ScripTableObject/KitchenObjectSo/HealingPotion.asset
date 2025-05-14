@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: HealingPotion
   m_EditorClassIdentifier: 
   prefab: {fileID: 5133453827729482660, guid: ffcd9974adccb7b45b80a51bc794ca89, type: 3}
-  recipeSprite: {fileID: 21300000, guid: 520cd963709f3bf4b996c5b14890e384, type: 3}
+  recipeSprite: {fileID: 294069945, guid: 520cd963709f3bf4b996c5b14890e384, type: 3}
   objectName: HealingPotion

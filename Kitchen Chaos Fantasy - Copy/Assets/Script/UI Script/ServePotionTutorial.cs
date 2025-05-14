@@ -31,6 +31,7 @@ public class ServePotionTutorial : BaseCounter
             // Cek apakah potion yang dibawa player adalah HealingPotion
             if (potion == healingPotionSO)
             {
+                GetComponent<WellAudio>()?.PlayTaruhSound();
                 Debug.Log("Healing Potion served successfully!");
                 playerObject.DestroySelf(); // Hancurkan potion yang telah disajikan
 
