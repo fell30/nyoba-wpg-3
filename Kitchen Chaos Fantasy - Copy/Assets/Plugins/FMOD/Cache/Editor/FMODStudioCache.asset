@@ -39,7 +39,7 @@ MonoBehaviour:
   Path: FMOD Unity/Bank/Desktop/BGM.assets.bank
   Name: BGM.assets
   StudioPath: bank:/BGM.assets
-  lastModified: 638822214093555642
+  lastModified: 638826462868722822
   FileSizes: []
   Exists: 1
 --- !u!114 &-8178343431096882557
@@ -194,7 +194,7 @@ MonoBehaviour:
   Path: FMOD Unity/Bank/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638822214094151586
+  lastModified: 638826462869483283
   FileSizes:
   - Name: 
     Value: 1620
@@ -268,7 +268,7 @@ MonoBehaviour:
   Path: FMOD Unity/Bank/Desktop/Master.assets.bank
   Name: Master.assets
   StudioPath: bank:/Master.assets
-  lastModified: 638822214093905760
+  lastModified: 638826462869157510
   FileSizes: []
   Exists: 1
 --- !u!114 &11400000
@@ -310,7 +310,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: -3629758534009279812}
   cacheVersion: 131847
-  cacheTime: 638822214094273831
+  cacheTime: 638826462869664807
   SerializableEventsDict:
   - key: event:/BGM
     index: 0
@@ -345,7 +345,7 @@ MonoBehaviour:
   Path: FMOD Unity/Bank/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638822214094175321
+  lastModified: 638826462869553330
   FileSizes: []
   Exists: 1
 --- !u!114 &1407814402539241748
@@ -363,7 +363,7 @@ MonoBehaviour:
   Path: FMOD Unity/Bank/Desktop/BGM.streams.bank
   Name: BGM.streams
   StudioPath: bank:/BGM.streams
-  lastModified: 638822214093905760
+  lastModified: 638826462869079427
   FileSizes: []
   Exists: 1
 --- !u!114 &2677062511850754195
@@ -381,7 +381,7 @@ MonoBehaviour:
   Path: FMOD Unity/Bank/Desktop/SFX.assets.bank
   Name: SFX.assets
   StudioPath: bank:/SFX.assets
-  lastModified: 638822214094161480
+  lastModified: 638826462869553330
   FileSizes: []
   Exists: 1
 --- !u!114 &3496641550254598564
@@ -426,7 +426,7 @@ MonoBehaviour:
   Path: FMOD Unity/Bank/Desktop/SFX.streams.bank
   Name: SFX.streams
   StudioPath: bank:/SFX.streams
-  lastModified: 638822214094273831
+  lastModified: 638826462869664807
   FileSizes: []
   Exists: 1
 --- !u!114 &5336363028646637550
@@ -444,7 +444,7 @@ MonoBehaviour:
   Path: FMOD Unity/Bank/Desktop/BGM.bank
   Name: BGM
   StudioPath: bank:/BGM
-  lastModified: 638822214093555642
+  lastModified: 638826462868791440
   FileSizes: []
   Exists: 1
 --- !u!114 &5495952874708681732
@@ -462,7 +462,7 @@ MonoBehaviour:
   Path: FMOD Unity/Bank/Desktop/Master.streams.bank
   Name: Master.streams
   StudioPath: bank:/Master.streams
-  lastModified: 638822214094131583
+  lastModified: 638826462869395444
   FileSizes: []
   Exists: 1
 --- !u!114 &6125456919088573864
@@ -480,7 +480,7 @@ MonoBehaviour:
   Path: FMOD Unity/Bank/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638822214093905760
+  lastModified: 638826462869222962
   FileSizes: []
   Exists: 1
 --- !u!114 &8706757613403423645
