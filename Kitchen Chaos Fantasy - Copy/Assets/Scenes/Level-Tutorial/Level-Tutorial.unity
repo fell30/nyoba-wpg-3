@@ -516,6 +516,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1280304131}
     m_Modifications:
+    - target: {fileID: 928295857228730639, guid: 8d492ad152037e54885fd15f880703ff, type: 3}
+      propertyPath: mushroomObject
+      value: 
+      objectReference: {fileID: 1622333338}
     - target: {fileID: 2506899737637680678, guid: 8d492ad152037e54885fd15f880703ff, type: 3}
       propertyPath: m_Materials.Array.size
       value: 1
@@ -571,7 +575,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6482609577781300241, guid: 8d492ad152037e54885fd15f880703ff, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1968988659}
   m_SourcePrefab: {fileID: 100100000, guid: 8d492ad152037e54885fd15f880703ff, type: 3}
 --- !u!1 &46188734
 GameObject:
@@ -980,6 +987,10 @@ PrefabInstance:
       propertyPath: baseCounter
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3623969561140874897, guid: eda47335012daf0498d85b4c7cc0f577, type: 3}
+      propertyPath: mushroomObject
+      value: 
+      objectReference: {fileID: 803631767}
     - target: {fileID: 4364704564446699073, guid: eda47335012daf0498d85b4c7cc0f577, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -1068,7 +1079,10 @@ PrefabInstance:
     - {fileID: 722650380037639468, guid: eda47335012daf0498d85b4c7cc0f577, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6482609577781300241, guid: eda47335012daf0498d85b4c7cc0f577, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 730519750}
   m_SourcePrefab: {fileID: 100100000, guid: eda47335012daf0498d85b4c7cc0f577, type: 3}
 --- !u!1 &81284412
 GameObject:
@@ -1207,6 +1221,21 @@ MonoBehaviour:
       Data4: -1595690107
     Path: event:/Ambil Ramuan
   DestroyEfek: {fileID: 0}
+  mushroomObject: {fileID: 2034729987}
+--- !u!114 &85565188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 85565183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bdfec57e98eb8a4aa919ac70f4f69fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mushroomObject: {fileID: 2034729987}
+  respawnDelay: 1.5
 --- !u!1001 &98385839
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4538,6 +4567,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &531351685 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6482609577781300241, guid: eda47335012daf0498d85b4c7cc0f577, type: 3}
+  m_PrefabInstance: {fileID: 65858490}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &532058908
 GameObject:
   m_ObjectHideFlags: 0
@@ -6716,6 +6750,20 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4364704564446699073, guid: eda47335012daf0498d85b4c7cc0f577, type: 3}
   m_PrefabInstance: {fileID: 65858490}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &730519750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 531351685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bdfec57e98eb8a4aa919ac70f4f69fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mushroomObject: {fileID: 803631767}
+  respawnDelay: 1.5
 --- !u!1001 &730883533
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7116,6 +7164,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f20245e4821aad443804552c6f915c51, type: 3}
   m_PrefabInstance: {fileID: 710368061}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &803631767 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8969936704310579023, guid: eda47335012daf0498d85b4c7cc0f577, type: 3}
+  m_PrefabInstance: {fileID: 65858490}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &812068127
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7211,6 +7264,11 @@ PrefabInstance:
       addedObject: {fileID: 1900072624}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f17cddb9298d3b4a88519e794fa6ee2, type: 3}
+--- !u!1 &824570138 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8969936704310579023, guid: eda47335012daf0498d85b4c7cc0f577, type: 3}
+  m_PrefabInstance: {fileID: 1930600211}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &827100147
 GameObject:
   m_ObjectHideFlags: 0
@@ -7793,6 +7851,25 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0852ba165a7730940a4403bee85e2606, type: 3}
+--- !u!1 &893131138 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6482609577781300241, guid: eda47335012daf0498d85b4c7cc0f577, type: 3}
+  m_PrefabInstance: {fileID: 2119490211}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &893131141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 893131138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bdfec57e98eb8a4aa919ac70f4f69fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mushroomObject: {fileID: 1258557916}
+  respawnDelay: 1.5
 --- !u!1 &895116157
 GameObject:
   m_ObjectHideFlags: 0
@@ -10326,6 +10403,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1191599711}
   m_Mesh: {fileID: 8802771628929948559, guid: 5df14a95055068d42a8564ffe348bfef, type: 3}
+--- !u!1 &1229687176 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6482609577781300241, guid: 8d492ad152037e54885fd15f880703ff, type: 3}
+  m_PrefabInstance: {fileID: 45134161}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1231867400
 GameObject:
   m_ObjectHideFlags: 0
@@ -10620,6 +10702,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53ad7483de2a2f24ebab6490a31e44ad, type: 3}
+--- !u!1 &1258557916 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8969936704310579023, guid: eda47335012daf0498d85b4c7cc0f577, type: 3}
+  m_PrefabInstance: {fileID: 2119490211}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1260579498
 GameObject:
   m_ObjectHideFlags: 0
@@ -14434,6 +14521,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2723368303092141706, guid: 73b65532f54f8e040b18acaa1fe62216, type: 3}
   m_PrefabInstance: {fileID: 1772931267}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1622333338 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4164334831876331507, guid: 8d492ad152037e54885fd15f880703ff, type: 3}
+  m_PrefabInstance: {fileID: 45134161}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1624188637 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9d28c7d10450ce34a998aad47f0d6632, type: 3}
@@ -14618,6 +14710,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6482609577781300241, guid: 8d492ad152037e54885fd15f880703ff, type: 3}
       insertIndex: -1
       addedObject: {fileID: 85565186}
+    - targetCorrespondingSourceObject: {fileID: 6482609577781300241, guid: 8d492ad152037e54885fd15f880703ff, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 85565188}
   m_SourcePrefab: {fileID: 100100000, guid: 8d492ad152037e54885fd15f880703ff, type: 3}
 --- !u!1 &1638808278
 GameObject:
@@ -15408,7 +15503,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bff343fa6d95ebd41941f6c1f0c43eeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CounterTopPoint: {fileID: 0}
+  CounterTopPoint: {fileID: 1854955338}
   kitchenObjectSO: {fileID: 11400000, guid: eedab8fc322f46d4ca5b37d52f923667, type: 2}
   ambilRamuanSFX:
     Guid:
@@ -15418,6 +15513,21 @@ MonoBehaviour:
       Data4: -1595690107
     Path: event:/Ambil Ramuan
   DestroyEfek: {fileID: 0}
+  mushroomObject: {fileID: 1988272536}
+--- !u!114 &1684086930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1684086925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bdfec57e98eb8a4aa919ac70f4f69fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mushroomObject: {fileID: 1988272536}
+  respawnDelay: 1.5
 --- !u!4 &1690047469 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4364704564446699073, guid: eda47335012daf0498d85b4c7cc0f577, type: 3}
@@ -16731,6 +16841,25 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 55871bc1cb53dfd468a343466456104c, type: 3}
   m_PrefabInstance: {fileID: 674772798}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1801910483 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6482609577781300241, guid: eda47335012daf0498d85b4c7cc0f577, type: 3}
+  m_PrefabInstance: {fileID: 1930600211}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1801910486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1801910483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bdfec57e98eb8a4aa919ac70f4f69fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mushroomObject: {fileID: 824570138}
+  respawnDelay: 1.5
 --- !u!1 &1803216008
 GameObject:
   m_ObjectHideFlags: 0
@@ -17149,6 +17278,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1853511359}
   m_CullTransparentMesh: 1
+--- !u!4 &1854955338 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2772706999704569089, guid: 8d492ad152037e54885fd15f880703ff, type: 3}
+  m_PrefabInstance: {fileID: 3812647374336584545}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1858006937 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6658662983685999433, guid: e653ba63a2d5cd54bbe09c1b874cbf10, type: 3}
@@ -17419,6 +17553,10 @@ PrefabInstance:
       propertyPath: baseCounter
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3623969561140874897, guid: eda47335012daf0498d85b4c7cc0f577, type: 3}
+      propertyPath: mushroomObject
+      value: 
+      objectReference: {fileID: 824570138}
     - target: {fileID: 4364704564446699073, guid: eda47335012daf0498d85b4c7cc0f577, type: 3}
       propertyPath: m_LocalPosition.x
       value: -15.63
@@ -17466,7 +17604,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6482609577781300241, guid: eda47335012daf0498d85b4c7cc0f577, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1801910486}
   m_SourcePrefab: {fileID: 100100000, guid: eda47335012daf0498d85b4c7cc0f577, type: 3}
 --- !u!1001 &1943246074
 PrefabInstance:
@@ -17552,12 +17693,26 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 928295857228730639, guid: 8d492ad152037e54885fd15f880703ff, type: 3}
   m_PrefabInstance: {fileID: 45134161}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1229687176}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bff343fa6d95ebd41941f6c1f0c43eeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1968988659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1229687176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bdfec57e98eb8a4aa919ac70f4f69fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mushroomObject: {fileID: 1622333338}
+  respawnDelay: 1.5
 --- !u!1001 &1975002375
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17631,6 +17786,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9d28c7d10450ce34a998aad47f0d6632, type: 3}
   m_PrefabInstance: {fileID: 1793209894}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1988272536 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4164334831876331507, guid: 8d492ad152037e54885fd15f880703ff, type: 3}
+  m_PrefabInstance: {fileID: 3812647374336584545}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1999432715
 GameObject:
@@ -18109,6 +18269,11 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4110662800945813785, guid: 27220672b57402b449802f7735e75460, type: 3}
   m_PrefabInstance: {fileID: 510594625}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2034729987 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4164334831876331507, guid: 8d492ad152037e54885fd15f880703ff, type: 3}
+  m_PrefabInstance: {fileID: 1638226289}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2046771891
 GameObject:
@@ -18742,6 +18907,10 @@ PrefabInstance:
       propertyPath: baseCounter
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3623969561140874897, guid: eda47335012daf0498d85b4c7cc0f577, type: 3}
+      propertyPath: mushroomObject
+      value: 
+      objectReference: {fileID: 1258557916}
     - target: {fileID: 4364704564446699073, guid: eda47335012daf0498d85b4c7cc0f577, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.8123
@@ -18822,7 +18991,10 @@ PrefabInstance:
     - {fileID: 722650380037639468, guid: eda47335012daf0498d85b4c7cc0f577, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6482609577781300241, guid: eda47335012daf0498d85b4c7cc0f577, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 893131141}
   m_SourcePrefab: {fileID: 100100000, guid: eda47335012daf0498d85b4c7cc0f577, type: 3}
 --- !u!1001 &1776656564554451679
 PrefabInstance:
@@ -19104,6 +19276,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6482609577781300241, guid: 8d492ad152037e54885fd15f880703ff, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1684086928}
+    - targetCorrespondingSourceObject: {fileID: 6482609577781300241, guid: 8d492ad152037e54885fd15f880703ff, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1684086930}
   m_SourcePrefab: {fileID: 100100000, guid: 8d492ad152037e54885fd15f880703ff, type: 3}
 --- !u!1001 &5291262625067180853
 PrefabInstance:
