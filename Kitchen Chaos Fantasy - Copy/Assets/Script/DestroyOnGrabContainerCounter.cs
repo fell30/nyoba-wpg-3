@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using FMODUnity;
 using UnityEngine;
 
@@ -7,10 +6,19 @@ public class DestroyOnGrabContainerCounter : ContainerCounter
 {
     [SerializeField] private EventReference ambilRamuanSFX;
     [SerializeField] private GameObject DestroyEfek;
+    [SerializeField] private GameObject mushroomObject; // referensi ke visual jamur
+
+    private RespawnableMushroom respawner;
+
+    private void Awake()
+    {
+        respawner = GetComponent<RespawnableMushroom>();
+    }
 
     public override void Interact(Player player)
     {
         base.Interact(player);
+
         if (!player.HasKitchenObject())
         {
             return;
@@ -24,6 +32,16 @@ public class DestroyOnGrabContainerCounter : ContainerCounter
             Destroy(efekInstance, 0.5f);
         }
 
-        Destroy(gameObject);
+        // Nonaktifkan visual jamurnya saja
+        if (mushroomObject != null)
+        {
+            mushroomObject.SetActive(false);
+        }
+
+        // Panggil respawn
+        if (respawner != null)
+        {
+            respawner.RespawnMushroom();
+        }
     }
 }
