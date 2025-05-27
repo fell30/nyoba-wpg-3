@@ -120,6 +120,7 @@ public class CauldronCounter : BaseCounter, IHasProgress
     {
         _isCookingInProgress = true;
         PlayCookingEffects();
+        Player.Instance.SetIsCooking(true);
 
         float cookDuration = 3f;
         float elapsedTime = 0f;
@@ -147,6 +148,7 @@ public class CauldronCounter : BaseCounter, IHasProgress
         _isCookingInProgress = false;
         OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs { progressNormalized = 0 });
         StopCookingEffects();
+        Player.Instance.SetIsCooking(false);
     }
 
     private void ResetCauldron()
