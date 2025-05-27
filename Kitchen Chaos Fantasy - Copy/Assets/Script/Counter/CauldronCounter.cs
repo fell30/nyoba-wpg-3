@@ -17,6 +17,7 @@ public class CauldronCounter : BaseCounter, IHasProgress
     [SerializeField] private Light _blubLight;
     [SerializeField] private KitchenObjectSO _waterBucketSO;
     [SerializeField] private GameObject _Water;
+    [SerializeField] private Player _player;
 
     private KitchenObject _ingredient1;
     private KitchenObject _ingredient2;
@@ -30,6 +31,8 @@ public class CauldronCounter : BaseCounter, IHasProgress
     {
         InitializeEffects();
         _Water.SetActive(false);
+
+
     }
 
     private void InitializeEffects()
@@ -121,6 +124,8 @@ public class CauldronCounter : BaseCounter, IHasProgress
         _isCookingInProgress = true;
         PlayCookingEffects();
         Player.Instance.SetIsCooking(true);
+        _player.enabled = false;
+
 
         float cookDuration = 3f;
         float elapsedTime = 0f;
@@ -149,6 +154,7 @@ public class CauldronCounter : BaseCounter, IHasProgress
         OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs { progressNormalized = 0 });
         StopCookingEffects();
         Player.Instance.SetIsCooking(false);
+        _player.enabled = true;
     }
 
     private void ResetCauldron()

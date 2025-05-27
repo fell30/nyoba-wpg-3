@@ -2,7 +2,8 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class WellCounter : BaseCounter, IHasProgress {
+public class WellCounter : BaseCounter, IHasProgress
+{
     public event EventHandler OnWaterCollected;
     public event EventHandler<IHasProgress.OnProgressChangedEventArgs> OnProgressChanged;
 
@@ -15,25 +16,31 @@ public class WellCounter : BaseCounter, IHasProgress {
     private Player _interactingPlayer;
     private Vector3 _playerStartPosition;
 
-    private void Start() {
+    private void Start()
+    {
         ResetHoldProcess();
     }
 
-    public void Initialize(GameInput gameInput) {
+    public void Initialize(GameInput gameInput)
+    {
         _gameInput = gameInput ?? throw new ArgumentNullException(nameof(gameInput));
     }
 
-    public override void Interact(Player player) {
-        if (!_isHolding && !player.HasKitchenObject()) {
+    public override void Interact(Player player)
+    {
+        if (!_isHolding && !player.HasKitchenObject())
+        {
             StartHoldProcess(player);
         }
     }
 
-    private void StartHoldProcess(Player player) {
+    private void StartHoldProcess(Player player)
+    {
         _isHolding = true;
         _holdProgress = 0f;
         _interactingPlayer = player;
         _playerStartPosition = player.Getposition();
+        Player.Instance.SetIsCooking(true);
 
         // SFX awal ambil ramuan
         GetComponent<WellAudio>()?.PlayAmbilSound();
@@ -42,30 +49,41 @@ public class WellCounter : BaseCounter, IHasProgress {
 
     }
 
-    private void Update() {
-        if (_isHolding) {
+    private void Update()
+    {
+        if (_isHolding)
+        {
             HandleHoldProgress();
         }
     }
 
-    private void HandleHoldProgress() {
-        if (_gameInput.IsInteractPressed() && _interactingPlayer != null && !_interactingPlayer.HasMovedSince(_playerStartPosition)) {
+    private void HandleHoldProgress()
+    {
+        if (_gameInput.IsInteractPressed() && _interactingPlayer != null && !_interactingPlayer.HasMovedSince(_playerStartPosition))
+        {
             _holdProgress += Time.deltaTime / _holdTime;
 
             // 🔥 Panggil event OnProgressChanged agar UI mengetahui perubahan progress
-            OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs {
+            OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs
+            {
                 progressNormalized = _holdProgress
             });
 
-            if (_holdProgress >= 1f) {
+            if (_holdProgress >= 1f)
+            {
                 CompleteHoldProcess();
+                Player.Instance.SetIsCooking(false);
             }
-        } else {
+        }
+        else
+        {
             CancelHoldProcess();
+            Player.Instance.SetIsCooking(false);
         }
     }
 
-    private void CompleteHoldProcess() {
+    private void CompleteHoldProcess()
+    {
         Transform waterBucketTransform = Instantiate(_waterBucketSO.prefab);
         waterBucketTransform.GetComponent<KitchenObject>().SetKitchenObjectParent(_interactingPlayer);
         OnWaterCollected?.Invoke(this, EventArgs.Empty);
@@ -76,19 +94,22 @@ public class WellCounter : BaseCounter, IHasProgress {
         ResetHoldProcess();
     }
 
-    private void CancelHoldProcess() {
+    private void CancelHoldProcess()
+    {
         ResetHoldProcess();
     }
 
-    private void ResetHoldProcess() {
+    private void ResetHoldProcess()
+    {
         _isHolding = false;
         _holdProgress = 0f;
         _interactingPlayer = null;
         AudioEventSystem.StopAudio("Well");
 
         // 🔥 Beritahu UI bahwa progress reset ke 0
-        OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs {
+        OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs
+        {
             progressNormalized = 0f
-        });
-    }
+        });
+    }
 }

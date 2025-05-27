@@ -2234,6 +2234,10 @@ PrefabInstance:
       value: MortarAndPastle_Counter (3)
       objectReference: {fileID: 0}
     - target: {fileID: 7925588497555052598, guid: 814d9792b9153094fa877a9120af28e3, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 52797740}
+    - target: {fileID: 7925588497555052598, guid: 814d9792b9153094fa877a9120af28e3, type: 3}
       propertyPath: cuttingObjectSO
       value: 
       objectReference: {fileID: 11400000, guid: b78b048b5e31c4c4d8df8e3ffb886199, type: 2}
@@ -7274,8 +7278,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 74632c28a0cec284789ec9a8a881cb8a, type: 2}
+  m_sharedMaterial: {fileID: 7185896554986190432, guid: 74632c28a0cec284789ec9a8a881cb8a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -19389,6 +19393,10 @@ PrefabInstance:
       propertyPath: InitialModule.startColor.minColor.r
       value: 0.3364067
       objectReference: {fileID: 0}
+    - target: {fileID: 9154376809899444676, guid: 26c0f6d9bac29fd4eac0265e6884cc9a, type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 52797740}
     - target: {fileID: 9154376809899444676, guid: 26c0f6d9bac29fd4eac0265e6884cc9a, type: 3}
       propertyPath: _cookingProgressSlider
       value: 
