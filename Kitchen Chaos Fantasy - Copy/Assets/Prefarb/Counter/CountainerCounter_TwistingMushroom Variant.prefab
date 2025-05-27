@@ -359,3 +359,4 @@ MonoBehaviour:
       Data3: -1752210295
       Data4: -1595690107
     Path: event:/Ambil Ramuan
+  DestroyEfek: {fileID: 9070474633162843459, guid: 356cf4dca1465b54fabbb8cd9b1cd190, type: 3}

@@ -11,6 +11,7 @@ public class CauldronCounter : BaseCounter, IHasProgress
     [SerializeField] private Transform _counterTopPoint1;
     [SerializeField] private Transform _counterTopPoint2;
     [SerializeField] private ParticleSystem _fireParticle;
+    [SerializeField] private ParticleSystem MagicParticle;
     [SerializeField] private Light _fireLight;
     [SerializeField] private ParticleSystem _blubParticle;
     [SerializeField] private Light _blubLight;
@@ -34,6 +35,7 @@ public class CauldronCounter : BaseCounter, IHasProgress
     private void InitializeEffects()
     {
         _fireParticle?.Stop();
+        MagicParticle?.Stop();
         _fireLight.enabled = false;
         _blubParticle?.Stop();
         _blubLight.enabled = false;
@@ -159,6 +161,12 @@ public class CauldronCounter : BaseCounter, IHasProgress
         _fireLight.enabled = true;
         _blubParticle?.Play();
         _blubLight.enabled = true;
+        StartCoroutine(MagicDelay());
+    }
+    private IEnumerator MagicDelay()
+    {
+        yield return new WaitForSeconds(1.8f);
+        MagicParticle?.Play();
     }
 
     private void StopCookingEffects()
@@ -167,6 +175,7 @@ public class CauldronCounter : BaseCounter, IHasProgress
         _fireLight.enabled = false;
         _blubParticle?.Stop();
         _blubLight.enabled = false;
+        MagicParticle?.Stop();
     }
 
     private void StopBlubParticleIfNoIngredients()

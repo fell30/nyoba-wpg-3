@@ -7,6 +7,7 @@ public class MortarCounterVisual : MonoBehaviour
 {
 
     [SerializeField] private MortarCounter mortarCounter;
+    [SerializeField] private ParticleSystem cutParticleSystem;
     private Animator animator;
     private const string cut = "cut";
 
@@ -24,7 +25,10 @@ public class MortarCounterVisual : MonoBehaviour
     private void MortarCounter_OnCut(object sender, System.EventArgs e)
     {
         animator.SetTrigger(cut);
-
+        if (cutParticleSystem != null)
+        {
+            cutParticleSystem.Play();
+        }
     }
 
 }
