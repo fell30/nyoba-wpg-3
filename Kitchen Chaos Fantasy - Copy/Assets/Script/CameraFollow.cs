@@ -4,8 +4,11 @@ public class CameraFollow : MonoBehaviour
 {
     private Vector3 _offset;
     [SerializeField] private Transform target;
+    [Header("Smooth Settings")]
     [SerializeField] private float smoothTime;
     private Vector3 _CurrentVelocity = Vector3.zero;
+
+
 
     private void Awake()
     {

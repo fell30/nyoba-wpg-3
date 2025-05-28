@@ -62,6 +62,7 @@ public class CountdownTimer : MonoBehaviour
     public void StopTimer()
     {
         timerIsRunning = false;
+        FindObjectOfType<BGMManager>().StartBGM();
     }
 
     void UpdateTimerDisplay(float currentTime)
