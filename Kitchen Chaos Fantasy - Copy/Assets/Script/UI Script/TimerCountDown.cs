@@ -62,7 +62,7 @@ public class CountdownTimer : MonoBehaviour
     public void StopTimer()
     {
         timerIsRunning = false;
-        FindObjectOfType<BGMManager>().StartBGM();
+        FindObjectOfType<BGMManager>().StopBGM();
     }
 
     void UpdateTimerDisplay(float currentTime)
@@ -109,6 +109,7 @@ public class CountdownTimer : MonoBehaviour
         {
             AudioEventSystem.StopAudio("TimerSound");
             isTimerSoundPlaying = false;
+
         }
 
         // Hentikan efek getar

@@ -29,6 +29,7 @@ public class TutorialController : MonoBehaviour
 
     private void Update()
     {
+
         switch (currenState)
         {
             case TutorialInputState.WASD:
@@ -212,6 +213,8 @@ public class TutorialController : MonoBehaviour
 
 
         FindObjectOfType<BGMManager>().StartBGM();
+
+
 
 
         if (serveTutorial != null)
