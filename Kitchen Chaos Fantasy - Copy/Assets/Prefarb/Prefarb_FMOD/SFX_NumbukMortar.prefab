@@ -51,7 +51,7 @@ MonoBehaviour:
       Data2: 1171783736
       Data3: 29889159
       Data4: 1548282012
-    Path: event:/MortarPastleSFX
+    Path: event:/SFX/MortarPastleSFX
   Event: 
   EventPlayTrigger: 0
   EventStopTrigger: 0

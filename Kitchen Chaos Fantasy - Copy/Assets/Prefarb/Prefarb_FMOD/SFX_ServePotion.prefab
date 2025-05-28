@@ -51,7 +51,7 @@ MonoBehaviour:
       Data2: 1238197804
       Data3: 69253554
       Data4: 1202372693
-    Path: event:/ServeSFX
+    Path: event:/SFX/ServeSFX
   Event: 
   EventPlayTrigger: 0
   EventStopTrigger: 0

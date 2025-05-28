@@ -51,7 +51,7 @@ MonoBehaviour:
       Data2: 1153132041
       Data3: 1752834735
       Data4: -407135531
-    Path: event:/DropIngridientSFX
+    Path: event:/SFX/DropIngridientSFX
   Event: 
   EventPlayTrigger: 0
   EventStopTrigger: 0

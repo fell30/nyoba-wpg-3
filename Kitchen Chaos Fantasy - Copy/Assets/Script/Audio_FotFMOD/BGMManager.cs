@@ -8,7 +8,7 @@ public class BGMManager : MonoBehaviour
 
     private void Start()
     {
-        bgmInstance = RuntimeManager.CreateInstance("event:/BGM");
+        bgmInstance = RuntimeManager.CreateInstance("event:/Music/BGM");
     }
 
     public void StartBGM()
