@@ -34,8 +34,10 @@ public class Player : MonoBehaviour, IkitchenObjectParent
     [SerializeField] private float PlayerHeight = 2f;
     [SerializeField] private LayerMask layerMaskCounter;
     [SerializeField] private Transform KitchenObjectHoldPoint;
+    [SerializeField] private ParticleSystem footstepParticleSystem;
 
     private bool isWalking;
+    private bool isCooking;
     private Vector3 LastInteractDir;
     private BaseCounter selectedCounter;
     private KitchenObject kitchenObject;
@@ -84,17 +86,36 @@ public class Player : MonoBehaviour, IkitchenObjectParent
     {
         return isWalking;
     }
+    public bool IsCooking()
+    {
+        return isCooking;
+    }
+    public void SetIsCooking(bool cooking)
+    {
+        isCooking = cooking;
+    }
     private void HandleFootstepSound()
     {
         if (isWalking && !wasWalking)
         {
             // Pemain mulai berjalan
             AudioEventSystem.PlayAudio("Footstep");
+            if (footstepParticleSystem != null)
+            {
+                footstepParticleSystem.Play();
+
+
+            }
         }
         else if (!isWalking && wasWalking)
         {
             // Pemain berhenti
             AudioEventSystem.StopAudio("Footstep");
+            if (footstepParticleSystem != null)
+            {
+                footstepParticleSystem.Stop();
+
+            }
         }
 
         wasWalking = isWalking; // Update status wasWalking

@@ -5,20 +5,26 @@ using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MortarCounter : BaseCounter, IHasProgress {
+public class MortarCounter : BaseCounter, IHasProgress
+{
     public event EventHandler<IHasProgress.OnProgressChangedEventArgs> OnProgressChanged;
 
     public event EventHandler OnCut;
     [SerializeField] private MortarRecipeSO[] cuttingObjectSOArray;
     [SerializeField] private SfxMortar sfxMortar;
+    [SerializeField] private Player _player;
 
     private int MortarProgress;
 
 
-    public override void Interact(Player player) {
-        if (!HasKitchenObject()) {
-            if (player.HasKitchenObject()) {
-                if (HasRecipeWithInput(player.GetKitchenObject().GetKitchenObjectSO())) {
+    public override void Interact(Player player)
+    {
+        if (!HasKitchenObject())
+        {
+            if (player.HasKitchenObject())
+            {
+                if (HasRecipeWithInput(player.GetKitchenObject().GetKitchenObjectSO()))
+                {
 
                     player.GetKitchenObject().SetKitchenObjectParent(this);
 
@@ -29,22 +35,33 @@ public class MortarCounter : BaseCounter, IHasProgress {
                     OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs { progressNormalized = (float)MortarProgress / mortarRecipeSO.mortarProgressMax });
                 }
 
-            } else {
+            }
+            else
+            {
 
             }
-        } else {
-            if (player.HasKitchenObject()) {
+        }
+        else
+        {
+            if (player.HasKitchenObject())
+            {
 
-            } else {
+            }
+            else
+            {
                 GetKitchenObject().SetKitchenObjectParent(player);
             }
         }
 
 
     }
-    public override void InteractAlternate(Player player) {
-        if (HasKitchenObject() && HasRecipeWithInput(GetKitchenObject().GetKitchenObjectSO())) {
+    public override void InteractAlternate(Player player)
+    {
+        if (HasKitchenObject() && HasRecipeWithInput(GetKitchenObject().GetKitchenObjectSO()))
+        {
             MortarProgress++;
+            Player.Instance.SetIsCooking(true);
+            _player.enabled = false;
             sfxMortar.PlayMortarSound(); // SFX saat proses tumbuk/uleg
 
             MortarRecipeSO mortarRecipeSO = GetMortarRecipeSOWithInput(GetKitchenObject().GetKitchenObjectSO());
@@ -53,37 +70,48 @@ public class MortarCounter : BaseCounter, IHasProgress {
 
             OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs { progressNormalized = (float)MortarProgress / mortarRecipeSO.mortarProgressMax });
 
-            if (MortarProgress >= mortarRecipeSO.mortarProgressMax) {
+            if (MortarProgress >= mortarRecipeSO.mortarProgressMax)
+            {
                 KitchenObjectSO outputKitchenObjectSO = GetOutputForInput(GetKitchenObject().GetKitchenObjectSO());
                 GetKitchenObject().DestroySelf();
                 KitchenObject.SpawnKitchenObject(outputKitchenObjectSO, this);
+                Player.Instance.SetIsCooking(false);
+                _player.enabled = true;
 
             }
 
         }
     }
 
-    private bool HasRecipeWithInput(KitchenObjectSO inputKitchenObjectSO) {
+    private bool HasRecipeWithInput(KitchenObjectSO inputKitchenObjectSO)
+    {
         MortarRecipeSO mortarRecipeSO = GetMortarRecipeSOWithInput(inputKitchenObjectSO);
         return mortarRecipeSO != null;
 
     }
-    private KitchenObjectSO GetOutputForInput(KitchenObjectSO inputKitchenObjectSO) {
+    private KitchenObjectSO GetOutputForInput(KitchenObjectSO inputKitchenObjectSO)
+    {
         MortarRecipeSO mortarRecipeSO = GetMortarRecipeSOWithInput(inputKitchenObjectSO);
-        if (mortarRecipeSO != null) {
+        if (mortarRecipeSO != null)
+        {
             return mortarRecipeSO.output;
-        } else {
+        }
+        else
+        {
             return null;
         }
 
     }
 
-    private MortarRecipeSO GetMortarRecipeSOWithInput(KitchenObjectSO inputKitchenObjectSO) {
-        foreach (MortarRecipeSO mortarRecipeSO in cuttingObjectSOArray) {
-            if (mortarRecipeSO.input == inputKitchenObjectSO) {
+    private MortarRecipeSO GetMortarRecipeSOWithInput(KitchenObjectSO inputKitchenObjectSO)
+    {
+        foreach (MortarRecipeSO mortarRecipeSO in cuttingObjectSOArray)
+        {
+            if (mortarRecipeSO.input == inputKitchenObjectSO)
+            {
                 return mortarRecipeSO;
             }
         }
-        return null;
-    }
+        return null;
+    }
 }

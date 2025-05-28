@@ -95,6 +95,7 @@ public class OrderSystem : MonoBehaviour
             OrderSuccess.SetActive(true);
             OnAllOrdersCompleted?.Invoke();
             countdownTimer.StopTimer();
+            FindObjectOfType<BGMManager>().StartBGM();
         }
     }
 
@@ -120,16 +121,17 @@ public class OrderSystem : MonoBehaviour
     //Animation TimerPanel
     private IEnumerator TimerPanelAnimation()
     {
-        yield return new WaitForSeconds(1f);
-        TimerPanel[0].SetActive(true);
-        yield return new WaitForSeconds(2);
-        TimerPanel[1].SetActive(true);
-        TimerPanel[0].SetActive(false);
-        yield return new WaitForSeconds(2);
-        TimerPanel[2].SetActive(true);
-        TimerPanel[1].SetActive(false);
-        yield return new WaitForSeconds(2);
-        TimerPanel[2].SetActive(false);
+        // yield return new WaitForSeconds(1f);
+        // TimerPanel[0].SetActive(true);
+        // yield return new WaitForSeconds(2);
+        // TimerPanel[1].SetActive(true);
+        // TimerPanel[0].SetActive(false);
+        // yield return new WaitForSeconds(2);
+        // TimerPanel[2].SetActive(true);
+        // TimerPanel[1].SetActive(false);
+        // yield return new WaitForSeconds(2);
+        // TimerPanel[2].SetActive(false);
+        yield return new WaitForSeconds(0.5f);
         StartOrderSystem();
         countdownTimer.StartTimer();
 
