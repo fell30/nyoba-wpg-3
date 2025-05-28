@@ -51,7 +51,7 @@ MonoBehaviour:
       Data2: 1105720674
       Data3: -667711079
       Data4: 772195109
-    Path: event:/CauldornSFX
+    Path: event:/SFX/CauldornSFX
   Event: 
   EventPlayTrigger: 0
   EventStopTrigger: 0

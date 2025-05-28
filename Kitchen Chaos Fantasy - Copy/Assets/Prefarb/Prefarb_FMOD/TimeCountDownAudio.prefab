@@ -51,7 +51,7 @@ MonoBehaviour:
       Data2: 1226598734
       Data3: -1711091543
       Data4: -103753337
-    Path: event:/Timecountdown
+    Path: event:/SFX/Timecountdown
   Event: 
   EventPlayTrigger: 0
   EventStopTrigger: 0
