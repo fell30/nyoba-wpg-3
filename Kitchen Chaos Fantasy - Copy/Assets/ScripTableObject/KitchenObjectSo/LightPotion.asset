@@ -15,3 +15,4 @@ MonoBehaviour:
   prefab: {fileID: 5133453827729482660, guid: 03575f1bc433a8d47b976ea3eea30f7c, type: 3}
   recipeSprite: {fileID: 21300000, guid: 5fe067d82c419634aa2c94c9449d8138, type: 3}
   objectName: LightPotion
+  GoldReward: 6

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 using UnityEngine;
+using UnityEngine.Rendering.Universal.Internal;
 using UnityEngine.SceneManagement;
 
 public class OrderSystem : MonoBehaviour
@@ -10,6 +11,8 @@ public class OrderSystem : MonoBehaviour
     public event Action OnAllOrdersCompleted;
     public List<KitchenObjectSO> possibleOrders;
     private Queue<KitchenObjectSO> orderQueue = new Queue<KitchenObjectSO>();
+    private Dictionary<KitchenObjectSO, int> serveCounts = new Dictionary<KitchenObjectSO, int>();
+
     private KitchenObjectSO currentOrder;
     [SerializeField] private CountdownTimer countdownTimer;
 
@@ -19,6 +22,8 @@ public class OrderSystem : MonoBehaviour
     [SerializeField] private GameObject[] TimerPanel;
 
     [SerializeField] private GameObject OrderSuccess;
+    [SerializeField] private totalReward totalReward;
+    [SerializeField] private GoldSystem goldSystem;
     private GameObject currentOrderUI;
 
     public int maxOrders;
@@ -31,6 +36,10 @@ public class OrderSystem : MonoBehaviour
             StartCoroutine(TimerPanelAnimation());
 
         }
+    }
+    public Dictionary<KitchenObjectSO, int> GetServeStats()
+    {
+        return serveCounts;
     }
     public void StartOrderSystem()
     {
@@ -95,7 +104,10 @@ public class OrderSystem : MonoBehaviour
             OrderSuccess.SetActive(true);
             OnAllOrdersCompleted?.Invoke();
             countdownTimer.StopTimer();
-            FindObjectOfType<BGMManager>().StartBGM();
+            int totalGold = goldSystem.GetcurrentGold();
+            totalReward.ShowFinalGold(totalGold);
+            totalReward.ShowPotionStats(GetServeStats());
+
         }
     }
 
@@ -113,6 +125,14 @@ public class OrderSystem : MonoBehaviour
             {
                 Destroy(currentOrderUI);
                 currentOrderUI = null;
+            }
+            if (serveCounts.ContainsKey(item))
+            {
+                serveCounts[item]++;
+            }
+            else
+            {
+                serveCounts[item] = 1;
             }
             ShowNextOrder();
         }
