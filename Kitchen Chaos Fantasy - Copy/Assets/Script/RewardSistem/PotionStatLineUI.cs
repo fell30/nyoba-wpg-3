@@ -11,6 +11,7 @@ public class PotionStatLineUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI countText;
     [SerializeField] private TextMeshProUGUI earnedGoldPotionText;
 
+
     public void Setup(KitchenObjectSO potionSO, int count)
     {
         potionImage.sprite = potionSO.recipeSprite;
@@ -20,4 +21,5 @@ public class PotionStatLineUI : MonoBehaviour
         int totalGold = potionSO.GoldReward * count;
         earnedGoldPotionText.text = "🪙 " + totalGold;
     }
+
 }

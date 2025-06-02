@@ -12,7 +12,7 @@ public class OrderSystem : MonoBehaviour
     public List<KitchenObjectSO> possibleOrders;
     private Queue<KitchenObjectSO> orderQueue = new Queue<KitchenObjectSO>();
     private Dictionary<KitchenObjectSO, int> serveCounts = new Dictionary<KitchenObjectSO, int>();
-
+    private List<KitchenObjectSO> activeOrders = new List<KitchenObjectSO>();
     private KitchenObjectSO currentOrder;
     [SerializeField] private CountdownTimer countdownTimer;
 
@@ -41,6 +41,29 @@ public class OrderSystem : MonoBehaviour
     {
         return serveCounts;
     }
+    public List<KitchenObjectSO> GetFailedOrders()
+    {
+        return new List<KitchenObjectSO>(activeOrders);
+    }
+    public Dictionary<KitchenObjectSO, int> GetFailedOrderStats()
+    {
+        Dictionary<KitchenObjectSO, int> failedStats = new Dictionary<KitchenObjectSO, int>();
+
+        foreach (KitchenObjectSO order in activeOrders)
+        {
+            if (failedStats.ContainsKey(order))
+            {
+                failedStats[order]++;
+            }
+            else
+            {
+                failedStats[order] = 1;
+            }
+        }
+
+        return failedStats;
+    }
+
     public void StartOrderSystem()
     {
         isTutorialCompleted = true;
@@ -52,6 +75,7 @@ public class OrderSystem : MonoBehaviour
     public void AddNewOrder()
     {
         KitchenObjectSO newOrder = possibleOrders[UnityEngine.Random.Range(0, possibleOrders.Count)];
+        activeOrders.Add(newOrder);
         orderQueue.Enqueue(newOrder);
         Debug.Log("New Order: " + newOrder.objectName);
         Debug.Log("Total Orders: " + orderQueue.Count);
@@ -135,6 +159,7 @@ public class OrderSystem : MonoBehaviour
                 serveCounts[item] = 1;
             }
             ShowNextOrder();
+            activeOrders.Remove(item);
         }
     }
 

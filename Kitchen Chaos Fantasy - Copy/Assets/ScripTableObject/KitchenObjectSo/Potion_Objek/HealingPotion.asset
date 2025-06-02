@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 16f952276c9eaf84b9c03c8ee55ab013, type: 3}
-  m_Name: LightPotion
+  m_Name: HealingPotion
   m_EditorClassIdentifier: 
-  prefab: {fileID: 5133453827729482660, guid: 03575f1bc433a8d47b976ea3eea30f7c, type: 3}
-  recipeSprite: {fileID: 21300000, guid: 5fe067d82c419634aa2c94c9449d8138, type: 3}
-  objectName: LightPotion
-  GoldReward: 6
+  prefab: {fileID: 5133453827729482660, guid: ffcd9974adccb7b45b80a51bc794ca89, type: 3}
+  recipeSprite: {fileID: 294069945, guid: 520cd963709f3bf4b996c5b14890e384, type: 3}
+  objectName: HealingPotion
+  GoldReward: 3
