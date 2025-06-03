@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 16f952276c9eaf84b9c03c8ee55ab013, type: 3}
-  m_Name: Nylium
+  m_Name: Frost Protection
   m_EditorClassIdentifier: 
-  prefab: {fileID: 5133453827729482660, guid: aaea1e05c75538747b6c57303991d5d9, type: 3}
-  recipeSprite: {fileID: 0}
-  IconObject: {fileID: 0}
-  objectName: Nylium
-  GoldReward: 0
+  prefab: {fileID: 5133453827729482660, guid: 6ece646422df0914bb162329e128c472, type: 3}
+  recipeSprite: {fileID: 21300000, guid: 020ae3b6d26ba5b4c8041c8cb5a635a3, type: 3}
+  IconObject: {fileID: 21300000, guid: f1f50c7ef90b19741b26f2040806cf56, type: 3}
+  objectName: Frost Protection
+  GoldReward: 7

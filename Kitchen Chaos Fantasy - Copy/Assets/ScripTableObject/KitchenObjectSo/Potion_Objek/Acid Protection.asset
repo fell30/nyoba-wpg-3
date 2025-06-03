@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 16f952276c9eaf84b9c03c8ee55ab013, type: 3}
-  m_Name: Nylium
+  m_Name: Acid Protection
   m_EditorClassIdentifier: 
-  prefab: {fileID: 5133453827729482660, guid: aaea1e05c75538747b6c57303991d5d9, type: 3}
-  recipeSprite: {fileID: 0}
-  IconObject: {fileID: 0}
-  objectName: Nylium
-  GoldReward: 0
+  prefab: {fileID: 5133453827729482660, guid: 0f2b7ff1b65462141a1b01d5ffa47a89, type: 3}
+  recipeSprite: {fileID: 21300000, guid: b65590794b5addf4a923de0cc02d4f73, type: 3}
+  IconObject: {fileID: 21300000, guid: 713ea9afa60dd6e4ebf6503a33e8cc99, type: 3}
+  objectName: Acid Protection
+  GoldReward: 5

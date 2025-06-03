@@ -9,11 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16f952276c9eaf84b9c03c8ee55ab013, type: 3}
-  m_Name: Nylium
+  m_Script: {fileID: 11500000, guid: 0f24cc680ea882047a29fd7d7fee5966, type: 3}
+  m_Name: coldLeaf_Powder
   m_EditorClassIdentifier: 
-  prefab: {fileID: 5133453827729482660, guid: aaea1e05c75538747b6c57303991d5d9, type: 3}
-  recipeSprite: {fileID: 0}
-  IconObject: {fileID: 0}
-  objectName: Nylium
-  GoldReward: 0
+  input: {fileID: 11400000, guid: ebd639f5f513691429746f5ebd0546e3, type: 2}
+  output: {fileID: 11400000, guid: a5811adc58a68e74c955fc693c475dda, type: 2}
+  mortarProgressMax: 5
