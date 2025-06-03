@@ -14,12 +14,12 @@ public class PotionStatLineUI : MonoBehaviour
 
     public void Setup(KitchenObjectSO potionSO, int count)
     {
-        potionImage.sprite = potionSO.recipeSprite;
+        potionImage.sprite = potionSO.IconObject;
         potionNameText.text = potionSO.objectName;
         countText.text = "x" + count;
 
         int totalGold = potionSO.GoldReward * count;
-        earnedGoldPotionText.text = "🪙 " + totalGold;
+        earnedGoldPotionText.text = totalGold.ToString();
     }
 
 }

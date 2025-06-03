@@ -19,7 +19,7 @@ public class OrderSystem : MonoBehaviour
     public GameObject orderUIPrefab;
     public Transform orderUIParent;
 
-    [SerializeField] private GameObject[] TimerPanel;
+    // [SerializeField] private GameObject[] TimerPanel;
 
     [SerializeField] private GameObject OrderSuccess;
     [SerializeField] private totalReward totalReward;

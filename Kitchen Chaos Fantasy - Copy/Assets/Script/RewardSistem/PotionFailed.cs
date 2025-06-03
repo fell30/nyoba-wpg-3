@@ -12,7 +12,7 @@ public class PotionFailed : MonoBehaviour
 
     public void Setup(KitchenObjectSO so, int count)
     {
-        icon.sprite = so.recipeSprite;
+        icon.sprite = so.IconObject;
         nameText.text = so.objectName;
         countText.text = "x" + count;
     }
