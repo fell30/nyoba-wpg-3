@@ -3400,7 +3400,7 @@ GameObject:
   - component: {fileID: 670242140}
   - component: {fileID: 670242139}
   - component: {fileID: 670242138}
-  - component: {fileID: 670242142}
+  - component: {fileID: 670242143}
   m_Layer: 0
   m_Name: Camera
   m_TagString: MainCamera
@@ -3519,14 +3519,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 670242137}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: 4.365575e-11, w: 1}
-  m_LocalPosition: {x: -0, y: -0, z: 4.1}
+  m_LocalRotation: {x: 0.05797839, y: -0, z: -0, w: 0.9983179}
+  m_LocalPosition: {x: 0.7, y: -1, z: 7.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2003885225}
-  m_LocalEulerAnglesHint: {x: -9.252, y: -0.282, z: -0.445}
---- !u!114 &670242142
+  m_LocalEulerAnglesHint: {x: 6.648, y: 0, z: 0}
+--- !u!114 &670242143
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3535,11 +3535,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 670242137}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4addcc05517ccba4ab2178882df93712, type: 3}
+  m_Script: {fileID: 11500000, guid: 079bb90276039f645b09f6f0e99483e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 52797741}
-  smoothTime: 0.7
+  smoothTime: 0.2
+  introMoveDuration: 3
+  startYOffset: -10
+  startFOV: 80
+  targetFOV: 80
+  zoomDuration: 2
 --- !u!1001 &718923228
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14983,7 +14988,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1098107115546942893, guid: cca242380575b234483a673299e18a0a, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4752215497554690133, guid: cca242380575b234483a673299e18a0a, type: 3}
       propertyPath: m_Pivot.x

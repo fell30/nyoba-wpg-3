@@ -15,84 +15,10 @@ MonoBehaviour:
   Path: FMOD Unity/Bank/Desktop/BGM.assets.bank
   Name: BGM.assets
   StudioPath: bank:/BGM.assets
-  lastModified: 638826462868722822
+  lastModified: 638839728590789663
   FileSizes: []
   Exists: 1
---- !u!114 &-7828803828470967041
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Timecountdown
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Timecountdown
-  Guid:
-    Data1: 2076101695
-    Data2: 1226598734
-    Data3: -1711091543
-    Data4: -103753337
-  Banks:
-  - {fileID: 1237730092018103866}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 31000
---- !u!114 &-3629758534009279812
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
-  m_EditorClassIdentifier: 
-  Path: FMOD Unity/Bank/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-  lastModified: 638842430593916089
-  FileSizes:
-  - Name: 
-    Value: 1754
-  Exists: 1
---- !u!114 &-3103100440364006649
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/TakeIngridientSFX
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/TakeIngridientSFX
-  Guid:
-    Data1: 1633005819
-    Data2: 1132671708
-    Data3: -1752210295
-    Data4: -1595690107
-  Banks:
-  - {fileID: 1237730092018103866}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 30
-  Length: 77
---- !u!114 &-2439661827826040521
+--- !u!114 &-8082091762291064498
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -119,7 +45,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 35
   Length: 200
---- !u!114 &-1125274431820960836
+--- !u!114 &-7718856425703507437
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -129,43 +55,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/CauldronEffectSFX
+  m_Name: event:/SFX/Timecountdown
   m_EditorClassIdentifier: 
-  Path: event:/SFX/CauldronEffectSFX
+  Path: event:/SFX/Timecountdown
   Guid:
-    Data1: 1263948958
-    Data2: 1085408411
-    Data3: -579334000
-    Data4: 1680027263
+    Data1: 2076101695
+    Data2: 1226598734
+    Data3: -1711091543
+    Data4: -103753337
   Banks:
   - {fileID: 1237730092018103866}
-  IsStream: 0
-  Is3D: 0
+  IsStream: 1
+  Is3D: 1
   IsOneShot: 1
-  Parameters:
-  - {fileID: 271534149509788094}
+  Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 2063
---- !u!114 &-1097642649924202966
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.assets.bank
-  m_EditorClassIdentifier: 
-  Path: FMOD Unity/Bank/Desktop/Master.assets.bank
-  Name: Master.assets
-  StudioPath: bank:/Master.assets
-  lastModified: 638826462869157510
-  FileSizes: []
-  Exists: 1
---- !u!114 &-924228305380584028
+  Length: 31000
+--- !u!114 &-7193802567290468786
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -175,14 +82,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/TrashSFX
+  m_Name: event:/SFX/TakeIngridientSFX
   m_EditorClassIdentifier: 
-  Path: event:/SFX/TrashSFX
+  Path: event:/SFX/TakeIngridientSFX
   Guid:
-    Data1: 352020603
-    Data2: 1301331175
-    Data3: 288266635
-    Data4: 1658701218
+    Data1: 1633005819
+    Data2: 1132671708
+    Data3: -1752210295
+    Data4: -1595690107
   Banks:
   - {fileID: 1237730092018103866}
   IsStream: 0
@@ -190,173 +97,9 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
-  MaxDistance: 35
-  Length: 475
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
-  m_Name: FMODStudioCache
-  m_EditorClassIdentifier: 
-  EditorBanks:
-  - {fileID: -3629758534009279812}
-  - {fileID: -8418235925747588219}
-  - {fileID: 5336363028646637550}
-  - {fileID: 1407814402539241748}
-  - {fileID: -1097642649924202966}
-  - {fileID: 6125456919088573864}
-  - {fileID: 5495952874708681732}
-  - {fileID: 2677062511850754195}
-  - {fileID: 1237730092018103866}
-  - {fileID: 4378526484284127055}
-  EditorEvents:
-  - {fileID: 3602990918354368943}
-  - {fileID: 6341565425378106249}
-  - {fileID: -2439661827826040521}
-  - {fileID: -7828803828470967041}
-  - {fileID: 3636897969588784910}
-  - {fileID: -924228305380584028}
-  - {fileID: 4952402043739000093}
-  - {fileID: 7113459667961687221}
-  - {fileID: -3103100440364006649}
-  - {fileID: -1125274431820960836}
-  EditorParameters: []
-  MasterBanks:
-  - {fileID: 6125456919088573864}
-  StringsBanks:
-  - {fileID: -3629758534009279812}
-  cacheVersion: 131847
-  cacheTime: 638842430594006754
-  SerializableEventsDict:
-  - key: event:/Music/BGMSelectionMap
-    index: 0
-  - key: event:/Music/BGM
-    index: 1
-  - key: event:/SFX/MortarPastleSFX
-    index: 2
-  - key: event:/SFX/Timecountdown
-    index: 3
-  - key: event:/SFX/CauldornSFX
-    index: 4
-  - key: event:/SFX/TrashSFX
-    index: 5
-  - key: event:/SFX/DropIngridientSFX
-    index: 6
-  - key: event:/SFX/ServeSFX
-    index: 7
-  - key: event:/SFX/TakeIngridientSFX
-    index: 8
-  - key: event:/SFX/CauldronEffectSFX
-    index: 9
---- !u!114 &271534149509788094
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/CauldronEffectSFX/Change Volume
-  m_EditorClassIdentifier: 
-  Name: Change Volume
-  StudioPath: 
-  Min: 0
-  Max: 10
-  Default: 0
-  ID:
-    data1: 3623985949
-    data2: 1889044088
-  Type: 0
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &1237730092018103866
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/SFX.bank
-  m_EditorClassIdentifier: 
-  Path: FMOD Unity/Bank/Desktop/SFX.bank
-  Name: SFX
-  StudioPath: bank:/SFX
-  lastModified: 638842430594006754
-  FileSizes: []
-  Exists: 1
---- !u!114 &1407814402539241748
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/BGM.streams.bank
-  m_EditorClassIdentifier: 
-  Path: FMOD Unity/Bank/Desktop/BGM.streams.bank
-  Name: BGM.streams
-  StudioPath: bank:/BGM.streams
-  lastModified: 638840700576044249
-  FileSizes: []
-  Exists: 1
---- !u!114 &2677062511850754195
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/SFX.assets.bank
-  m_EditorClassIdentifier: 
-  Path: FMOD Unity/Bank/Desktop/SFX.assets.bank
-  Name: SFX.assets
-  StudioPath: bank:/SFX.assets
-  lastModified: 638842430593926069
-  FileSizes: []
-  Exists: 1
---- !u!114 &3531356216762837567
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/BGMSelectionMap/RangeVolume
-  m_EditorClassIdentifier: 
-  Name: RangeVolume
-  StudioPath: 
-  Min: 0
-  Max: 100
-  Default: 100
-  ID:
-    data1: 4139103757
-    data2: 4293264773
-  Type: 0
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
---- !u!114 &3602990918354368943
+  MaxDistance: 30
+  Length: 77
+--- !u!114 &-6837308596281602154
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -380,38 +123,11 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 3531356216762837567}
+  - {fileID: 7702491699057478392}
   MinDistance: 1
   MaxDistance: 20
   Length: 94417
---- !u!114 &3636897969588784910
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/CauldornSFX
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/CauldornSFX
-  Guid:
-    Data1: 1585884500
-    Data2: 1105720674
-    Data3: -667711079
-    Data4: 772195109
-  Banks:
-  - {fileID: 1237730092018103866}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 45
-  Length: 9400
---- !u!114 &4378526484284127055
+--- !u!114 &-3629758534009279812
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -421,15 +137,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/SFX.streams.bank
+  m_Name: bank:/Master.strings.bank
   m_EditorClassIdentifier: 
-  Path: FMOD Unity/Bank/Desktop/SFX.streams.bank
-  Name: SFX.streams
-  StudioPath: bank:/SFX.streams
-  lastModified: 638826462869664807
-  FileSizes: []
+  Path: FMOD Unity/Bank/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638841293493908009
+  FileSizes:
+  - Name: 
+    Value: 1644
   Exists: 1
---- !u!114 &4952402043739000093
+--- !u!114 &-2704140056654725541
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -456,6 +174,209 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 35
   Length: 80
+--- !u!114 &-2549829291691550536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/TrashSFX
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/TrashSFX
+  Guid:
+    Data1: 352020603
+    Data2: 1301331175
+    Data3: 288266635
+    Data4: 1658701218
+  Banks:
+  - {fileID: 1237730092018103866}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 35
+  Length: 475
+--- !u!114 &-1097642649924202966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.assets.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Unity/Bank/Desktop/Master.assets.bank
+  Name: Master.assets
+  StudioPath: bank:/Master.assets
+  lastModified: 638839728591075534
+  FileSizes: []
+  Exists: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: -3629758534009279812}
+  - {fileID: -8418235925747588219}
+  - {fileID: 5336363028646637550}
+  - {fileID: 1407814402539241748}
+  - {fileID: -1097642649924202966}
+  - {fileID: 6125456919088573864}
+  - {fileID: 5495952874708681732}
+  - {fileID: 2677062511850754195}
+  - {fileID: 1237730092018103866}
+  - {fileID: 4378526484284127055}
+  EditorEvents:
+  - {fileID: -6837308596281602154}
+  - {fileID: 7494067180620065980}
+  - {fileID: -8082091762291064498}
+  - {fileID: -7718856425703507437}
+  - {fileID: 5297617191711402340}
+  - {fileID: -2549829291691550536}
+  - {fileID: -2704140056654725541}
+  - {fileID: 6106311233874244944}
+  - {fileID: -7193802567290468786}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: 6125456919088573864}
+  StringsBanks:
+  - {fileID: -3629758534009279812}
+  cacheVersion: 131847
+  cacheTime: 638841293494068687
+  SerializableEventsDict:
+  - key: event:/Music/BGMSelectionMap
+    index: 0
+  - key: event:/Music/BGM
+    index: 1
+  - key: event:/SFX/MortarPastleSFX
+    index: 2
+  - key: event:/SFX/Timecountdown
+    index: 3
+  - key: event:/SFX/CauldornSFX
+    index: 4
+  - key: event:/SFX/TrashSFX
+    index: 5
+  - key: event:/SFX/DropIngridientSFX
+    index: 6
+  - key: event:/SFX/ServeSFX
+    index: 7
+  - key: event:/SFX/TakeIngridientSFX
+    index: 8
+--- !u!114 &1237730092018103866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/SFX.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Unity/Bank/Desktop/SFX.bank
+  Name: SFX
+  StudioPath: bank:/SFX
+  lastModified: 638841293494068687
+  FileSizes: []
+  Exists: 1
+--- !u!114 &1407814402539241748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/BGM.streams.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Unity/Bank/Desktop/BGM.streams.bank
+  Name: BGM.streams
+  StudioPath: bank:/BGM.streams
+  lastModified: 638841293493751955
+  FileSizes: []
+  Exists: 1
+--- !u!114 &2677062511850754195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/SFX.assets.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Unity/Bank/Desktop/SFX.assets.bank
+  Name: SFX.assets
+  StudioPath: bank:/SFX.assets
+  lastModified: 638839728591182354
+  FileSizes: []
+  Exists: 1
+--- !u!114 &4378526484284127055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/SFX.streams.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Unity/Bank/Desktop/SFX.streams.bank
+  Name: SFX.streams
+  StudioPath: bank:/SFX.streams
+  lastModified: 638839728591223295
+  FileSizes: []
+  Exists: 1
+--- !u!114 &5297617191711402340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/CauldornSFX
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/CauldornSFX
+  Guid:
+    Data1: 1585884500
+    Data2: 1105720674
+    Data3: -667711079
+    Data4: 772195109
+  Banks:
+  - {fileID: 1237730092018103866}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 45
+  Length: 9400
 --- !u!114 &5336363028646637550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -471,7 +392,7 @@ MonoBehaviour:
   Path: FMOD Unity/Bank/Desktop/BGM.bank
   Name: BGM
   StudioPath: bank:/BGM
-  lastModified: 638840700575811603
+  lastModified: 638841293493438095
   FileSizes: []
   Exists: 1
 --- !u!114 &5495952874708681732
@@ -489,55 +410,10 @@ MonoBehaviour:
   Path: FMOD Unity/Bank/Desktop/Master.streams.bank
   Name: Master.streams
   StudioPath: bank:/Master.streams
-  lastModified: 638840700576163017
+  lastModified: 638841293493908009
   FileSizes: []
   Exists: 1
---- !u!114 &6125456919088573864
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: FMOD Unity/Bank/Desktop/Master.bank
-  Name: Master
-  StudioPath: bank:/Master
-  lastModified: 638840700576112805
-  FileSizes: []
-  Exists: 1
---- !u!114 &6341565425378106249
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/BGM
-  m_EditorClassIdentifier: 
-  Path: event:/Music/BGM
-  Guid:
-    Data1: 395064684
-    Data2: 1209474891
-    Data3: -1336331869
-    Data4: -795325664
-  Banks:
-  - {fileID: 5336363028646637550}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 130000
---- !u!114 &7113459667961687221
+--- !u!114 &6106311233874244944
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -564,3 +440,72 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 45
   Length: 1000
+--- !u!114 &6125456919088573864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD Unity/Bank/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 638841293493751955
+  FileSizes: []
+  Exists: 1
+--- !u!114 &7494067180620065980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/BGM
+  m_EditorClassIdentifier: 
+  Path: event:/Music/BGM
+  Guid:
+    Data1: 395064684
+    Data2: 1209474891
+    Data3: -1336331869
+    Data4: -795325664
+  Banks:
+  - {fileID: 5336363028646637550}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 130000
+--- !u!114 &7702491699057478392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/BGMSelectionMap/RangeVolume
+  m_EditorClassIdentifier: 
+  Name: RangeVolume
+  StudioPath: 
+  Min: 0
+  Max: 100
+  Default: 100
+  ID:
+    data1: 4139103757
+    data2: 4293264773
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1

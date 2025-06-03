@@ -1372,6 +1372,9 @@ MonoBehaviour:
   - {fileID: 429498786}
   - {fileID: 79859879}
   TRANSISIOUT: {fileID: 927694932}
+  cameraZoom: {fileID: 0}
+  zoomOutTargetFOV: 50
+  zoomOutDuration: 1
 --- !u!1 &576941607
 GameObject:
   m_ObjectHideFlags: 0
