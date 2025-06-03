@@ -10,4 +10,6 @@ public class KitchenObjectSO : ScriptableObject
 
     public Sprite recipeSprite;
     public string objectName;
+    [Header(" Reward Setting")]
+    public int GoldReward;
 }

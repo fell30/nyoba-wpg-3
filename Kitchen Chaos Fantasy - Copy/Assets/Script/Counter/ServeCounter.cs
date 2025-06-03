@@ -3,10 +3,12 @@ using UnityEngine;
 public class ServingCounter : BaseCounter
 {
     private OrderSystem orderSystem;
+    private GoldSystem goldSystem;
 
     private void Start()
     {
         orderSystem = FindObjectOfType<OrderSystem>();
+        goldSystem = FindAnyObjectByType<GoldSystem>();
     }
 
     // Metode untuk interaksi utama
@@ -23,7 +25,12 @@ public class ServingCounter : BaseCounter
 
             if (orderSystem.CheckOrder(playerKitchenObjectSO))
             {
-                Debug.Log("Order served successfully!");
+                if (goldSystem != null)
+                {
+                    int reward = playerKitchenObjectSO.GoldReward;
+                    goldSystem.AddGold(reward);
+                    Debug.Log("Order served successfully!");
+                }
                 GetComponent<WellAudio>()?.PlayTaruhSound();
                 playerObject.DestroySelf();
                 orderSystem.CompleteOrder(playerKitchenObjectSO);

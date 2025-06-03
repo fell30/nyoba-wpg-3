@@ -16,6 +16,7 @@ public class UIMenu : MonoBehaviour
     public float zoomOutTargetFOV = 100f;
     public float zoomOutDuration = 2f;
 
+
     void Start()
     {
         EventSystem.current.SetSelectedGameObject(menuButtons[currentIndex].gameObject);
@@ -27,16 +28,20 @@ public class UIMenu : MonoBehaviour
         {
             currentIndex = (currentIndex + 1) % menuButtons.Length;
             EventSystem.current.SetSelectedGameObject(menuButtons[currentIndex].gameObject);
+
         }
         else if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             currentIndex = (currentIndex - 1 + menuButtons.Length) % menuButtons.Length;
             EventSystem.current.SetSelectedGameObject(menuButtons[currentIndex].gameObject);
+
         }
         else if (Input.GetKeyDown(KeyCode.Return))
         {
             menuButtons[currentIndex].onClick.Invoke();
+
         }
+
     }
 
     public void PlayGame(string nameScene)

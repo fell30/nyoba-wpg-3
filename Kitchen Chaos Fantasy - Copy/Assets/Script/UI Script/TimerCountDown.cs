@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using DG.Tweening;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class CountdownTimer : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class CountdownTimer : MonoBehaviour
     public bool timerIsRunning = false;
     public TextMeshProUGUI timeText;
     [SerializeField] private GameObject GameOverPanel;
+    public totalReward totalReward;
+    public OrderSystem OrderSystem;
+
 
 
     private bool isTimerSoundPlaying = false;
@@ -51,6 +55,10 @@ public class CountdownTimer : MonoBehaviour
                 timeRemaining = 0;
                 timerIsRunning = false;
                 TimerEnd();
+
+                //List<KitchenObjectSO> failedOrders = OrderSystem.GetFailedOrders();
+                totalReward.ShowFailedOrders(OrderSystem.GetFailedOrderStats());
+
             }
         }
     }
