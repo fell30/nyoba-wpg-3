@@ -5,10 +5,15 @@ ModelImporter:
   internalIDToNameTable: []
   externalObjects:
   - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: plane material.001
+    second: {fileID: 2100000, guid: b9e48defba49b784dae858a0e9b77bd1, type: 2}
+  - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: rumput
-    second: {fileID: 2800000, guid: 5be7be3ae6d374f45a403403a71fec78, type: 3}
+    second: {fileID: 2800000, guid: 9a5a7da2a48f34d4bb6aea084fde57f3, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
