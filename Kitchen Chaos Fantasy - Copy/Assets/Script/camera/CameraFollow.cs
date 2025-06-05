@@ -9,6 +9,8 @@ public class CameraFollow : MonoBehaviour
     [Header("Smooth Settings")]
     [SerializeField] private float smoothTime;
     private Vector3 _CurrentVelocity = Vector3.zero;
+    [SerializeField] private float minX, maxX, minZ, maxZ;
+
 
     private void Awake()
     {
@@ -20,8 +22,16 @@ public class CameraFollow : MonoBehaviour
         if (target == null) return;
 
         Vector3 targetPosition = target.position + _offset;
-        transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref _CurrentVelocity, smoothTime);
+
+        // Clamp posisi kamera agar tidak melewati batas
+        float clampedX = Mathf.Clamp(targetPosition.x, minX, maxX);
+        float clampedZ = Mathf.Clamp(targetPosition.z, minZ, maxZ);
+
+        Vector3 clampedPosition = new Vector3(clampedX, targetPosition.y, clampedZ);
+
+        transform.position = Vector3.SmoothDamp(transform.position, clampedPosition, ref _CurrentVelocity, smoothTime);
     }
+
 
     //Fungsi untuk efek Zoom Out 
     public IEnumerator ZoomOutCoroutine(float targetFOV, float duration)
@@ -39,4 +49,14 @@ public class CameraFollow : MonoBehaviour
 
         cam.fieldOfView = targetFOV;
     }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawLine(new Vector3(minX, transform.position.y, minZ), new Vector3(minX, transform.position.y, maxZ));
+        Gizmos.DrawLine(new Vector3(maxX, transform.position.y, minZ), new Vector3(maxX, transform.position.y, maxZ));
+        Gizmos.DrawLine(new Vector3(minX, transform.position.y, minZ), new Vector3(maxX, transform.position.y, minZ));
+        Gizmos.DrawLine(new Vector3(minX, transform.position.y, maxZ), new Vector3(maxX, transform.position.y, maxZ));
+    }
+
 }
