@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: FMOD Unity/Bank/Desktop/BGM.assets.bank
   Name: BGM.assets
   StudioPath: bank:/BGM.assets
-  lastModified: 638839728590789663
+  lastModified: 638826462868722822
   FileSizes: []
   Exists: 1
 --- !u!114 &-8082091762291064498
@@ -142,10 +142,10 @@ MonoBehaviour:
   Path: FMOD Unity/Bank/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638841293493908009
+  lastModified: 638842430593916089
   FileSizes:
   - Name: 
-    Value: 1644
+    Value: 1754
   Exists: 1
 --- !u!114 &-2704140056654725541
 MonoBehaviour:
@@ -216,7 +216,7 @@ MonoBehaviour:
   Path: FMOD Unity/Bank/Desktop/Master.assets.bank
   Name: Master.assets
   StudioPath: bank:/Master.assets
-  lastModified: 638839728591075534
+  lastModified: 638826462869157510
   FileSizes: []
   Exists: 1
 --- !u!114 &11400000
@@ -252,13 +252,14 @@ MonoBehaviour:
   - {fileID: -2704140056654725541}
   - {fileID: 6106311233874244944}
   - {fileID: -7193802567290468786}
+  - {fileID: 5085750570384688824}
   EditorParameters: []
   MasterBanks:
   - {fileID: 6125456919088573864}
   StringsBanks:
   - {fileID: -3629758534009279812}
   cacheVersion: 131847
-  cacheTime: 638841293494068687
+  cacheTime: 638842430594006754
   SerializableEventsDict:
   - key: event:/Music/BGMSelectionMap
     index: 0
@@ -293,7 +294,7 @@ MonoBehaviour:
   Path: FMOD Unity/Bank/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638841293494068687
+  lastModified: 638842430594006754
   FileSizes: []
   Exists: 1
 --- !u!114 &1407814402539241748
@@ -311,7 +312,7 @@ MonoBehaviour:
   Path: FMOD Unity/Bank/Desktop/BGM.streams.bank
   Name: BGM.streams
   StudioPath: bank:/BGM.streams
-  lastModified: 638841293493751955
+  lastModified: 638840700576044249
   FileSizes: []
   Exists: 1
 --- !u!114 &2677062511850754195
@@ -329,7 +330,7 @@ MonoBehaviour:
   Path: FMOD Unity/Bank/Desktop/SFX.assets.bank
   Name: SFX.assets
   StudioPath: bank:/SFX.assets
-  lastModified: 638839728591182354
+  lastModified: 638842430593926069
   FileSizes: []
   Exists: 1
 --- !u!114 &4378526484284127055
@@ -347,9 +348,37 @@ MonoBehaviour:
   Path: FMOD Unity/Bank/Desktop/SFX.streams.bank
   Name: SFX.streams
   StudioPath: bank:/SFX.streams
-  lastModified: 638839728591223295
+  lastModified: 638826462869664807
   FileSizes: []
   Exists: 1
+--- !u!114 &5085750570384688824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/CauldronEffectSFX
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/CauldronEffectSFX
+  Guid:
+    Data1: 1263948958
+    Data2: 1085408411
+    Data3: -579334000
+    Data4: 1680027263
+  Banks:
+  - {fileID: 1237730092018103866}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 8232481201164257854}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2063
 --- !u!114 &5297617191711402340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -392,7 +421,7 @@ MonoBehaviour:
   Path: FMOD Unity/Bank/Desktop/BGM.bank
   Name: BGM
   StudioPath: bank:/BGM
-  lastModified: 638841293493438095
+  lastModified: 638840700575811603
   FileSizes: []
   Exists: 1
 --- !u!114 &5495952874708681732
@@ -410,7 +439,7 @@ MonoBehaviour:
   Path: FMOD Unity/Bank/Desktop/Master.streams.bank
   Name: Master.streams
   StudioPath: bank:/Master.streams
-  lastModified: 638841293493908009
+  lastModified: 638840700576163017
   FileSizes: []
   Exists: 1
 --- !u!114 &6106311233874244944
@@ -455,7 +484,7 @@ MonoBehaviour:
   Path: FMOD Unity/Bank/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638841293493751955
+  lastModified: 638840700576112805
   FileSizes: []
   Exists: 1
 --- !u!114 &7494067180620065980
@@ -505,6 +534,30 @@ MonoBehaviour:
   ID:
     data1: 4139103757
     data2: 4293264773
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &8232481201164257854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/CauldronEffectSFX/Change Volume
+  m_EditorClassIdentifier: 
+  Name: Change Volume
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 3623985949
+    data2: 1889044088
   Type: 0
   IsGlobal: 0
   Labels: []

@@ -3,7 +3,27 @@ guid: e36d8895455124f48b549bc2d3693ab3
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: 1800e0b10421a484690d78776949b3ef, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rumput
+    second: {fileID: 2100000, guid: ad18577941421bc47a340db3ec394f0d, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Cartoon_green_texture_grass
+    second: {fileID: 2800000, guid: 19ea0b4dacb98fc4189ca8edc8a7b87c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: rumput texture
+    second: {fileID: 2800000, guid: 4e1b6fcaecf5a9844b277be9f79cbbcd, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
