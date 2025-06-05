@@ -20,9 +20,9 @@ RenderSettings:
   m_FogDensity: 0.06
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0, g: 0.20759696, b: 0.3377358, a: 1}
-  m_AmbientEquatorColor: {r: 0.20758276, g: 0.3207547, b: 0.3207547, a: 1}
-  m_AmbientGroundColor: {r: 0.5018867, g: 0.5018867, b: 0.5018867, a: 1}
+  m_AmbientSkyColor: {r: 0.18506938, g: 0.3933737, b: 0.5245282, a: 1}
+  m_AmbientEquatorColor: {r: 0.046545014, g: 0.07452828, b: 0.07452828, a: 1}
+  m_AmbientGroundColor: {r: 1, g: 1, b: 1, a: 1}
   m_AmbientIntensity: 0.46
   m_AmbientMode: 1
   m_SubtractiveShadowColor: {r: 1, g: 1, b: 1, a: 1}
@@ -5054,6 +5054,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1983417938}
   smoothTime: 0.5
+  minX: 0
+  maxX: 0
+  minZ: 0
+  maxZ: 0
 --- !u!1001 &674772798
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5801,6 +5805,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1983417938}
   smoothTime: 0.5
+  minX: 0
+  maxX: 0
+  minZ: 0
+  maxZ: 0
 --- !u!114 &799156859
 MonoBehaviour:
   m_ObjectHideFlags: 0
