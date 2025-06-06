@@ -10,10 +10,13 @@ public class PotionFailed : MonoBehaviour
     [SerializeField] private TextMeshProUGUI nameText;
     [SerializeField] private TextMeshProUGUI countText;
 
+
     public void Setup(KitchenObjectSO so, int count)
     {
         icon.sprite = so.IconObject;
         nameText.text = so.objectName;
         countText.text = "x" + count;
     }
+
+
 }

@@ -5,10 +5,12 @@ using UnityEngine;
 public class totalReward : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI finalGoldText;
+    [SerializeField] private TextMeshProUGUI totalServedText;
     [SerializeField] private GameObject statLinePrefab;
     [SerializeField] private GameObject failedLinePrefab;
     [SerializeField] private Transform statContainer;
     [SerializeField] private Transform failedContainer;
+
 
     public void ShowPotionStats(Dictionary<KitchenObjectSO, int> serveStats)
     {
@@ -39,6 +41,18 @@ public class totalReward : MonoBehaviour
             GameObject line = Instantiate(failedLinePrefab, failedContainer);
             line.GetComponent<PotionFailed>().Setup(potion, count);
         }
+
+    }
+    public void ShowTotalServed(Dictionary<KitchenObjectSO, int> serveStats)
+    {
+        int totalServed = 0;
+
+        foreach (var entry in serveStats)
+        {
+            totalServed += entry.Value;
+        }
+
+        totalServedText.text = "✔️ Total Potions Served: " + totalServed;
     }
     public void ShowFinalGold(int totalGold)
     {

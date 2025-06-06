@@ -52,17 +52,24 @@ public class CountdownTimer : MonoBehaviour
             }
             else
             {
-                timeRemaining = 0;
-                timerIsRunning = false;
-                TimerEnd();
 
-                //List<KitchenObjectSO> failedOrders = OrderSystem.GetFailedOrders();
-                totalReward.ShowFailedOrders(OrderSystem.GetFailedOrderStats());
+                Set_Statistic_Akhir();
+
 
             }
         }
     }
+    private void Set_Statistic_Akhir()
+    {
+        timeRemaining = 0;
+        timerIsRunning = false;
+        TimerEnd();
 
+        //List<KitchenObjectSO> failedOrders = OrderSystem.GetFailedOrders();
+        totalReward.ShowFailedOrders(OrderSystem.GetFailedOrderStats());
+
+        totalReward.ShowTotalServed(OrderSystem.GetServeStats());
+    }
     public void StartTimer()
     {
         timerIsRunning = true;
