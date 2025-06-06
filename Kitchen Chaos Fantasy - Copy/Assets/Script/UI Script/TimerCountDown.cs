@@ -3,6 +3,7 @@ using TMPro;
 using DG.Tweening;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using System.Linq;
 
 public class CountdownTimer : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class CountdownTimer : MonoBehaviour
     public bool timerIsRunning = false;
     public TextMeshProUGUI timeText;
     [SerializeField] private GameObject GameOverPanel;
+    [SerializeField] private GameObject clearUI;
     public totalReward totalReward;
     public OrderSystem OrderSystem;
 
@@ -19,9 +21,15 @@ public class CountdownTimer : MonoBehaviour
     private bool isUrgentMusicPlaying = false;
     private Vector3 originalPosition; // Simpan posisi asli teks
 
+    public float GetTimeRemaining()
+    {
+        return timeRemaining;
+    }
+
     void Start()
     {
         originalPosition = timeText.transform.localPosition; // Simpan posisi awal teks
+
     }
 
     void Update()
@@ -65,10 +73,15 @@ public class CountdownTimer : MonoBehaviour
         timerIsRunning = false;
         TimerEnd();
 
-        //List<KitchenObjectSO> failedOrders = OrderSystem.GetFailedOrders();
-        totalReward.ShowFailedOrders(OrderSystem.GetFailedOrderStats());
+        var serveStats = OrderSystem.GetServeStats();
+        var failedOrders = OrderSystem.GetFailedOrders(); // atau activeOrders
 
-        totalReward.ShowTotalServed(OrderSystem.GetServeStats());
+        totalReward.ShowGameOver(serveStats);
+        totalReward.ShowFailedOrderCount(failedOrders);
+
+        FindAnyObjectByType<BGMManager>().StopBGM();
+        GetComponent<SFX_Timer>().StopTimer();
+
     }
     public void StartTimer()
     {
@@ -115,8 +128,11 @@ public class CountdownTimer : MonoBehaviour
     {
         Debug.Log("Timer finished! Execute any end of timer logic here.");
         GameOverPanel.SetActive(true);
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
         Time.timeScale = 0; // Pause game saat waktu habis
-        FindAnyObjectByType<BGMManager>().StopBGM();
+        clearUI.SetActive(false);
+
 
 
         // Hentikan suara timer

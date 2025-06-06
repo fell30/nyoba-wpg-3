@@ -17,6 +17,7 @@ public class OrderSystem : MonoBehaviour
     [SerializeField] private CountdownTimer countdownTimer;
 
     public GameObject orderUIPrefab;
+    [SerializeField] private GameObject clearUI;
     public Transform orderUIParent;
 
     // [SerializeField] private GameObject[] TimerPanel;
@@ -24,6 +25,7 @@ public class OrderSystem : MonoBehaviour
     [SerializeField] private GameObject OrderSuccess;
     [SerializeField] private totalReward totalReward;
     [SerializeField] private GoldSystem goldSystem;
+
     private GameObject currentOrderUI;
 
     public int maxOrders;
@@ -31,11 +33,18 @@ public class OrderSystem : MonoBehaviour
 
     private void Start()
     {
+        StartCoroutine(HideCursorNextFrame());
         if (SceneManager.GetActiveScene().name != "Level-Tutorial")
         {
             StartCoroutine(TimerPanelAnimation());
 
         }
+    }
+    IEnumerator HideCursorNextFrame()
+    {
+        yield return null;  // tunggu 1 frame agar Unity fokus ke game window
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
     public Dictionary<KitchenObjectSO, int> GetServeStats()
     {
@@ -131,6 +140,11 @@ public class OrderSystem : MonoBehaviour
             int totalGold = goldSystem.GetcurrentGold();
             totalReward.ShowFinalGold(totalGold);
             totalReward.ShowPotionStats(GetServeStats());
+            float remaining = countdownTimer.GetTimeRemaining();
+            totalReward.ShowTimeRemaining(remaining);
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+            clearUI.SetActive(false);
 
         }
     }

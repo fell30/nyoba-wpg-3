@@ -24,6 +24,18 @@ public class SFX_Timer : MonoBehaviour
         }
     }
 
+    public void StopTimer()
+    {
+        if (TimerEmitter != null && TimerEmitter.IsPlaying())
+        {
+            TimerEmitter.Stop();
+        }
+        else
+        {
+            Debug.LogWarning("ambilEmitter belum di-assign atau tidak sedang dimainkan!");
+        }
+    }
+
 
 
 }
