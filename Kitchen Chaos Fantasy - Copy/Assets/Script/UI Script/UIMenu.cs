@@ -11,6 +11,8 @@ public class UIMenu : MonoBehaviour
 
     private int currentIndex = 0;
 
+
+
     [Header("Zoom Out Settings")]
     public CameraZoomOut cameraZoom;
     public float zoomOutTargetFOV = 100f;

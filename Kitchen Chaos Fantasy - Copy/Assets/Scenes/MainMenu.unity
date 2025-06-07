@@ -1716,6 +1716,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas Screen Space Transisi
       objectReference: {fileID: 0}
+    - target: {fileID: 1098107115546942893, guid: cca242380575b234483a673299e18a0a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4752215497554690133, guid: cca242380575b234483a673299e18a0a, type: 3}
       propertyPath: m_Pivot.x
       value: 0
