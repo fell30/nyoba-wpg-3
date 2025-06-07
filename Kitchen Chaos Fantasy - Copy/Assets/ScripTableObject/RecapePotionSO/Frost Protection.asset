@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   potionName: Acid Protection
   ingredients:
-  - {fileID: 11400000, guid: ebd639f5f513691429746f5ebd0546e3, type: 2}
+  - {fileID: 11400000, guid: a5811adc58a68e74c955fc693c475dda, type: 2}
   - {fileID: 11400000, guid: 06f22ab9376e4b24c9dc7645a9557149, type: 2}
   potionResult: {fileID: 11400000, guid: 5ed6bccb6143abd498c3fe561e1b997f, type: 2}
