@@ -631,6 +631,7 @@ GameObject:
   - component: {fileID: 52797744}
   - component: {fileID: 52797743}
   - component: {fileID: 52797745}
+  - component: {fileID: 52797746}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -673,6 +674,7 @@ MonoBehaviour:
   moveSpeed: 5
   gameInput: {fileID: 169101990}
   animator: {fileID: 1575482535}
+  bgmLevelSelection: {fileID: 52797746}
   TRANSISIOUT: {fileID: 1515776973}
 --- !u!54 &52797743
 Rigidbody:
@@ -745,6 +747,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &52797746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 52797739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83b53a4786c73094bbd6212f7c7ff72f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bgmEmitter: {fileID: -1368624827168094863, guid: 70fa7c7f58961474cbe725af3ebb50f3, type: 3}
 --- !u!1001 &90674736
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15246,7 +15261,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1098107115546942893, guid: cca242380575b234483a673299e18a0a, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4752215497554690133, guid: cca242380575b234483a673299e18a0a, type: 3}
       propertyPath: m_Pivot.x
