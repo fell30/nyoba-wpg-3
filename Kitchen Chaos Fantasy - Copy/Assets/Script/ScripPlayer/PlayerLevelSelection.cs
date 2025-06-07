@@ -8,6 +8,8 @@ public class PlayerLevelSelection : MonoBehaviour
 {
     public float moveSpeed = 5f;
     [SerializeField] private GameInput gameInput;
+    [SerializeField] private Animator animator;
+
 
     private Rigidbody rb;
     private bool isWalking;
@@ -18,6 +20,7 @@ public class PlayerLevelSelection : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         Cursor.lockState = CursorLockMode.Locked;
+
     }
 
     private void FixedUpdate()
@@ -27,6 +30,7 @@ public class PlayerLevelSelection : MonoBehaviour
 
     private void Update()
     {
+        animator.SetBool("IsWalking", isWalking);
         if (currentLevelTrigger != null && Input.GetKeyDown(KeyCode.E))
         {
             StartCoroutine(transitionOut());
