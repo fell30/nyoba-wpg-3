@@ -175,6 +175,7 @@ public class CauldronCounter : BaseCounter, IHasProgress
     {
         yield return new WaitForSeconds(1.8f);
         MagicParticle?.Play();
+        GetComponent<WellAudio>()?.PlayEfekMasakSound();
     }
 
     private void StopCookingEffects()

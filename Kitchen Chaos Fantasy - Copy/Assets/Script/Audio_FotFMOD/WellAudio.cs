@@ -6,6 +6,7 @@ public class WellAudio : MonoBehaviour
     [SerializeField] private StudioEventEmitter ambilEmitter;  // SFX awal
     [SerializeField] private StudioEventEmitter taruhEmitter;  // SFX akhir
     [SerializeField] private StudioEventEmitter masakEmitter;  // SFX masak
+    [SerializeField] private StudioEventEmitter efekMasakEmitter; // SFX efek masak
 
     public void PlayAmbilSound()
     {
@@ -17,6 +18,18 @@ public class WellAudio : MonoBehaviour
         else
         {
             Debug.LogWarning("ambilEmitter belum di-assign atau sedang dimainkan!");
+        }
+    }
+    public void PlayEfekMasakSound()
+    {
+        if (efekMasakEmitter != null && !efekMasakEmitter.IsPlaying())
+        {
+            efekMasakEmitter.Play();
+            // Debug.Log("SFX Efek Masak dimainkan!");
+        }
+        else
+        {
+            Debug.LogWarning("efekMasakEmitter belum di-assign atau sedang dimainkan!");
         }
     }
 
@@ -75,10 +88,23 @@ public class WellAudio : MonoBehaviour
             Debug.LogWarning("taruhEmitter belum di-assign atau tidak sedang dimainkan!");
         }
     }
+    public void StopEfekMasakSound()
+    {
+        if (efekMasakEmitter != null && efekMasakEmitter.IsPlaying())
+        {
+            efekMasakEmitter.Stop();
+            // Debug.Log("SFX Efek Masak dihentikan!");
+        }
+        else
+        {
+            Debug.LogWarning("efekMasakEmitter belum di-assign atau tidak sedang dimainkan!");
+        }
+    }
     public void StopAllSounds()
     {
         StopAmbilSound();
         StopTaruhSound();
         StopMasakPotion();
+        StopEfekMasakSound();
     }
 }

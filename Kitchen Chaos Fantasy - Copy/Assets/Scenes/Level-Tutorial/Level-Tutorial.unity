@@ -6117,10 +6117,16 @@ MonoBehaviour:
   ambilEmitter: {fileID: 0}
   taruhEmitter: {fileID: 8546419811031869872, guid: 40df8ad5dffbde64fbea89bfb4363e73, type: 3}
   masakEmitter: {fileID: 0}
+  efekMasakEmitter: {fileID: 0}
 --- !u!1 &959018345 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2972342927911722426, guid: 7ec9bbe211c5c3d49b81de1595a6ca7a, type: 3}
   m_PrefabInstance: {fileID: 4245146394316989889}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &961363324 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7188800506218599814, guid: cca242380575b234483a673299e18a0a, type: 3}
+  m_PrefabInstance: {fileID: 1257103253}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &974162052 stripped
 Transform:
@@ -7893,6 +7899,7 @@ MonoBehaviour:
   ambilEmitter: {fileID: 0}
   taruhEmitter: {fileID: 8546419811031869872, guid: 40df8ad5dffbde64fbea89bfb4363e73, type: 3}
   masakEmitter: {fileID: 0}
+  efekMasakEmitter: {fileID: 0}
 --- !u!1 &1253917773
 GameObject:
   m_ObjectHideFlags: 0
@@ -9696,6 +9703,7 @@ MonoBehaviour:
   ambilEmitter: {fileID: 5934115295746545462, guid: 57deaac772fcc8643a0d79d09806c246, type: 3}
   taruhEmitter: {fileID: 7947536617824656679, guid: 9f63030e89be9e042be3d30e4f17adb2, type: 3}
   masakEmitter: {fileID: 790698154932592237, guid: aec35bed058ec194ba04269032481000, type: 3}
+  efekMasakEmitter: {fileID: 790698154932592237, guid: 385377cc4d3cf724c8115fcd4b248441, type: 3}
 --- !u!4 &1546610506 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3526458156391113324, guid: 0852ba165a7730940a4403bee85e2606, type: 3}
@@ -12635,6 +12643,7 @@ MonoBehaviour:
   ambilEmitter: {fileID: 5934115295746545462, guid: 57deaac772fcc8643a0d79d09806c246, type: 3}
   taruhEmitter: {fileID: 7947536617824656679, guid: 9f63030e89be9e042be3d30e4f17adb2, type: 3}
   masakEmitter: {fileID: 0}
+  efekMasakEmitter: {fileID: 0}
 --- !u!1 &1862641232
 GameObject:
   m_ObjectHideFlags: 0
@@ -14501,10 +14510,6 @@ PrefabInstance:
       propertyPath: TRANSISIOUT
       value: 
       objectReference: {fileID: 1055306757}
-    - target: {fileID: 2210003143658701601, guid: 7ec9bbe211c5c3d49b81de1595a6ca7a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4684255696699162301, guid: 7ec9bbe211c5c3d49b81de1595a6ca7a, type: 3}
       propertyPath: OrderSystem
       value: 
@@ -14513,6 +14518,10 @@ PrefabInstance:
       propertyPath: totalReward
       value: 
       objectReference: {fileID: 1668967414}
+    - target: {fileID: 5335603730295167265, guid: 7ec9bbe211c5c3d49b81de1595a6ca7a, type: 3}
+      propertyPath: TRANSISIOUT
+      value: 
+      objectReference: {fileID: 961363324}
     - target: {fileID: 6491695303409643925, guid: 7ec9bbe211c5c3d49b81de1595a6ca7a, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -14596,10 +14605,6 @@ PrefabInstance:
     - target: {fileID: 8259455486623706469, guid: 7ec9bbe211c5c3d49b81de1595a6ca7a, type: 3}
       propertyPath: m_Name
       value: Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 8259455486623706469, guid: 7ec9bbe211c5c3d49b81de1595a6ca7a, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
