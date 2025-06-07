@@ -4180,6 +4180,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 781099774}
   smoothTime: 0.5
+  minX: -2
+  maxX: 2
+  minZ: 4
+  maxZ: 2
 --- !u!1001 &673550611
 PrefabInstance:
   m_ObjectHideFlags: 0

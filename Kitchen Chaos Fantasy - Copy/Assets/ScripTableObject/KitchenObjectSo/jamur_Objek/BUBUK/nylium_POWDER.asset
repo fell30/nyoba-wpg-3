@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 16f952276c9eaf84b9c03c8ee55ab013, type: 3}
-  m_Name: nylium
+  m_Name: nylium_POWDER
   m_EditorClassIdentifier: 
   prefab: {fileID: 5133453827729482660, guid: cf6e7882870651e4ca4539c1e960a4bd, type: 3}
   recipeSprite: {fileID: 0}
