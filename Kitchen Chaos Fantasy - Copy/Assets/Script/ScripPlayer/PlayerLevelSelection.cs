@@ -9,6 +9,7 @@ public class PlayerLevelSelection : MonoBehaviour
     public float moveSpeed = 5f;
     [SerializeField] private GameInput gameInput;
     [SerializeField] private Animator animator;
+    [SerializeField] private bgm_Level_Selection bgmLevelSelection;
 
 
     private Rigidbody rb;
@@ -22,7 +23,10 @@ public class PlayerLevelSelection : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
 
     }
-
+    private void Start()
+    {
+        bgmLevelSelection.PlayBGM();
+    }
     private void FixedUpdate()
     {
         HandleMovement();
@@ -35,12 +39,17 @@ public class PlayerLevelSelection : MonoBehaviour
         {
             StartCoroutine(transitionOut());
 
+
         }
     }
     private IEnumerator transitionOut()
     {
         TRANSISIOUT.SetActive(true);
         yield return new WaitForSeconds(0.53f);
+        if (bgmLevelSelection != null)
+        {
+            bgmLevelSelection.StopBGM();
+        }
         SceneManager.LoadScene(currentLevelTrigger.sceneToLoad);
         //TRANSISIOUT.SetActive(false);
     }

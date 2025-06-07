@@ -630,6 +630,7 @@ GameObject:
   - component: {fileID: 52797742}
   - component: {fileID: 52797744}
   - component: {fileID: 52797743}
+  - component: {fileID: 52797745}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -671,6 +672,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   gameInput: {fileID: 169101990}
+  animator: {fileID: 1575482535}
   TRANSISIOUT: {fileID: 1515776973}
 --- !u!54 &52797743
 Rigidbody:
@@ -722,6 +724,27 @@ CapsuleCollider:
   m_Height: 4.443343
   m_Direction: 1
   m_Center: {x: 0, y: -0.443351, z: 0}
+--- !u!95 &52797745
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 52797739}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &90674736
 PrefabInstance:
   m_ObjectHideFlags: 0
