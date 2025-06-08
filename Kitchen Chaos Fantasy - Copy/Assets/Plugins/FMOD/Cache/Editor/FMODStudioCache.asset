@@ -121,7 +121,7 @@ MonoBehaviour:
   - {fileID: 5336363028646637550}
   IsStream: 1
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters:
   - {fileID: 7702491699057478392}
   MinDistance: 1
@@ -142,10 +142,10 @@ MonoBehaviour:
   Path: FMOD Unity/Bank/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638842430593916089
+  lastModified: 638849237734096470
   FileSizes:
   - Name: 
-    Value: 1754
+    Value: 1796
   Exists: 1
 --- !u!114 &-2704140056654725541
 MonoBehaviour:
@@ -253,13 +253,14 @@ MonoBehaviour:
   - {fileID: 6106311233874244944}
   - {fileID: -7193802567290468786}
   - {fileID: 5085750570384688824}
+  - {fileID: 189904581549385711}
   EditorParameters: []
   MasterBanks:
   - {fileID: 6125456919088573864}
   StringsBanks:
   - {fileID: -3629758534009279812}
   cacheVersion: 131847
-  cacheTime: 638842430594006754
+  cacheTime: 638849237734206538
   SerializableEventsDict:
   - key: event:/Music/BGMSelectionMap
     index: 0
@@ -279,6 +280,38 @@ MonoBehaviour:
     index: 7
   - key: event:/SFX/TakeIngridientSFX
     index: 8
+  - key: event:/SFX/CauldronEffectSFX
+    index: 9
+  - key: event:/Music/BGMUpMainMenu
+    index: 10
+--- !u!114 &189904581549385711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/BGMUpMainMenu
+  m_EditorClassIdentifier: 
+  Path: event:/Music/BGMUpMainMenu
+  Guid:
+    Data1: 1555836185
+    Data2: 1242639034
+    Data3: -10205808
+    Data4: 819305682
+  Banks:
+  - {fileID: 5336363028646637550}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 5115644947552467281}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 61935
 --- !u!114 &1237730092018103866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -294,7 +327,7 @@ MonoBehaviour:
   Path: FMOD Unity/Bank/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638842430594006754
+  lastModified: 638849237734206538
   FileSizes: []
   Exists: 1
 --- !u!114 &1407814402539241748
@@ -312,7 +345,7 @@ MonoBehaviour:
   Path: FMOD Unity/Bank/Desktop/BGM.streams.bank
   Name: BGM.streams
   StudioPath: bank:/BGM.streams
-  lastModified: 638840700576044249
+  lastModified: 638849237733964287
   FileSizes: []
   Exists: 1
 --- !u!114 &2677062511850754195
@@ -379,6 +412,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2063
+--- !u!114 &5115644947552467281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/BGMUpMainMenu/Change Volume
+  m_EditorClassIdentifier: 
+  Name: Change Volume
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 3623985949
+    data2: 1889044088
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &5297617191711402340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -421,7 +478,7 @@ MonoBehaviour:
   Path: FMOD Unity/Bank/Desktop/BGM.bank
   Name: BGM
   StudioPath: bank:/BGM
-  lastModified: 638840700575811603
+  lastModified: 638849237733559526
   FileSizes: []
   Exists: 1
 --- !u!114 &5495952874708681732
