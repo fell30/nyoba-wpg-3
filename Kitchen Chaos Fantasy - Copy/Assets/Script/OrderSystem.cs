@@ -193,6 +193,7 @@ public class OrderSystem : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         StartOrderSystem();
         countdownTimer.StartTimer();
+        FindAnyObjectByType<BGMManager>().StartBGM();
 
     }
 }
