@@ -5,6 +5,16 @@ ModelImporter:
   internalIDToNameTable: []
   externalObjects:
   - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Frost potion material
+    second: {fileID: 2100000, guid: d270d20fbc39c154286e6ad2514c9d1e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material kaca
+    second: {fileID: 2100000, guid: d11b5aad48c0b9b47bb4a40f0ba1d919, type: 2}
+  - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Frost potion texture

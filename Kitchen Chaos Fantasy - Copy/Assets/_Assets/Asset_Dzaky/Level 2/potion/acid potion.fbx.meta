@@ -5,6 +5,21 @@ ModelImporter:
   internalIDToNameTable: []
   externalObjects:
   - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material kaca
+    second: {fileID: 2100000, guid: 7764781caf20ef24ca34d3afa5bff01a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material penutup
+    second: {fileID: 2100000, guid: 380c78914d82c364d8ad5b00cb7992b7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material water
+    second: {fileID: 2100000, guid: 558bcccc647cc9040a7be2ec2d29fc68, type: 2}
+  - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Texture acid
