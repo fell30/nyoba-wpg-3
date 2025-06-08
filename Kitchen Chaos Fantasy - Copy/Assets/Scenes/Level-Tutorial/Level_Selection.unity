@@ -1965,6 +1965,8 @@ GameObject:
   - component: {fileID: 336971740}
   - component: {fileID: 336971739}
   - component: {fileID: 336971738}
+  - component: {fileID: 336971743}
+  - component: {fileID: 336971742}
   m_Layer: 5
   m_Name: UIMenu
   m_TagString: Untagged
@@ -2050,6 +2052,7 @@ RectTransform:
   - {fileID: 1490276048}
   - {fileID: 1170428257}
   - {fileID: 1982794838}
+  - {fileID: 1293721311}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2057,6 +2060,36 @@ RectTransform:
   m_AnchoredPosition: {x: 5.3, y: 1.08}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &336971742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 336971737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8547cd561aa375499797922f6885153, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuButtons:
+  - {fileID: 1170428258}
+  - {fileID: 1982794839}
+--- !u!114 &336971743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 336971737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5012b7225816ef34e9a6bdc472ef9797, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playButton: {fileID: 1170428258}
+  quitButton: {fileID: 1982794839}
+  cameraFollow: {fileID: 670242143}
 --- !u!4 &345834898 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e8f3fa7b123be944eab2edbf9ff9dab3, type: 3}
@@ -3942,13 +3975,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 670242137}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.20480779, y: -0.00043306215, z: 0.002532354, w: 0.97879887}
-  m_LocalPosition: {x: 0.71, y: -9.29, z: 1.68}
+  m_LocalRotation: {x: -0.33434123, y: -0.000769068, z: 0.0024513043, w: 0.9424486}
+  m_LocalPosition: {x: 0.7, y: -14.5, z: 3.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2003885225}
-  m_LocalEulerAnglesHint: {x: -23.636, y: -0.118, z: 0.321}
+  m_LocalEulerAnglesHint: {x: -39.065, y: -0.228, z: 0.379}
 --- !u!114 &670242143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3962,12 +3995,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 52797741}
+  playerScript: {fileID: 52797742}
+  menuTransform: {fileID: 1293721311}
+  gameplayOffset: {x: 0, y: 17, z: -20}
+  gameplayEulerAngles: {x: 35, y: 0, z: 0}
   smoothTime: 0.2
-  introMoveDuration: 3
-  startYOffset: -10
-  startFOV: 80
-  targetFOV: 80
-  zoomDuration: 2
+  startFOV: 65
+  targetFOV: 45
+  zoomDuration: 3
 --- !u!1 &688841010 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: cf7ecc630164aed44b4d26943734adc5, type: 3}
@@ -6529,7 +6564,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 0.9308176, g: 0.82327735, b: 0.41857514, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -6548,7 +6583,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1170428259}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 336971743}
+        m_TargetAssemblyTypeName: UIMenu, Assembly-CSharp
+        m_MethodName: OnPlayClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1170428259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7190,6 +7237,41 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ea740562cadf58c47947079e2aca5d5f, type: 3}
   m_PrefabInstance: {fileID: 1751038275}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1293721310
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1293721311}
+  m_Layer: 5
+  m_Name: CameraStartPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1293721311
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293721310}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -12.63}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 336971741}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 143}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1308268889
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12379,9 +12461,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 52797741}
+  playerScript: {fileID: 0}
+  menuTransform: {fileID: 0}
+  gameplayOffset: {x: 0, y: 15, z: -5}
+  gameplayEulerAngles: {x: 75, y: 0, z: 0}
   smoothTime: 0.2
-  introMoveDuration: 3
-  startYOffset: -10
   startFOV: 80
   targetFOV: 80
   zoomDuration: 2
@@ -15997,7 +16081,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 0.92941177, g: 0.8235294, b: 0.41960785, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -16016,7 +16100,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1982794840}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 336971743}
+        m_TargetAssemblyTypeName: UIMenu, Assembly-CSharp
+        m_MethodName: OnQuitClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1982794840
 MonoBehaviour:
   m_ObjectHideFlags: 0
