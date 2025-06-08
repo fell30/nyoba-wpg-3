@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Acid Protection
   m_EditorClassIdentifier: 
   prefab: {fileID: 5133453827729482660, guid: 0f2b7ff1b65462141a1b01d5ffa47a89, type: 3}
-  recipeSprite: {fileID: 21300000, guid: d22aa12772ab5554b87228a003e38214, type: 3}
+  recipeSprite: {fileID: -1165739431, guid: d22aa12772ab5554b87228a003e38214, type: 3}
   IconObject: {fileID: 21300000, guid: 7ee36374034628540880286588ba8d7b, type: 3}
   objectName: Acid Protection
   GoldReward: 5

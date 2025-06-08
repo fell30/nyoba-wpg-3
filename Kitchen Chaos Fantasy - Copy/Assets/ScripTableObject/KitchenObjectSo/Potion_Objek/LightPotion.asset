@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: LightPotion
   m_EditorClassIdentifier: 
   prefab: {fileID: 5133453827729482660, guid: 03575f1bc433a8d47b976ea3eea30f7c, type: 3}
-  recipeSprite: {fileID: 21300000, guid: c24e289408da09943ac4d9e7e8a64d5e, type: 3}
+  recipeSprite: {fileID: 1951221633, guid: c24e289408da09943ac4d9e7e8a64d5e, type: 3}
   IconObject: {fileID: 21300000, guid: 6dc0c9b599afe0d479b2a692e4a05a62, type: 3}
   objectName: LightPotion
   GoldReward: 3
