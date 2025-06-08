@@ -20,9 +20,10 @@ public class PlayerLevelSelection : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         Cursor.lockState = CursorLockMode.Locked;
         rb = GetComponent<Rigidbody>();
+
     }
 
-    private void Start()
+    public void playBGMLevelSelection()
     {
         bgmLevelSelection.PlayBGM();
     }

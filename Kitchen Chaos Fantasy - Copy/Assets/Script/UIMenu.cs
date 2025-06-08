@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using FMODUnity;
 
 public class UIMenu : MonoBehaviour
 {
@@ -10,6 +11,9 @@ public class UIMenu : MonoBehaviour
     [SerializeField] private Button playButton;
     [SerializeField] private Button quitButton;
     [SerializeField] private CameraFollowWithIntro cameraFollow;
+    [SerializeField] private StudioEventEmitter bgmMainMenu; // Tambahkan ini untuk BGM
+    [SerializeField] private PlayerLevelSelection playerLevelSelection; // Tambahkan ini untuk PlayerLevelSelection
+
 
     private void Start()
     {
@@ -22,6 +26,14 @@ public class UIMenu : MonoBehaviour
             quitButton.onClick.AddListener(OnQuitClicked);
         else
             Debug.LogWarning("Quit Button belum di-assign di Inspector!");
+
+        if (SceneManager.GetActiveScene().name == "Level_Selection")
+        {
+            if (bgmMainMenu != null)
+            {
+                bgmMainMenu.Play();
+            }
+        }
     }
 
     public void OnPlayClicked()  // <-- Diubah jadi public
@@ -29,6 +41,9 @@ public class UIMenu : MonoBehaviour
         if (cameraFollow != null)
         {
             cameraFollow.StartIntroTransition();
+            bgmMainMenu?.Stop(); // Hentikan BGM jika ada
+            playerLevelSelection?.playBGMLevelSelection(); // Memanggil playBGMLevelSelection jika ada
+
         }
         else
         {

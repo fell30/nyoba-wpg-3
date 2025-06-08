@@ -72,17 +72,18 @@ public class UIMenu2 : MonoBehaviour
     public void PauseGame() => Time.timeScale = 0f;
     public void ResumeGame() => Time.timeScale = 1f;
 
-    public void RestartGame()
-    {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
+    // public void RestartGame()
+    // {
+    //     Time.timeScale = 1f;
+    //     SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    //     FindAnyObjectByType<BGMManager>().StopBGM();
+    // }
 
-    public void BacktoMainMenu()
-    {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene("MainMenu");
-    }
+    // public void BacktoMainMenu()
+    // {
+    //     Time.timeScale = 1f;
+    //     SceneManager.LoadScene("Level_Selection");
+    // }
 
     public void QuitGame() => Application.Quit();
 }

@@ -239,13 +239,13 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 780731096703871881}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -38, y: -357}
+  m_AnchoredPosition: {x: -38, y: -358}
   m_SizeDelta: {x: 355, y: 103}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8081540835884666660
@@ -614,7 +614,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.0014038086, y: -0.0010986328}
+  m_AnchoredPosition: {x: 0.0014648438, y: -0.0010986328}
   m_SizeDelta: {x: -604.93, y: -340.28}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &139994191032755561
@@ -913,7 +913,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -0}
+  m_AnchoredPosition: {x: 0, y: -29}
   m_SizeDelta: {x: 1065.8, y: 652.16003}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1164800954374724630
@@ -2336,8 +2336,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7490732141650744354}
-        m_TargetAssemblyTypeName: UIMenu2, Assembly-CSharp
+      - m_Target: {fileID: 6811517577932784473}
+        m_TargetAssemblyTypeName: UI_Manager, Assembly-CSharp
         m_MethodName: RestartGame
         m_Mode: 1
         m_Arguments:
@@ -3811,7 +3811,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 3
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e098ccf147c6d23458a4a79d704607f8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 74632c28a0cec284789ec9a8a881cb8a, type: 2}
   m_sharedMaterial: {fileID: 7427261919156769991, guid: e098ccf147c6d23458a4a79d704607f8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -4111,8 +4111,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7490732141650744354}
-        m_TargetAssemblyTypeName: UIMenu2, Assembly-CSharp
+      - m_Target: {fileID: 6811517577932784473}
+        m_TargetAssemblyTypeName: UI_Manager, Assembly-CSharp
         m_MethodName: BacktoMainMenu
         m_Mode: 1
         m_Arguments:
@@ -4293,7 +4293,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26236d529881f5148b3b43b74ac6d723, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeRemaining: 120
+  timeRemaining: 300
   timerIsRunning: 0
   timeText: {fileID: 1540480777259506665}
   GameOverPanel: {fileID: 541231623912370282}
@@ -4683,7 +4683,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6261e7aec4a87a143b2a2e39dec23c1d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c9f1f48eceb459d4c915cd0e68052ba7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5685,7 +5685,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -612, y: 55.50647}
+  m_AnchoredPosition: {x: -590, y: 55.50647}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &2558497062627544565
@@ -6509,6 +6509,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PauseMenu: {fileID: 1367808873097254129}
+  transisiOut: {fileID: 0}
   ResumeButton: {fileID: 5659442071481200403}
 --- !u!114 &7490732141650744354
 MonoBehaviour:
@@ -6544,7 +6545,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &5817523216912384254
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6680,7 +6681,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1921, y: -540.00037}
+  m_AnchoredPosition: {x: -1929, y: -540.00037}
   m_SizeDelta: {x: 1920, y: 864.0188}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2233954079369932208
@@ -6711,7 +6712,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6261e7aec4a87a143b2a2e39dec23c1d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c9f1f48eceb459d4c915cd0e68052ba7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7011,6 +7012,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2033044899467963694, guid: 32d18a60acf03b748afe42d1ba4fecf4, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 74632c28a0cec284789ec9a8a881cb8a, type: 2}
     - target: {fileID: 3353570972970721838, guid: 32d18a60acf03b748afe42d1ba4fecf4, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -7111,6 +7116,10 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6408841165832760532, guid: 32d18a60acf03b748afe42d1ba4fecf4, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 74632c28a0cec284789ec9a8a881cb8a, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 961631771738263667, guid: 32d18a60acf03b748afe42d1ba4fecf4, type: 3}

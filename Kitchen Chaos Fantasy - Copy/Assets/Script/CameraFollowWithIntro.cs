@@ -103,10 +103,11 @@ public class CameraFollowWithIntro : MonoBehaviour
         _isFollowing = true;
         _isTransitioning = false;
 
+
         Debug.Log("[CameraFollow] Intro transition complete. Camera is now following.");
 
         // Aktifkan player movement setelah transisi
-       
+
     }
 
     private void LateUpdate()

@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class UI_Manager : MonoBehaviour
 {
     public GameObject PauseMenu;
+    public GameObject transisiOut;
     public Button ResumeButton;
 
     private void Update()
@@ -22,6 +23,22 @@ public class UI_Manager : MonoBehaviour
             {
                 PauseGame();
             }
+        }
+    }
+    public void RestartGame()
+    {
+        StartCoroutine(Restart());
+    }
+    private IEnumerator Restart()
+    {
+        if (transisiOut != null)
+        {
+            transisiOut.SetActive(true);
+            yield return new WaitForSecondsRealtime(0.5f);
+            FindAnyObjectByType<BGMManager>().StopBGM();
+            Time.timeScale = 1f;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
         }
     }
 
@@ -45,13 +62,29 @@ public class UI_Manager : MonoBehaviour
             }
         }
     }
+    public void BacktoMainMenu()
+    {
+        StartCoroutine(Backmenu());
+    }
+    private IEnumerator Backmenu()
+    {
+        if (transisiOut != null)
+        {
+            transisiOut.SetActive(true);
+            yield return new WaitForSecondsRealtime(0.5f);
+            FindAnyObjectByType<BGMManager>().StopBGM();
+            Time.timeScale = 1f;
+            SceneManager.LoadScene("Level_Selection");
 
+        }
+    }
     public void ResumeGame()
     {
         PauseMenu.SetActive(false);
         Time.timeScale = 1f;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+        Debug.Log("Game Resumed");
     }
 
     public void QuitGame()

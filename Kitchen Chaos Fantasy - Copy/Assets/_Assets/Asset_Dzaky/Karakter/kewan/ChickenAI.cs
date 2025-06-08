@@ -51,7 +51,7 @@ public class ChickenAI : MonoBehaviour
         if (Random.value > 0.5f)
         {
             animator.SetTrigger("Eat");
-            Debug.Log("Chicken is eating!");
+
         }
 
         yield return new WaitForSeconds(waitTime);

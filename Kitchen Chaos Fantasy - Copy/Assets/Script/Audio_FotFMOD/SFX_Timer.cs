@@ -15,6 +15,7 @@ public class SFX_Timer : MonoBehaviour
         if (TimerEmitter != null && !TimerEmitter.IsPlaying())
         {
             TimerEmitter.Play();
+            Debug.Log("Timer sound played.");
 
 
         }
