@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class UIMenu : MonoBehaviour
+public class UIMenu2 : MonoBehaviour
 {
     public Button[] menuButtons;
     public GameObject TRANSISIOUT;

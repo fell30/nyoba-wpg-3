@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -11,6 +10,7 @@ public class PlayerLevelSelection : MonoBehaviour
 
     private Rigidbody rb;
     private bool isWalking;
+    private bool canMove = false;  // ⛔ Tambahan: kontrol gerakan player
     private LevelSelection currentLevelTrigger;
     [SerializeField] private GameObject TRANSISIOUT;
 
@@ -20,26 +20,34 @@ public class PlayerLevelSelection : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
     }
 
+    private void Start()
+    {
+        DisableMovement(); // ⛔ Tambahan: agar player tidak langsung bisa gerak saat start
+    }
+
     private void FixedUpdate()
     {
+        if (!canMove) return; // ⛔ Tambahan: tahan gerakan
         HandleMovement();
     }
 
     private void Update()
     {
+        if (!canMove) return; // ⛔ Tambahan: tahan input
+
         if (currentLevelTrigger != null && Input.GetKeyDown(KeyCode.E))
         {
             StartCoroutine(transitionOut());
-
         }
     }
+
     private IEnumerator transitionOut()
     {
         TRANSISIOUT.SetActive(true);
         yield return new WaitForSeconds(0.53f);
         SceneManager.LoadScene(currentLevelTrigger.sceneToLoad);
-        //TRANSISIOUT.SetActive(false);
     }
+
     private void HandleMovement()
     {
         Vector2 inputVector = gameInput.GetMovmentInputNormalized();
@@ -61,6 +69,16 @@ public class PlayerLevelSelection : MonoBehaviour
     public bool IsWalking()
     {
         return isWalking;
+    }
+
+    public void EnableMovement()  // ✅ Fungsi untuk mengaktifkan gerak
+    {
+        canMove = true;
+    }
+
+    public void DisableMovement() // ✅ Fungsi untuk menonaktifkan gerak
+    {
+        canMove = false;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -91,7 +109,6 @@ public class PlayerLevelSelection : MonoBehaviour
 
                 if (currentLevelTrigger == levelTrigger)
                     currentLevelTrigger = null;
-
             }
         }
     }
