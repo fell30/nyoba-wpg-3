@@ -46,12 +46,12 @@ public class MenuNavigation : MonoBehaviour
         GameObject selected = menuButtons[currentIndex].gameObject;
         EventSystem.current.SetSelectedGameObject(selected);
 
-        PlayBounceAnimation(selected.transform); // ⬅️ Tambahkan animasi di sini
+        PlayBounceAnimation(selected.transform);
     }
 
     private void PlayBounceAnimation(Transform target)
     {
-        target.localScale = Vector3.one * 0.13f; // Reset ke skala aslinya
+        target.localScale = Vector3.one * 0.13f;
         target.DOScale(1.0f, 0.15f)
               .SetEase(Ease.OutBack)
               .OnComplete(() =>

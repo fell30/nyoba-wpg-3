@@ -43,6 +43,7 @@ public class UIMenu : MonoBehaviour
             cameraFollow.StartIntroTransition();
             bgmMainMenu?.Stop(); // Hentikan BGM jika ada
             playerLevelSelection?.playBGMLevelSelection(); // Memanggil playBGMLevelSelection jika ada
+            playerLevelSelection.enabled = true;
 
         }
         else
