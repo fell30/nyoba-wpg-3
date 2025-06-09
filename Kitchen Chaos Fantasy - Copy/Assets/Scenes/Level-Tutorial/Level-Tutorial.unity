@@ -15595,6 +15595,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 541231623912370282, guid: 7ec9bbe211c5c3d49b81de1595a6ca7a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1132461955532193035, guid: 7ec9bbe211c5c3d49b81de1595a6ca7a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2112373344235334734, guid: 7ec9bbe211c5c3d49b81de1595a6ca7a, type: 3}
       propertyPath: TRANSISIOUT
       value: 
@@ -15699,6 +15707,10 @@ PrefabInstance:
       propertyPath: transisiOut
       value: 
       objectReference: {fileID: 961363324}
+    - target: {fileID: 7036713568038017065, guid: 7ec9bbe211c5c3d49b81de1595a6ca7a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -1942
+      objectReference: {fileID: 0}
     - target: {fileID: 7819262007475368430, guid: 7ec9bbe211c5c3d49b81de1595a6ca7a, type: 3}
       propertyPath: m_Camera
       value: 
