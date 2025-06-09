@@ -36,6 +36,7 @@ public class UI_Manager : MonoBehaviour
             transisiOut.SetActive(true);
             yield return new WaitForSecondsRealtime(0.5f);
             FindAnyObjectByType<BGMManager>().StopBGM();
+            FindAnyObjectByType<bgm_Level_Selection>().StopBGM();
             Time.timeScale = 1f;
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
@@ -73,6 +74,7 @@ public class UI_Manager : MonoBehaviour
             transisiOut.SetActive(true);
             yield return new WaitForSecondsRealtime(0.5f);
             FindAnyObjectByType<BGMManager>().StopBGM();
+            FindAnyObjectByType<bgm_Level_Selection>().StopBGM();
             Time.timeScale = 1f;
             SceneManager.LoadScene("Level_Selection");
 

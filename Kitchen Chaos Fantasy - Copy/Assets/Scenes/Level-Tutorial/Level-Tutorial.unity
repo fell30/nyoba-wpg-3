@@ -15603,10 +15603,30 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1367808873097254129, guid: 7ec9bbe211c5c3d49b81de1595a6ca7a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2112373344235334734, guid: 7ec9bbe211c5c3d49b81de1595a6ca7a, type: 3}
       propertyPath: TRANSISIOUT
       value: 
       objectReference: {fileID: 1055306757}
+    - target: {fileID: 3632574606999073547, guid: 7ec9bbe211c5c3d49b81de1595a6ca7a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3632574606999073547, guid: 7ec9bbe211c5c3d49b81de1595a6ca7a, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3632574606999073547, guid: 7ec9bbe211c5c3d49b81de1595a6ca7a, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3632574606999073547, guid: 7ec9bbe211c5c3d49b81de1595a6ca7a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -1614
+      objectReference: {fileID: 0}
     - target: {fileID: 4684255696699162301, guid: 7ec9bbe211c5c3d49b81de1595a6ca7a, type: 3}
       propertyPath: OrderSystem
       value: 

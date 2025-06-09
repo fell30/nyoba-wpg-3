@@ -142,10 +142,10 @@ MonoBehaviour:
   Path: FMOD Unity/Bank/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638849237734096470
+  lastModified: 638850603869386482
   FileSizes:
   - Name: 
-    Value: 1796
+    Value: 1832
   Exists: 1
 --- !u!114 &-2704140056654725541
 MonoBehaviour:
@@ -254,13 +254,14 @@ MonoBehaviour:
   - {fileID: -7193802567290468786}
   - {fileID: 5085750570384688824}
   - {fileID: 189904581549385711}
+  - {fileID: 7863864555405596350}
   EditorParameters: []
   MasterBanks:
   - {fileID: 6125456919088573864}
   StringsBanks:
   - {fileID: -3629758534009279812}
   cacheVersion: 131847
-  cacheTime: 638849237734206538
+  cacheTime: 638850603869386482
   SerializableEventsDict:
   - key: event:/Music/BGMSelectionMap
     index: 0
@@ -284,6 +285,8 @@ MonoBehaviour:
     index: 9
   - key: event:/Music/BGMUpMainMenu
     index: 10
+  - key: event:/Music/BGM5menit
+    index: 11
 --- !u!114 &189904581549385711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -345,7 +348,7 @@ MonoBehaviour:
   Path: FMOD Unity/Bank/Desktop/BGM.streams.bank
   Name: BGM.streams
   StudioPath: bank:/BGM.streams
-  lastModified: 638849237733964287
+  lastModified: 638850603869311298
   FileSizes: []
   Exists: 1
 --- !u!114 &2677062511850754195
@@ -478,7 +481,7 @@ MonoBehaviour:
   Path: FMOD Unity/Bank/Desktop/BGM.bank
   Name: BGM
   StudioPath: bank:/BGM
-  lastModified: 638849237733559526
+  lastModified: 638850603868884516
   FileSizes: []
   Exists: 1
 --- !u!114 &5495952874708681732
@@ -566,7 +569,7 @@ MonoBehaviour:
   - {fileID: 5336363028646637550}
   IsStream: 1
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
@@ -595,6 +598,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &7863864555405596350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/BGM5menit
+  m_EditorClassIdentifier: 
+  Path: event:/Music/BGM5menit
+  Guid:
+    Data1: -213050258
+    Data2: 1154975930
+    Data3: -1449337703
+    Data4: -1084851960
+  Banks:
+  - {fileID: 5336363028646637550}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 299996
 --- !u!114 &8232481201164257854
 MonoBehaviour:
   m_ObjectHideFlags: 0

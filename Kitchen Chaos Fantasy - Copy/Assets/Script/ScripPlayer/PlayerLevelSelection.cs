@@ -26,6 +26,7 @@ public class PlayerLevelSelection : MonoBehaviour
     public void playBGMLevelSelection()
     {
         bgmLevelSelection.PlayBGM();
+        Debug.Log("BGM Level Selection Played");
     }
 
     private void FixedUpdate()

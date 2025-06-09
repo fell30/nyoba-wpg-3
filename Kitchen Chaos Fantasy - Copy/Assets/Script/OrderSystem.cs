@@ -193,7 +193,15 @@ public class OrderSystem : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         StartOrderSystem();
         countdownTimer.StartTimer();
-        FindAnyObjectByType<BGMManager>().StartBGM();
+        if (SceneManager.GetActiveScene().name == "Level-Tutorial")
+        {
+
+            FindAnyObjectByType<BGMManager>().StartBGM();
+        }
+        else
+        {
+            FindAnyObjectByType<bgm_Level_Selection>().PlayBGM();
+        }
 
     }
 }
