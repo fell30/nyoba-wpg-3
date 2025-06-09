@@ -13,6 +13,7 @@ public class UIMenu : MonoBehaviour
     [SerializeField] private CameraFollowWithIntro cameraFollow;
     [SerializeField] private StudioEventEmitter bgmMainMenu; // Tambahkan ini untuk BGM
     [SerializeField] private PlayerLevelSelection playerLevelSelection; // Tambahkan ini untuk PlayerLevelSelection
+    [SerializeField] private SfxMortar buttonSound;
 
 
     private void Start()
@@ -44,6 +45,10 @@ public class UIMenu : MonoBehaviour
             bgmMainMenu?.Stop(); // Hentikan BGM jika ada
             playerLevelSelection?.playBGMLevelSelection(); // Memanggil playBGMLevelSelection jika ada
             playerLevelSelection.enabled = true;
+            if (buttonSound != null)
+            {
+                buttonSound.PlayTaruhSound(); // Memanggil PlayTaruhSound dari SfxMortar
+            }
 
         }
         else
@@ -57,6 +62,10 @@ public class UIMenu : MonoBehaviour
     public void OnQuitClicked()  // <-- Diubah jadi public
     {
         Debug.Log("Quit Game");
+        if (buttonSound != null)
+        {
+            buttonSound.PlayTaruhSound(); // Memanggil PlayTaruhSound dari SfxMortar
+        }
         Application.Quit();
 
 #if UNITY_EDITOR

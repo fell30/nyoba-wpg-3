@@ -2687,6 +2687,7 @@ GameObject:
   - component: {fileID: 336971743}
   - component: {fileID: 336971742}
   - component: {fileID: 336971744}
+  - component: {fileID: 336971745}
   m_Layer: 5
   m_Name: UIMenu
   m_TagString: Untagged
@@ -2795,6 +2796,7 @@ MonoBehaviour:
   menuButtons:
   - {fileID: 1170428258}
   - {fileID: 1982794839}
+  buttonSound: {fileID: 336971745}
 --- !u!114 &336971743
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2812,6 +2814,7 @@ MonoBehaviour:
   cameraFollow: {fileID: 670242143}
   bgmMainMenu: {fileID: -1368624827168094863, guid: f615366ef54e7434d95e194650eb4ce0, type: 3}
   playerLevelSelection: {fileID: 52797742}
+  buttonSound: {fileID: 336971745}
 --- !u!114 &336971744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2825,6 +2828,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bgmEmitter: {fileID: -1368624827168094863, guid: f615366ef54e7434d95e194650eb4ce0, type: 3}
+--- !u!114 &336971745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 336971737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21d1a056084c6b84ba36badf119eb941, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menaruhEmitter: {fileID: 5934115295746545462, guid: c9db6cf1b4c54d448b381b2b3f7c5d6c, type: 3}
+  tumbukEmitter: {fileID: 5934115295746545462, guid: a2d32e1e677543142b5212e623ff0fa8, type: 3}
 --- !u!1001 &346539149
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7415,6 +7432,8 @@ GameObject:
   - component: {fileID: 1170428258}
   - component: {fileID: 1170428262}
   - component: {fileID: 1170428261}
+  - component: {fileID: 1170428264}
+  - component: {fileID: 1170428263}
   m_Layer: 5
   m_Name: Play
   m_TagString: Untagged
@@ -7658,6 +7677,33 @@ MonoBehaviour:
   preset: 1
   onEnableBehaviour: 3
   onDisableBehaviour: 2
+--- !u!114 &1170428263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1170428256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21d1a056084c6b84ba36badf119eb941, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menaruhEmitter: {fileID: 0}
+  tumbukEmitter: {fileID: 5934115295746545462, guid: a2d32e1e677543142b5212e623ff0fa8, type: 3}
+--- !u!114 &1170428264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1170428256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dba33d8205b80f4f95740255a53e362, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverSound: {fileID: 1170428263}
 --- !u!1 &1170541142 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: cfcf56968c5dee445b2da0db76676dec, type: 3}
@@ -18279,6 +18325,8 @@ GameObject:
   - component: {fileID: 1982794839}
   - component: {fileID: 1982794843}
   - component: {fileID: 1982794842}
+  - component: {fileID: 1982794845}
+  - component: {fileID: 1982794844}
   m_Layer: 5
   m_Name: Quit
   m_TagString: Untagged
@@ -18522,6 +18570,33 @@ MonoBehaviour:
   preset: 1
   onEnableBehaviour: 3
   onDisableBehaviour: 2
+--- !u!114 &1982794844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982794837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21d1a056084c6b84ba36badf119eb941, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menaruhEmitter: {fileID: 0}
+  tumbukEmitter: {fileID: 5934115295746545462, guid: a2d32e1e677543142b5212e623ff0fa8, type: 3}
+--- !u!114 &1982794845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982794837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dba33d8205b80f4f95740255a53e362, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverSound: {fileID: 1170428263}
 --- !u!1001 &1990456004
 PrefabInstance:
   m_ObjectHideFlags: 0

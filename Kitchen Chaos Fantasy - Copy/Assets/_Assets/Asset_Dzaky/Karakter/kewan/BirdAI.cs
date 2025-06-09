@@ -19,8 +19,8 @@ public class BirdAI : MonoBehaviour
 
     private void Start()
     {
-        animator = GetComponent<Animator>();
-        animator.SetBool("isFlying", true);
+        //animator = GetComponent<Animator>();
+        //animator.SetBool("isFlying", true);
 
         PickNewTarget();
     }
