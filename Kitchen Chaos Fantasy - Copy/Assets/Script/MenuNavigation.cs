@@ -10,12 +10,13 @@ public class MenuNavigation : MonoBehaviour
     public Button[] menuButtons;
     [SerializeField] private SfxMortar buttonSound;
 
-    private int currentIndex = -1; // Awalnya -1, artinya tidak ada yang terseleksi
+    private int currentIndex = 0; // Awalnya -1, artinya tidak ada yang terseleksi
 
     private void Start()
     {
         // Jangan set selected di awal, biarkan kosong
-        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(menuButtons[currentIndex].gameObject);
+       
     }
 
     private void Update()
@@ -57,11 +58,11 @@ public class MenuNavigation : MonoBehaviour
         }
 
         target.localScale = Vector3.one * 0.13f;
-        target.DOScale(1.0f, 0.15f)
+        target.DOScale(0.7f, 0.15f)
               .SetEase(Ease.OutBack)
               .OnComplete(() =>
               {
-                  target.DOScale(1.10f, 0.15f).SetEase(Ease.InOutQuad);
+                  target.DOScale(0.7f, 0.15f).SetEase(Ease.InOutQuad);
               });
     }
 }

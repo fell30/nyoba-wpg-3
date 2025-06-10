@@ -1254,11 +1254,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &175255494 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2975661327147877668, guid: 7ec9bbe211c5c3d49b81de1595a6ca7a, type: 3}
-  m_PrefabInstance: {fileID: 4245146394316989889}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &181032864 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3526458156391113324, guid: 0852ba165a7730940a4403bee85e2606, type: 3}
@@ -2832,11 +2827,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 3526458156391113324, guid: 0852ba165a7730940a4403bee85e2606, type: 3}
   m_PrefabInstance: {fileID: 864844854}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &374592942 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4845029973226282877, guid: 7ec9bbe211c5c3d49b81de1595a6ca7a, type: 3}
-  m_PrefabInstance: {fileID: 4245146394316989889}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &379075261
 GameObject:
@@ -15607,6 +15597,10 @@ PrefabInstance:
       propertyPath: totalReward
       value: 
       objectReference: {fileID: 1668967414}
+    - target: {fileID: 4684255696699162301, guid: 7ec9bbe211c5c3d49b81de1595a6ca7a, type: 3}
+      propertyPath: timeRemaining
+      value: 120
+      objectReference: {fileID: 0}
     - target: {fileID: 5335603730295167265, guid: 7ec9bbe211c5c3d49b81de1595a6ca7a, type: 3}
       propertyPath: TRANSISIOUT
       value: 
@@ -16135,11 +16129,11 @@ PrefabInstance:
     - target: {fileID: 3458641249929094733, guid: 0a116f91ff9a1c24ea51db6977b2b6f7, type: 3}
       propertyPath: TimerPanel.Array.data[1]
       value: 
-      objectReference: {fileID: 175255494}
+      objectReference: {fileID: 0}
     - target: {fileID: 3458641249929094733, guid: 0a116f91ff9a1c24ea51db6977b2b6f7, type: 3}
       propertyPath: TimerPanel.Array.data[2]
       value: 
-      objectReference: {fileID: 374592942}
+      objectReference: {fileID: 0}
     - target: {fileID: 7620026043979149710, guid: 0a116f91ff9a1c24ea51db6977b2b6f7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

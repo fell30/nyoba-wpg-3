@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using FMODUnity;
+using System.Diagnostics.CodeAnalysis;
 
 public class UIMenu : MonoBehaviour
 {
@@ -14,6 +15,9 @@ public class UIMenu : MonoBehaviour
     [SerializeField] private StudioEventEmitter bgmMainMenu; // Tambahkan ini untuk BGM
     [SerializeField] private PlayerLevelSelection playerLevelSelection; // Tambahkan ini untuk PlayerLevelSelection
     [SerializeField] private SfxMortar buttonSound;
+    [SerializeField] private MenuNavigation menuNavigation;
+    public GameObject  menuplayqu;
+    
 
 
     private void Start()
@@ -34,6 +38,15 @@ public class UIMenu : MonoBehaviour
             {
                 bgmMainMenu.Play();
             }
+        }
+    }
+
+    void Update()
+    {
+        if (Input.GetKey(KeyCode.M))
+        {
+            EnableMenu();
+            Debug.Log("askaksaksa");
         }
     }
 
@@ -71,5 +84,20 @@ public class UIMenu : MonoBehaviour
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #endif
+    }
+
+    public void DisableMenu(GameObject menu)
+    {
+        menu.SetActive(false);
+        menuNavigation.enabled = false;
+    }
+    public void EnableMenu()
+    {
+        menuplayqu.SetActive(true);
+        menuNavigation.enabled = true;
+    }
+    public void EnableMenuuuuuuu(GameObject gameObject)
+    {
+      gameObject.SetActive(true);
     }
 }
