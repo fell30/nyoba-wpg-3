@@ -11,6 +11,8 @@ public class UI_Manager : MonoBehaviour
     public GameObject transisiOut;
     public Button ResumeButton;
     [SerializeField] private SfxMortar buttonSound;
+    public BGMManager bgmmanager;
+    public bgm_Level_Selection bgm_Level_Selection;
 
     private void Update()
     {
@@ -40,10 +42,10 @@ public class UI_Manager : MonoBehaviour
         {
             transisiOut.SetActive(true);
             yield return new WaitForSecondsRealtime(0.5f);
-            FindAnyObjectByType<BGMManager>().StopBGM();
+            bgmmanager.StopBGM();
             if (SceneManager.GetActiveScene().name == "Level-2")
             {
-                FindAnyObjectByType<bgm_Level_Selection>().StopBGM();
+                bgm_Level_Selection.StopBGM();
             }
 
 

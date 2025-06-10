@@ -25,6 +25,8 @@ public class OrderSystem : MonoBehaviour
     [SerializeField] private GameObject OrderSuccess;
     [SerializeField] private totalReward totalReward;
     [SerializeField] private GoldSystem goldSystem;
+    public BGMManager bgmmanager;
+    public bgm_Level_Selection bgm_Level_Selection;
 
     private GameObject currentOrderUI;
 
@@ -133,20 +135,34 @@ public class OrderSystem : MonoBehaviour
         }
         else
         {
-            currentOrder = null;
-            OrderSuccess.SetActive(true);
-            OnAllOrdersCompleted?.Invoke();
-            countdownTimer.StopTimer();
-            int totalGold = goldSystem.GetcurrentGold();
-            totalReward.ShowFinalGold(totalGold);
-            totalReward.ShowPotionStats(GetServeStats());
-            float remaining = countdownTimer.GetTimeRemaining();
-            totalReward.ShowTimeRemaining(remaining);
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
-            clearUI.SetActive(false);
+            CompleteOrder();
+            if (SceneManager.GetActiveScene().name == "Level-Tutorial")
+            {
+                bgmmanager.StopBGM();
+            }
+            else
+            {
+                bgm_Level_Selection.StopBGM();
+            }
 
         }
+    }
+
+    private void CompleteOrder()
+    {
+        bgmmanager.StopBGM();
+        currentOrder = null;
+        OrderSuccess.SetActive(true);
+        OnAllOrdersCompleted?.Invoke();
+        countdownTimer.StopTimer();
+        int totalGold = goldSystem.GetcurrentGold();
+        totalReward.ShowFinalGold(totalGold);
+        totalReward.ShowPotionStats(GetServeStats());
+        float remaining = countdownTimer.GetTimeRemaining();
+        totalReward.ShowTimeRemaining(remaining);
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+        clearUI.SetActive(false);
     }
 
     public bool CheckOrder(KitchenObjectSO item)

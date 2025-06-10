@@ -14,6 +14,7 @@ public class CountdownTimer : MonoBehaviour
     [SerializeField] private GameObject clearUI;
     public totalReward totalReward;
     public OrderSystem OrderSystem;
+    public BGMManager bgmanager;
 
 
 
@@ -79,8 +80,9 @@ public class CountdownTimer : MonoBehaviour
         totalReward.ShowGameOver(serveStats);
         totalReward.ShowFailedOrderCount(failedOrders);
 
-        FindAnyObjectByType<BGMManager>().StopBGM();
+        bgmanager.StopBGM();
         GetComponent<SFX_Timer>().StopTimer();
+        Debug.Log("Timer has ended. Game Over logic executed.");
 
     }
     public void StartTimer()
@@ -90,7 +92,7 @@ public class CountdownTimer : MonoBehaviour
     public void StopTimer()
     {
         timerIsRunning = false;
-        FindObjectOfType<BGMManager>().StopBGM();
+        //FindObjectOfType<BGMManager>().StopBGM();
     }
 
     void UpdateTimerDisplay(float currentTime)

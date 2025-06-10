@@ -54,7 +54,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1082801445117073783
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1413,6 +1413,7 @@ MonoBehaviour:
   clearUI: {fileID: 0}
   totalReward: {fileID: 0}
   OrderSystem: {fileID: 0}
+  bgmanager: {fileID: 0}
 --- !u!1 &2210003143658701601
 GameObject:
   m_ObjectHideFlags: 0
@@ -2907,7 +2908,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1926, y: 17.009}
+  m_AnchoredPosition: {x: -1977, y: 17.009}
   m_SizeDelta: {x: 1920, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7374659348239604329
@@ -3037,7 +3038,7 @@ MonoBehaviour:
   autoPlay: 1
   useTargetAsV3: 0
   endValueFloat: 0
-  endValueV3: {x: 0, y: 47, z: 0}
+  endValueV3: {x: 0, y: 17.009, z: 0}
   endValueV2: {x: 0, y: 0}
   endValueColor: {r: 1, g: 1, b: 1, a: 1}
   endValueString: 
@@ -4224,13 +4225,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26236d529881f5148b3b43b74ac6d723, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeRemaining: 300
+  timeRemaining: 120
   timerIsRunning: 0
   timeText: {fileID: 1540480777259506665}
   GameOverPanel: {fileID: 541231623912370282}
   clearUI: {fileID: 8699393287835876124}
   totalReward: {fileID: 0}
   OrderSystem: {fileID: 0}
+  bgmanager: {fileID: 8408265927432381859}
 --- !u!114 &8408265927432381859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4739,7 +4741,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3863, y: -510.0094}
+  m_AnchoredPosition: {x: -1977, y: -510.0094}
   m_SizeDelta: {x: 1928.7253, y: 872.5065}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2043261350263862131
@@ -6770,7 +6772,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuButtons:
   - {fileID: 3491187563270166674}
-  - {fileID: 0}
   TRANSISIOUT: {fileID: 0}
   cameraZoom: {fileID: 0}
   zoomOutTargetFOV: 100
@@ -6940,7 +6941,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -12558, y: -510.0094}
+  m_AnchoredPosition: {x: -3456, y: -510.0094}
   m_SizeDelta: {x: 1920, y: 864.0188}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2233954079369932208

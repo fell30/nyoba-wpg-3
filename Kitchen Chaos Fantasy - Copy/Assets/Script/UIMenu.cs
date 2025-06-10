@@ -16,8 +16,9 @@ public class UIMenu : MonoBehaviour
     [SerializeField] private PlayerLevelSelection playerLevelSelection; // Tambahkan ini untuk PlayerLevelSelection
     [SerializeField] private SfxMortar buttonSound;
     [SerializeField] private MenuNavigation menuNavigation;
-    public GameObject  menuplayqu;
-    
+    public GameObject menuplayqu;
+    public GameObject creditsInfo;
+
 
 
     private void Start()
@@ -34,6 +35,7 @@ public class UIMenu : MonoBehaviour
 
         if (SceneManager.GetActiveScene().name == "Level_Selection")
         {
+
             if (bgmMainMenu != null)
             {
                 bgmMainMenu.Play();
@@ -46,6 +48,11 @@ public class UIMenu : MonoBehaviour
         if (Input.GetKey(KeyCode.M))
         {
             EnableMenu();
+            if (buttonSound != null)
+            {
+                buttonSound.PlayTaruhSound(); // Memanggil PlayTaruhSound dari SfxMortar
+            }
+            creditsInfo.SetActive(false);
             Debug.Log("askaksaksa");
         }
     }
@@ -98,6 +105,7 @@ public class UIMenu : MonoBehaviour
     }
     public void EnableMenuuuuuuu(GameObject gameObject)
     {
-      gameObject.SetActive(true);
+        gameObject.SetActive(true);
+
     }
 }
