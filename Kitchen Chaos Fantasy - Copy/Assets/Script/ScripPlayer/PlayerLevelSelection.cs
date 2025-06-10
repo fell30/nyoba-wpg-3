@@ -10,6 +10,8 @@ public class PlayerLevelSelection : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private bgm_Level_Selection bgmLevelSelection;
     [SerializeField] private GameObject TRANSISIOUT;
+    [SerializeField] private ParticleSystem footstepParticleSystem;
+
 
     private Rigidbody rb;
     private bool isWalking;
@@ -72,6 +74,21 @@ public class PlayerLevelSelection : MonoBehaviour
             Vector3 newDir = Vector3.Slerp(transform.forward, moveDir, Time.fixedDeltaTime * rotationSpeed);
             rb.rotation = Quaternion.LookRotation(newDir);
         }
+
+        if (isWalking)
+        {
+            if (!footstepParticleSystem.isPlaying)
+            {
+                footstepParticleSystem.Play();
+            }
+        }
+        else
+        {
+            if (footstepParticleSystem.isStopped)
+            {
+                footstepParticleSystem.Stop();
+            }
+        }
     }
 
     public bool IsWalking()
@@ -115,4 +132,6 @@ public class PlayerLevelSelection : MonoBehaviour
             }
         }
     }
+
+    
 }
