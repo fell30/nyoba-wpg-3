@@ -45,7 +45,7 @@ public class UIMenu : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.M))
+        if (Input.GetKey(KeyCode.Escape) || Input.GetKey(KeyCode.Space))
         {
             EnableMenu();
             if (buttonSound != null)
