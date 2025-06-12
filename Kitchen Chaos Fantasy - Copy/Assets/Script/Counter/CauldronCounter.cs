@@ -155,13 +155,23 @@ public class CauldronCounter : BaseCounter, IHasProgress
         StopCookingEffects();
         Player.Instance.SetIsCooking(false);
         _player.enabled = true;
+        if (_finishedPotion != null)
+        {
+            ResetCauldron(true);
+        }
+
+
     }
 
-    private void ResetCauldron()
+    private void ResetCauldron(bool resetWater = true)
     {
-        _Water.SetActive(false);
-        _isWaterAdded = false;
+        if (resetWater)
+        {
+            _Water.SetActive(false);
+            _isWaterAdded = false;
+        }
     }
+
 
     private void PlayCookingEffects()
     {
@@ -193,9 +203,11 @@ public class CauldronCounter : BaseCounter, IHasProgress
         {
             _blubParticle?.Stop();
             _blubLight.enabled = false;
-            ResetCauldron();
+            // Jangan reset air jika bahan habis tapi belum masak
+            // ResetCauldron(); // Ini dihapus atau dikomentari
         }
     }
+
 
     private bool HasBothIngredients() => _ingredient1 != null && _ingredient2 != null;
 
