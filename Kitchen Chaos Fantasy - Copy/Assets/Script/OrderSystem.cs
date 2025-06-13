@@ -107,12 +107,24 @@ public class OrderSystem : MonoBehaviour
 
     private void GenerateOrders(int count)
     {
-        Shuffle(possibleOrders);
-        for (int i = 0; i < count; i++)
+        // Pastikan count tidak lebih banyak dari jumlah possibleOrders
+        int finalCount = Mathf.Min(count, possibleOrders.Count);
+
+        // Duplikat list biar tidak mengubah aslinya
+        List<KitchenObjectSO> shuffledList = new List<KitchenObjectSO>(possibleOrders);
+        Shuffle(shuffledList); // Mengacak list
+
+        for (int i = 0; i < finalCount; i++)
         {
-            AddNewOrder();
+            KitchenObjectSO newOrder = shuffledList[i];
+            activeOrders.Add(newOrder);
+            orderQueue.Enqueue(newOrder);
+            Debug.Log("New Order (Shuffled): " + newOrder.objectName);
         }
+
+        Debug.Log("Total Orders (Shuffled): " + orderQueue.Count);
     }
+
 
 
     private void ShowNextOrder()

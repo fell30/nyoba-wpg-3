@@ -40,10 +40,11 @@ public class PlayerLevelSelection : MonoBehaviour
     {
         animator.SetBool("IsWalking", isWalking);
 
-        if (currentLevelTrigger != null && Input.GetKeyDown(KeyCode.E))
+        if (currentLevelTrigger != null && (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter)))
         {
             StartCoroutine(transitionOut());
         }
+
     }
 
     private IEnumerator transitionOut()
@@ -133,5 +134,5 @@ public class PlayerLevelSelection : MonoBehaviour
         }
     }
 
-    
+
 }
