@@ -1,16 +1,11 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-
-using System.Threading;
 using UnityEngine;
 
 public class Player : MonoBehaviour, IkitchenObjectParent
 {
-
     public static Player Instance { get; private set; }
-
-
 
     public event EventHandler<OnSelectedCounterChangedEventArgs> OnSelectedCounterChanged;
 
@@ -18,14 +13,9 @@ public class Player : MonoBehaviour, IkitchenObjectParent
     {
         public BaseCounter selectedCounter;
     }
-    public bool IsInteractAlternatePressed()
-    {
-        return gameInput.IsInteractAlternatePressed();
-    }
-    public bool IsInteractPressed()
-    {
-        return gameInput.IsInteractPressed();
-    }
+
+    public bool IsInteractAlternatePressed() => gameInput.IsInteractAlternatePressed();
+    public bool IsInteractPressed() => gameInput.IsInteractPressed();
 
     public float speed = 5f;
 
@@ -36,6 +26,16 @@ public class Player : MonoBehaviour, IkitchenObjectParent
     [SerializeField] private Transform KitchenObjectHoldPoint;
     [SerializeField] private ParticleSystem footstepParticleSystem;
 
+    // Dash Variables
+    [SerializeField] private float dashSpeed = 20f;
+    [SerializeField] private float dashDuration = 0.2f;
+    [SerializeField] private float dashCooldown = 1f;
+
+    private bool isDashing = false;
+    private float dashTimer;
+    private float dashCooldownTimer;
+    private Vector3 dashDirection;
+
     private bool isWalking;
     private bool isCooking;
     private Vector3 LastInteractDir;
@@ -43,23 +43,33 @@ public class Player : MonoBehaviour, IkitchenObjectParent
     private KitchenObject kitchenObject;
     private bool wasWalking = false;
 
-
     private void Awake()
     {
         if (Instance != null)
         {
-            UnityEngine.Debug.LogError("There is more than one player instance in the scene");
-
+            Debug.LogError("There is more than one player instance in the scene");
         }
         Instance = this;
     }
+
     private void Start()
     {
         gameInput.OnInteract += GameInput_OnInteract;
         gameInput.OnInteractAlternate += GameInput_OnInteractAlternate;
     }
 
-    private void GameInput_OnInteractAlternate(object sender, System.EventArgs e)
+    private void Update()
+    {
+        HandleDash();
+        if (!isDashing)
+        {
+            HandleMoveMent();
+        }
+        HandleInteraction();
+        HandleFootstepSound();
+    }
+
+    private void GameInput_OnInteractAlternate(object sender, EventArgs e)
     {
         if (selectedCounter != null)
         {
@@ -67,59 +77,34 @@ public class Player : MonoBehaviour, IkitchenObjectParent
         }
     }
 
-    private void GameInput_OnInteract(object sender, System.EventArgs e)
+    private void GameInput_OnInteract(object sender, EventArgs e)
     {
         if (selectedCounter != null)
         {
             selectedCounter.Interact(this);
         }
+    }
 
-    }
-    private void Update()
-    {
-        HandleMoveMent();
-        HandleInteraction();
-        HandleFootstepSound();
+    public bool IsWalking() => isWalking;
+    public bool IsCooking() => isCooking;
+    public void SetIsCooking(bool cooking) => isCooking = cooking;
 
-    }
-    public bool IsWalking()
-    {
-        return isWalking;
-    }
-    public bool IsCooking()
-    {
-        return isCooking;
-    }
-    public void SetIsCooking(bool cooking)
-    {
-        isCooking = cooking;
-    }
     private void HandleFootstepSound()
     {
         if (isWalking && !wasWalking)
         {
-            // Pemain mulai berjalan
             AudioEventSystem.PlayAudio("Footstep");
-            if (footstepParticleSystem != null)
-            {
-                footstepParticleSystem.Play();
-
-
-            }
+            footstepParticleSystem?.Play();
         }
         else if (!isWalking && wasWalking)
         {
-            // Pemain berhenti
             AudioEventSystem.StopAudio("Footstep");
-            if (footstepParticleSystem != null)
-            {
-                footstepParticleSystem.Stop();
-
-            }
+            footstepParticleSystem?.Stop();
         }
 
-        wasWalking = isWalking; // Update status wasWalking
+        wasWalking = isWalking;
     }
+
     private void HandleInteraction()
     {
         Vector2 inputVector = gameInput.GetMovmentInputNormalized();
@@ -133,7 +118,6 @@ public class Player : MonoBehaviour, IkitchenObjectParent
 
         if (Physics.Raycast(transform.position, LastInteractDir, out RaycastHit raycasthit, InteractDistance, layerMaskCounter))
         {
-
             if (raycasthit.transform.TryGetComponent(out BaseCounter baseCounter))
             {
                 if (baseCounter != selectedCounter)
@@ -145,24 +129,17 @@ public class Player : MonoBehaviour, IkitchenObjectParent
             {
                 SetSelectedCounter(null);
             }
-
         }
         else
         {
             SetSelectedCounter(null);
         }
-
-
-
-
     }
 
     private void HandleMoveMent()
     {
-
         Vector2 inputVector = gameInput.GetMovmentInputNormalized();
         Vector3 MoveDir = new Vector3(inputVector.x, 0f, inputVector.y);
-
         float MoveDistance = speed * Time.deltaTime;
 
         bool CanMove = !Physics.CapsuleCast(transform.position, transform.position + Vector3.up * PlayerHeight, PlayerRadius, MoveDir, MoveDistance);
@@ -174,7 +151,7 @@ public class Player : MonoBehaviour, IkitchenObjectParent
 
             if (CanMove)
             {
-                MoveDir = MoveDirX; // Jika bisa bergerak di x, gunakan arah ini
+                MoveDir = MoveDirX;
             }
             else
             {
@@ -183,25 +160,58 @@ public class Player : MonoBehaviour, IkitchenObjectParent
 
                 if (CanMove)
                 {
-                    MoveDir = MoveDirZ; // Jika bisa bergerak di z, gunakan arah ini
+                    MoveDir = MoveDirZ;
                 }
-
             }
-
         }
 
-        // Setelah pengecekan, jika CanMove true, player bergerak
         if (CanMove)
         {
-            transform.position += MoveDir * MoveDistance; // Gerakkan player
+            transform.position += MoveDir * MoveDistance;
         }
 
         float rotationSpeed = 15f;
         isWalking = MoveDir != Vector3.zero;
         transform.forward = Vector3.Slerp(transform.forward, MoveDir, Time.deltaTime * rotationSpeed);
-
-
     }
+
+    private void HandleDash()
+    {
+        if (isDashing)
+        {
+            transform.position += dashDirection * dashSpeed * Time.deltaTime;
+            dashTimer -= Time.deltaTime;
+
+            if (dashTimer <= 0f)
+            {
+                isDashing = false;
+                dashCooldownTimer = dashCooldown;
+            }
+            return;
+        }
+
+        if (dashCooldownTimer > 0f)
+        {
+            dashCooldownTimer -= Time.deltaTime;
+        }
+
+        if (Input.GetKeyDown(KeyCode.LeftShift) && dashCooldownTimer <= 0f)
+        {
+            Vector2 inputVector = gameInput.GetMovmentInputNormalized();
+            Vector3 inputDir = new Vector3(inputVector.x, 0f, inputVector.y);
+
+            if (inputDir != Vector3.zero)
+            {
+                dashDirection = inputDir.normalized;
+                isDashing = true;
+                dashTimer = dashDuration;
+
+                // Optional: play audio/particle
+                AudioEventSystem.PlayAudio("Dash");
+            }
+        }
+    }
+
     private void SetSelectedCounter(BaseCounter selectedCounter)
     {
         this.selectedCounter = selectedCounter;
@@ -211,39 +221,17 @@ public class Player : MonoBehaviour, IkitchenObjectParent
         });
     }
 
-    //Metode untuk mendapatkan Posisi Player
-    public Vector3 Getposition()
-    {
-        return transform.position;
-    }
-    // Tambahan metode untuk memeriksa apakah pemain telah bergerak sejak posisi tertentu
+    public Vector3 Getposition() => transform.position;
+
     public bool HasMovedSince(Vector3 startPosition)
     {
-        return Vector3.Distance(startPosition, transform.position) > 0.01f; // Threshold pergerakan
+        return Vector3.Distance(startPosition, transform.position) > 0.01f;
     }
 
-    //IkitcheObjectParent
-    public Transform GetKitchenObjectFollowTransform()
-    {
-        return KitchenObjectHoldPoint;
-    }
-    public void SetKitchenObject(KitchenObject kitchenObject)
-    {
-        this.kitchenObject = kitchenObject;
-    }
-    public KitchenObject GetKitchenObject()
-    {
-        return kitchenObject;
-    }
-    public void ClearKitchenObject()
-    {
-        kitchenObject = null;
-    }
-    public bool HasKitchenObject()
-    {
-        return kitchenObject != null;
-    }
-
-
-
+    // KitchenObjectParent interface implementation
+    public Transform GetKitchenObjectFollowTransform() => KitchenObjectHoldPoint;
+    public void SetKitchenObject(KitchenObject kitchenObject) => this.kitchenObject = kitchenObject;
+    public KitchenObject GetKitchenObject() => kitchenObject;
+    public void ClearKitchenObject() => kitchenObject = null;
+    public bool HasKitchenObject() => kitchenObject != null;
 }
