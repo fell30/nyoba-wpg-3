@@ -31,6 +31,7 @@ public class OrderSystem : MonoBehaviour
     private GameObject currentOrderUI;
 
     public int maxOrders;
+    [SerializeField] private OrderGenerator orderGenerator; // kosongkan di scene Level-Tutorial
     private bool isTutorialCompleted = false;
 
     private void Start()
@@ -78,6 +79,13 @@ public class OrderSystem : MonoBehaviour
     public void StartOrderSystem()
     {
         isTutorialCompleted = true;
+
+        // Waktu total level diambil dari LevelConfig (hanya jika PCG dipasang)
+        if (orderGenerator != null && orderGenerator.Config != null)
+        {
+            countdownTimer.timeRemaining = orderGenerator.Config.totalTimeSeconds;
+        }
+
         GenerateOrders(maxOrders);
         ShowNextOrder();
     }
@@ -107,6 +115,25 @@ public class OrderSystem : MonoBehaviour
 
     private void GenerateOrders(int count)
     {
+        // ---- Jalur PCG (aktif jika OrderGenerator terpasang di scene) ----
+        if (orderGenerator != null)
+        {
+            List<KitchenObjectSO> generated = orderGenerator.Generate();
+            if (generated != null)
+            {
+                foreach (KitchenObjectSO generatedOrder in generated)
+                {
+                    activeOrders.Add(generatedOrder);
+                    orderQueue.Enqueue(generatedOrder);
+                    Debug.Log("New Order (PCG): " + generatedOrder.objectName);
+                }
+                Debug.Log("Total Orders (PCG): " + orderQueue.Count);
+                return;
+            }
+            Debug.LogWarning("PCG gagal, memakai pengacakan lama.");
+        }
+
+        // ---- Jalur lama (fallback): level tanpa PCG atau jika PCG gagal ----
         // Pastikan count tidak lebih banyak dari jumlah possibleOrders
         int finalCount = Mathf.Min(count, possibleOrders.Count);
 
